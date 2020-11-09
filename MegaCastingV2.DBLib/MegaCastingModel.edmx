@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MegaCastingsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APPARTENIR_FILTRE">
+          <Key>
+            <PropertyRef Name="ID_CASTING" />
+            <PropertyRef Name="ID_FILTRE" />
+          </Key>
+          <Property Name="ID_CASTING" Type="int" Nullable="false" />
+          <Property Name="ID_FILTRE" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APPARTIENT_CASTING">
+          <Key>
+            <PropertyRef Name="ID_CASTING" />
+            <PropertyRef Name="ID_CAT" />
+          </Key>
+          <Property Name="ID_CASTING" Type="int" Nullable="false" />
+          <Property Name="ID_CAT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CASTINGS">
+          <Key>
+            <PropertyRef Name="ID_CASTING" />
+          </Key>
+          <Property Name="ID_CASTING" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LABEL" Type="varchar" MaxLength="50" />
+          <Property Name="DOM_METIERS" Type="varchar" MaxLength="50" />
+          <Property Name="METIERS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TYPE_CONTRACT" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DUREE_DIFFUSION" Type="int" />
+          <Property Name="DATE_DEB_CONTRACT" Type="datetime" Nullable="false" />
+          <Property Name="NB_POSTES" Type="int" Nullable="false" />
+          <Property Name="LOCALISATION" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DESC_POSTE" Type="text" />
+          <Property Name="DESC_PROFIL" Type="text" />
+          <Property Name="COORDONNEES" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CATEGORIES">
+          <Key>
+            <PropertyRef Name="ID_CAT" />
+          </Key>
+          <Property Name="ID_CAT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CAT_LABEL" Type="varchar" MaxLength="50" />
+          <Property Name="IMG_CAST" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="CIVILITE">
+          <Key>
+            <PropertyRef Name="ID_CIVILITE" />
+          </Key>
+          <Property Name="ID_CIVILITE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LABEL_CIVILITE" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ID_EMPLOYEE" />
+          </Key>
+          <Property Name="ID_EMPLOYEE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EMPLOYEE_FIRSTNAME" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="EMPLOYEE_LASTNAME" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="EMPLOYEE_USERNAME" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="EMPLOYEE_PASSWORD" Type="varchar" MaxLength="175" Nullable="false" />
+          <Property Name="EST_ADMIN" Type="bit" Nullable="false" />
+          <Property Name="ID_CIVILITE" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FILTRES">
+          <Key>
+            <PropertyRef Name="ID_FILTRE" />
+          </Key>
+          <Property Name="ID_FILTRE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CAT_LABEL" Type="varchar" MaxLength="50" />
+          <Property Name="LABEL_FILTRE" Type="varchar" MaxLength="75" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ORGANISATION">
+          <Key>
+            <PropertyRef Name="ID_ORG" />
+          </Key>
+          <Property Name="ID_ORG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME_ORG" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="URL_ORG" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="EMAIL_ORG" Type="varchar" MaxLength="100" />
+          <Property Name="TEL_ORG" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ADRESS_ORG" Type="varchar" MaxLength="100" />
+          <Property Name="ID_CASTING" Type="int" Nullable="false" />
+          <Property Name="ID_PACK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PACK">
+          <Key>
+            <PropertyRef Name="ID_PACK" />
+          </Key>
+          <Property Name="ID_PACK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME_PACK" Type="varchar" MaxLength="50" />
+          <Property Name="PRICE" Type="int" />
+        </EntityType>
+        <EntityType Name="POSTULER">
+          <Key>
+            <PropertyRef Name="ID_CASTING" />
+            <PropertyRef Name="ID_USER" />
+          </Key>
+          <Property Name="ID_CASTING" Type="int" Nullable="false" />
+          <Property Name="ID_USER" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="ID_USER" />
+          </Key>
+          <Property Name="ID_USER" Type="int" Nullable="false" />
+          <Property Name="USER_FIRSTNAME" Type="varchar" MaxLength="100" />
+          <Property Name="USER_LASTNAME" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="USER_PASSWORD" Type="varchar" MaxLength="100" />
+          <Property Name="USER_MAIL" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="USER_NAISSANCE" Type="date" Nullable="false" />
+          <Property Name="IMG_PROFIL" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ID_CIVILITE" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="APPARTENIR_FILTRE_CASTINGS_FK">
+          <End Role="CASTINGS" Type="Self.CASTINGS" Multiplicity="1" />
+          <End Role="APPARTENIR_FILTRE" Type="Self.APPARTENIR_FILTRE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CASTINGS">
+              <PropertyRef Name="ID_CASTING" />
+            </Principal>
+            <Dependent Role="APPARTENIR_FILTRE">
+              <PropertyRef Name="ID_CASTING" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="APPARTENIR_FILTRE_FILTRES0_FK">
+          <End Role="FILTRES" Type="Self.FILTRES" Multiplicity="1" />
+          <End Role="APPARTENIR_FILTRE" Type="Self.APPARTENIR_FILTRE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FILTRES">
+              <PropertyRef Name="ID_FILTRE" />
+            </Principal>
+            <Dependent Role="APPARTENIR_FILTRE">
+              <PropertyRef Name="ID_FILTRE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="APPARTIENT_CASTING_CASTINGS_FK">
+          <End Role="CASTINGS" Type="Self.CASTINGS" Multiplicity="1" />
+          <End Role="APPARTIENT_CASTING" Type="Self.APPARTIENT_CASTING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CASTINGS">
+              <PropertyRef Name="ID_CASTING" />
+            </Principal>
+            <Dependent Role="APPARTIENT_CASTING">
+              <PropertyRef Name="ID_CASTING" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="APPARTIENT_CASTING_CATEGORIES0_FK">
+          <End Role="CATEGORIES" Type="Self.CATEGORIES" Multiplicity="1" />
+          <End Role="APPARTIENT_CASTING" Type="Self.APPARTIENT_CASTING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIES">
+              <PropertyRef Name="ID_CAT" />
+            </Principal>
+            <Dependent Role="APPARTIENT_CASTING">
+              <PropertyRef Name="ID_CAT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EMPLOYEE_CIVILITE_FK">
+          <End Role="CIVILITE" Type="Self.CIVILITE" Multiplicity="1" />
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIVILITE">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Principal>
+            <Dependent Role="EMPLOYEE">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ORGANISATION_CASTINGS_FK">
+          <End Role="CASTINGS" Type="Self.CASTINGS" Multiplicity="1" />
+          <End Role="ORGANISATION" Type="Self.ORGANISATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CASTINGS">
+              <PropertyRef Name="ID_CASTING" />
+            </Principal>
+            <Dependent Role="ORGANISATION">
+              <PropertyRef Name="ID_CASTING" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ORGANISATION_PACK0_FK">
+          <End Role="PACK" Type="Self.PACK" Multiplicity="1" />
+          <End Role="ORGANISATION" Type="Self.ORGANISATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACK">
+              <PropertyRef Name="ID_PACK" />
+            </Principal>
+            <Dependent Role="ORGANISATION">
+              <PropertyRef Name="ID_PACK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="POSTULER_CASTINGS_FK">
+          <End Role="CASTINGS" Type="Self.CASTINGS" Multiplicity="1" />
+          <End Role="POSTULER" Type="Self.POSTULER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CASTINGS">
+              <PropertyRef Name="ID_CASTING" />
+            </Principal>
+            <Dependent Role="POSTULER">
+              <PropertyRef Name="ID_CASTING" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="POSTULER_USERS0_FK">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="POSTULER" Type="Self.POSTULER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="ID_USER" />
+            </Principal>
+            <Dependent Role="POSTULER">
+              <PropertyRef Name="ID_USER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USERS_CIVILITE_FK">
+          <End Role="CIVILITE" Type="Self.CIVILITE" Multiplicity="1" />
+          <End Role="USERS" Type="Self.USERS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIVILITE">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Principal>
+            <Dependent Role="USERS">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MegaCastingsModelStoreContainer">
+          <EntitySet Name="APPARTENIR_FILTRE" EntityType="Self.APPARTENIR_FILTRE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="APPARTIENT_CASTING" EntityType="Self.APPARTIENT_CASTING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CASTINGS" EntityType="Self.CASTINGS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CATEGORIES" EntityType="Self.CATEGORIES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CIVILITE" EntityType="Self.CIVILITE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FILTRES" EntityType="Self.FILTRES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORGANISATION" EntityType="Self.ORGANISATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PACK" EntityType="Self.PACK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="POSTULER" EntityType="Self.POSTULER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="APPARTENIR_FILTRE_CASTINGS_FK" Association="Self.APPARTENIR_FILTRE_CASTINGS_FK">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="APPARTENIR_FILTRE" EntitySet="APPARTENIR_FILTRE" />
+          </AssociationSet>
+          <AssociationSet Name="APPARTENIR_FILTRE_FILTRES0_FK" Association="Self.APPARTENIR_FILTRE_FILTRES0_FK">
+            <End Role="FILTRES" EntitySet="FILTRES" />
+            <End Role="APPARTENIR_FILTRE" EntitySet="APPARTENIR_FILTRE" />
+          </AssociationSet>
+          <AssociationSet Name="APPARTIENT_CASTING_CASTINGS_FK" Association="Self.APPARTIENT_CASTING_CASTINGS_FK">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="APPARTIENT_CASTING" EntitySet="APPARTIENT_CASTING" />
+          </AssociationSet>
+          <AssociationSet Name="APPARTIENT_CASTING_CATEGORIES0_FK" Association="Self.APPARTIENT_CASTING_CATEGORIES0_FK">
+            <End Role="CATEGORIES" EntitySet="CATEGORIES" />
+            <End Role="APPARTIENT_CASTING" EntitySet="APPARTIENT_CASTING" />
+          </AssociationSet>
+          <AssociationSet Name="EMPLOYEE_CIVILITE_FK" Association="Self.EMPLOYEE_CIVILITE_FK">
+            <End Role="CIVILITE" EntitySet="CIVILITE" />
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+          </AssociationSet>
+          <AssociationSet Name="ORGANISATION_CASTINGS_FK" Association="Self.ORGANISATION_CASTINGS_FK">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="ORGANISATION" EntitySet="ORGANISATION" />
+          </AssociationSet>
+          <AssociationSet Name="ORGANISATION_PACK0_FK" Association="Self.ORGANISATION_PACK0_FK">
+            <End Role="PACK" EntitySet="PACK" />
+            <End Role="ORGANISATION" EntitySet="ORGANISATION" />
+          </AssociationSet>
+          <AssociationSet Name="POSTULER_CASTINGS_FK" Association="Self.POSTULER_CASTINGS_FK">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="POSTULER" EntitySet="POSTULER" />
+          </AssociationSet>
+          <AssociationSet Name="POSTULER_USERS0_FK" Association="Self.POSTULER_USERS0_FK">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="POSTULER" EntitySet="POSTULER" />
+          </AssociationSet>
+          <AssociationSet Name="USERS_CIVILITE_FK" Association="Self.USERS_CIVILITE_FK">
+            <End Role="CIVILITE" EntitySet="CIVILITE" />
+            <End Role="USERS" EntitySet="USERS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MegaCastingsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CASTING">
+          <Key>
+            <PropertyRef Name="ID_CASTING" />
+          </Key>
+          <Property Name="ID_CASTING" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LABEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOM_METIERS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="METIERS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TYPE_CONTRACT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DUREE_DIFFUSION" Type="Int32" />
+          <Property Name="DATE_DEB_CONTRACT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NB_POSTES" Type="Int32" Nullable="false" />
+          <Property Name="LOCALISATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESC_POSTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DESC_PROFIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="COORDONNEES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ORGANISATIONs" Relationship="Self.ORGANISATION_CASTINGS_FK" FromRole="CASTINGS" ToRole="ORGANISATION" />
+          <NavigationProperty Name="FILTRES" Relationship="Self.APPARTENIR_FILTRE" FromRole="CASTINGS" ToRole="FILTRES" />
+          <NavigationProperty Name="CATEGORIES" Relationship="Self.APPARTIENT_CASTING" FromRole="CASTINGS" ToRole="CATEGORIES" />
+          <NavigationProperty Name="USERS" Relationship="Self.POSTULER" FromRole="CASTINGS" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="CATEGORy">
+          <Key>
+            <PropertyRef Name="ID_CAT" />
+          </Key>
+          <Property Name="ID_CAT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CAT_LABEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IMG_CAST" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CASTINGS" Relationship="Self.APPARTIENT_CASTING" FromRole="CATEGORIES" ToRole="CASTINGS" />
+        </EntityType>
+        <EntityType Name="CIVILITE">
+          <Key>
+            <PropertyRef Name="ID_CIVILITE" />
+          </Key>
+          <Property Name="ID_CIVILITE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LABEL_CIVILITE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EMPLOYEEs" Relationship="Self.EMPLOYEE_CIVILITE_FK" FromRole="CIVILITE" ToRole="EMPLOYEE" />
+          <NavigationProperty Name="USERS" Relationship="Self.USERS_CIVILITE_FK" FromRole="CIVILITE" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ID_EMPLOYEE" />
+          </Key>
+          <Property Name="ID_EMPLOYEE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EMPLOYEE_FIRSTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMPLOYEE_LASTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMPLOYEE_USERNAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMPLOYEE_PASSWORD" Type="String" MaxLength="175" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EST_ADMIN" Type="Boolean" Nullable="false" />
+          <Property Name="ID_CIVILITE" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CIVILITE" Relationship="Self.EMPLOYEE_CIVILITE_FK" FromRole="EMPLOYEE" ToRole="CIVILITE" />
+        </EntityType>
+        <EntityType Name="FILTRE">
+          <Key>
+            <PropertyRef Name="ID_FILTRE" />
+          </Key>
+          <Property Name="ID_FILTRE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CAT_LABEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LABEL_FILTRE" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CASTINGS" Relationship="Self.APPARTENIR_FILTRE" FromRole="FILTRES" ToRole="CASTINGS" />
+        </EntityType>
+        <EntityType Name="ORGANISATION">
+          <Key>
+            <PropertyRef Name="ID_ORG" />
+          </Key>
+          <Property Name="ID_ORG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME_ORG" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="URL_ORG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL_ORG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_ORG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ADRESS_ORG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ID_CASTING" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CASTING" Relationship="Self.ORGANISATION_CASTINGS_FK" FromRole="ORGANISATION" ToRole="CASTINGS" />
+          <NavigationProperty Name="PACK" Relationship="Self.ORGANISATION_PACK0_FK" FromRole="ORGANISATION" ToRole="PACK" />
+        </EntityType>
+        <EntityType Name="PACK">
+          <Key>
+            <PropertyRef Name="ID_PACK" />
+          </Key>
+          <Property Name="ID_PACK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME_PACK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PRICE" Type="Int32" />
+          <NavigationProperty Name="ORGANISATIONs" Relationship="Self.ORGANISATION_PACK0_FK" FromRole="PACK" ToRole="ORGANISATION" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="ID_USER" />
+          </Key>
+          <Property Name="ID_USER" Type="Int32" Nullable="false" />
+          <Property Name="USER_FIRSTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="USER_LASTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USER_PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="USER_MAIL" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USER_NAISSANCE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IMG_PROFIL" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ID_CIVILITE" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CIVILITE" Relationship="Self.USERS_CIVILITE_FK" FromRole="USERS" ToRole="CIVILITE" />
+          <NavigationProperty Name="CASTINGS" Relationship="Self.POSTULER" FromRole="USERS" ToRole="CASTINGS" />
+        </EntityType>
+        <Association Name="ORGANISATION_CASTINGS_FK">
+          <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="1" />
+          <End Role="ORGANISATION" Type="Self.ORGANISATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CASTINGS">
+              <PropertyRef Name="ID_CASTING" />
+            </Principal>
+            <Dependent Role="ORGANISATION">
+              <PropertyRef Name="ID_CASTING" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EMPLOYEE_CIVILITE_FK">
+          <End Role="CIVILITE" Type="Self.CIVILITE" Multiplicity="1" />
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIVILITE">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Principal>
+            <Dependent Role="EMPLOYEE">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USERS_CIVILITE_FK">
+          <End Role="CIVILITE" Type="Self.CIVILITE" Multiplicity="1" />
+          <End Role="USERS" Type="Self.USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIVILITE">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Principal>
+            <Dependent Role="USERS">
+              <PropertyRef Name="ID_CIVILITE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ORGANISATION_PACK0_FK">
+          <End Role="PACK" Type="Self.PACK" Multiplicity="1" />
+          <End Role="ORGANISATION" Type="Self.ORGANISATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACK">
+              <PropertyRef Name="ID_PACK" />
+            </Principal>
+            <Dependent Role="ORGANISATION">
+              <PropertyRef Name="ID_PACK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="APPARTENIR_FILTRE">
+          <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="*" />
+          <End Role="FILTRES" Type="Self.FILTRE" Multiplicity="*" />
+        </Association>
+        <Association Name="APPARTIENT_CASTING">
+          <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="*" />
+          <End Role="CATEGORIES" Type="Self.CATEGORy" Multiplicity="*" />
+        </Association>
+        <Association Name="POSTULER">
+          <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="*" />
+          <End Role="USERS" Type="Self.USER" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CASTINGS" EntityType="Self.CASTING" />
+          <EntitySet Name="CATEGORIES" EntityType="Self.CATEGORy" />
+          <EntitySet Name="CIVILITEs" EntityType="Self.CIVILITE" />
+          <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+          <EntitySet Name="FILTRES" EntityType="Self.FILTRE" />
+          <EntitySet Name="ORGANISATIONs" EntityType="Self.ORGANISATION" />
+          <EntitySet Name="PACKs" EntityType="Self.PACK" />
+          <EntitySet Name="USERS" EntityType="Self.USER" />
+          <AssociationSet Name="ORGANISATION_CASTINGS_FK" Association="Self.ORGANISATION_CASTINGS_FK">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="ORGANISATION" EntitySet="ORGANISATIONs" />
+          </AssociationSet>
+          <AssociationSet Name="EMPLOYEE_CIVILITE_FK" Association="Self.EMPLOYEE_CIVILITE_FK">
+            <End Role="CIVILITE" EntitySet="CIVILITEs" />
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+          </AssociationSet>
+          <AssociationSet Name="USERS_CIVILITE_FK" Association="Self.USERS_CIVILITE_FK">
+            <End Role="CIVILITE" EntitySet="CIVILITEs" />
+            <End Role="USERS" EntitySet="USERS" />
+          </AssociationSet>
+          <AssociationSet Name="ORGANISATION_PACK0_FK" Association="Self.ORGANISATION_PACK0_FK">
+            <End Role="PACK" EntitySet="PACKs" />
+            <End Role="ORGANISATION" EntitySet="ORGANISATIONs" />
+          </AssociationSet>
+          <AssociationSet Name="APPARTENIR_FILTRE" Association="Self.APPARTENIR_FILTRE">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="FILTRES" EntitySet="FILTRES" />
+          </AssociationSet>
+          <AssociationSet Name="APPARTIENT_CASTING" Association="Self.APPARTIENT_CASTING">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="CATEGORIES" EntitySet="CATEGORIES" />
+          </AssociationSet>
+          <AssociationSet Name="POSTULER" Association="Self.POSTULER">
+            <End Role="CASTINGS" EntitySet="CASTINGS" />
+            <End Role="USERS" EntitySet="USERS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MegaCastingsModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="CASTINGS">
+            <EntityTypeMapping TypeName="MegaCastingsModel.CASTING">
+              <MappingFragment StoreEntitySet="CASTINGS">
+                <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
+                <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+                <ScalarProperty Name="DOM_METIERS" ColumnName="DOM_METIERS" />
+                <ScalarProperty Name="METIERS" ColumnName="METIERS" />
+                <ScalarProperty Name="TYPE_CONTRACT" ColumnName="TYPE_CONTRACT" />
+                <ScalarProperty Name="DUREE_DIFFUSION" ColumnName="DUREE_DIFFUSION" />
+                <ScalarProperty Name="DATE_DEB_CONTRACT" ColumnName="DATE_DEB_CONTRACT" />
+                <ScalarProperty Name="NB_POSTES" ColumnName="NB_POSTES" />
+                <ScalarProperty Name="LOCALISATION" ColumnName="LOCALISATION" />
+                <ScalarProperty Name="DESC_POSTE" ColumnName="DESC_POSTE" />
+                <ScalarProperty Name="DESC_PROFIL" ColumnName="DESC_PROFIL" />
+                <ScalarProperty Name="COORDONNEES" ColumnName="COORDONNEES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CATEGORIES">
+            <EntityTypeMapping TypeName="MegaCastingsModel.CATEGORy">
+              <MappingFragment StoreEntitySet="CATEGORIES">
+                <ScalarProperty Name="ID_CAT" ColumnName="ID_CAT" />
+                <ScalarProperty Name="CAT_LABEL" ColumnName="CAT_LABEL" />
+                <ScalarProperty Name="IMG_CAST" ColumnName="IMG_CAST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CIVILITEs">
+            <EntityTypeMapping TypeName="MegaCastingsModel.CIVILITE">
+              <MappingFragment StoreEntitySet="CIVILITE">
+                <ScalarProperty Name="ID_CIVILITE" ColumnName="ID_CIVILITE" />
+                <ScalarProperty Name="LABEL_CIVILITE" ColumnName="LABEL_CIVILITE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLOYEEs">
+            <EntityTypeMapping TypeName="MegaCastingsModel.EMPLOYEE">
+              <MappingFragment StoreEntitySet="EMPLOYEE">
+                <ScalarProperty Name="ID_EMPLOYEE" ColumnName="ID_EMPLOYEE" />
+                <ScalarProperty Name="EMPLOYEE_FIRSTNAME" ColumnName="EMPLOYEE_FIRSTNAME" />
+                <ScalarProperty Name="EMPLOYEE_LASTNAME" ColumnName="EMPLOYEE_LASTNAME" />
+                <ScalarProperty Name="EMPLOYEE_USERNAME" ColumnName="EMPLOYEE_USERNAME" />
+                <ScalarProperty Name="EMPLOYEE_PASSWORD" ColumnName="EMPLOYEE_PASSWORD" />
+                <ScalarProperty Name="EST_ADMIN" ColumnName="EST_ADMIN" />
+                <ScalarProperty Name="ID_CIVILITE" ColumnName="ID_CIVILITE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FILTRES">
+            <EntityTypeMapping TypeName="MegaCastingsModel.FILTRE">
+              <MappingFragment StoreEntitySet="FILTRES">
+                <ScalarProperty Name="ID_FILTRE" ColumnName="ID_FILTRE" />
+                <ScalarProperty Name="CAT_LABEL" ColumnName="CAT_LABEL" />
+                <ScalarProperty Name="LABEL_FILTRE" ColumnName="LABEL_FILTRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORGANISATIONs">
+            <EntityTypeMapping TypeName="MegaCastingsModel.ORGANISATION">
+              <MappingFragment StoreEntitySet="ORGANISATION">
+                <ScalarProperty Name="ID_ORG" ColumnName="ID_ORG" />
+                <ScalarProperty Name="NAME_ORG" ColumnName="NAME_ORG" />
+                <ScalarProperty Name="URL_ORG" ColumnName="URL_ORG" />
+                <ScalarProperty Name="EMAIL_ORG" ColumnName="EMAIL_ORG" />
+                <ScalarProperty Name="TEL_ORG" ColumnName="TEL_ORG" />
+                <ScalarProperty Name="ADRESS_ORG" ColumnName="ADRESS_ORG" />
+                <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
+                <ScalarProperty Name="ID_PACK" ColumnName="ID_PACK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PACKs">
+            <EntityTypeMapping TypeName="MegaCastingsModel.PACK">
+              <MappingFragment StoreEntitySet="PACK">
+                <ScalarProperty Name="ID_PACK" ColumnName="ID_PACK" />
+                <ScalarProperty Name="NAME_PACK" ColumnName="NAME_PACK" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="MegaCastingsModel.USER">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+                <ScalarProperty Name="USER_FIRSTNAME" ColumnName="USER_FIRSTNAME" />
+                <ScalarProperty Name="USER_LASTNAME" ColumnName="USER_LASTNAME" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+                <ScalarProperty Name="USER_MAIL" ColumnName="USER_MAIL" />
+                <ScalarProperty Name="USER_NAISSANCE" ColumnName="USER_NAISSANCE" />
+                <ScalarProperty Name="IMG_PROFIL" ColumnName="IMG_PROFIL" />
+                <ScalarProperty Name="ID_CIVILITE" ColumnName="ID_CIVILITE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="APPARTENIR_FILTRE" TypeName="MegaCastingsModel.APPARTENIR_FILTRE" StoreEntitySet="APPARTENIR_FILTRE">
+            <EndProperty Name="CASTINGS">
+              <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
+            </EndProperty>
+            <EndProperty Name="FILTRES">
+              <ScalarProperty Name="ID_FILTRE" ColumnName="ID_FILTRE" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="APPARTIENT_CASTING" TypeName="MegaCastingsModel.APPARTIENT_CASTING" StoreEntitySet="APPARTIENT_CASTING">
+            <EndProperty Name="CASTINGS">
+              <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
+            </EndProperty>
+            <EndProperty Name="CATEGORIES">
+              <ScalarProperty Name="ID_CAT" ColumnName="ID_CAT" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="POSTULER" TypeName="MegaCastingsModel.POSTULER" StoreEntitySet="POSTULER">
+            <EndProperty Name="CASTINGS">
+              <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
+            </EndProperty>
+            <EndProperty Name="USERS">
+              <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

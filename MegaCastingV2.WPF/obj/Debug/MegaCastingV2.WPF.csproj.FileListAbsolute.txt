@@ -1,0 +1,178 @@
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe.config
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csprojAssemblyReference.cache
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MainWindow.g.cs
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\App.g.cs
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.cache
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.lref
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MainWindow.baml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.g.resources
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.Properties.Resources.resources
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.GenerateResource.cache
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CoreCompileInputs.cache
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.exe
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\App.baml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CopyComplete
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll.config
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.xml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewMain.g.cs
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewMain.baml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewContractType.g.cs
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewContractType.baml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe.config
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.dll
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll.config
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.xml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csprojAssemblyReference.cache
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MainWindow.g.cs
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewMain.g.cs
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\App.g.cs
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.cache
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.lref
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\App.baml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MainWindow.baml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewMain.baml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.g.resources
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.Properties.Resources.resources
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.GenerateResource.cache
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CopyComplete
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.exe
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewUserType.g.cs
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting - Admin\MegaCastingV2\MegaCastingV2.WPF\obj\Debug\View\ViewUserType.baml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe.config
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.pdb
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.dll
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.pdb
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll.config
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.xml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csprojAssemblyReference.cache
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUserType.g.cs
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.g.cs
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\App.g.cs
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.cache
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.lref
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\App.baml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MainWindow.baml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUserType.baml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.baml
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.g.resources
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.Properties.Resources.resources
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.GenerateResource.cache
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CopyComplete
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.exe
+C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.pdb
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe.config
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.pdb
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.dll
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.pdb
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MegastingV2.DBlib.dll.config
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.xml
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csprojAssemblyReference.cache
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUserType.g.cs
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.g.cs
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\App.g.cs
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.cache
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.lref
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\App.baml
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MainWindow.baml
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUserType.baml
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.baml
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.g.resources
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.Properties.Resources.resources
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.GenerateResource.cache
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CopyComplete
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.exe
+C:\Users\Matéo\Documents\MegaCasting_Client-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.pdb
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csprojAssemblyReference.cache
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MainWindow.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\Popup\PopupAddUser.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewCastings.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewCategory.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewOrga.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewPack.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUser.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\App.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.cache
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF_MarkupCompile.lref
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe.config
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.pdb
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.dll
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.DBLib.dll
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.DBLib.pdb
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.DBLib.dll.config
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.xml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignColors.pdb
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\App.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MainWindow.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\Style\Style.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\Popup\PopupAddUser.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewCastings.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewCategory.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewOrga.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewPack.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUser.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.baml
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.g.resources
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.Properties.Resources.resources
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.GenerateResource.cache
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CoreCompileInputs.cache
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CopyComplete
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.exe
+C:\Users\tete-\Desktop\MegaCasting\Client_Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.pdb

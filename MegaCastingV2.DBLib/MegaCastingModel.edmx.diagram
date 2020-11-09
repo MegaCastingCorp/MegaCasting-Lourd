@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="76a0c2588fe645cc89af3566e700127c" Name="Diagram1" ZoomLevel="114">
+        <EntityTypeShape EntityType="MegaCastingsModel.CASTING" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.CATEGORy" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.CIVILITE" Width="1.5" PointX="3.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.EMPLOYEE" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.FILTRE" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.ORGANISATION" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.PACK" Width="1.5" PointX="3.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.USER" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="MegaCastingsModel.ORGANISATION_CASTINGS_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.EMPLOYEE_CIVILITE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.USERS_CIVILITE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.ORGANISATION_PACK0_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.APPARTENIR_FILTRE" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.APPARTIENT_CASTING" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.POSTULER" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

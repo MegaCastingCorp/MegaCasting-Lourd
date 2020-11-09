@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[PACK] (
+    [ID_PACK]   INT          IDENTITY (1, 1) NOT NULL,
+    [NAME_PACK] VARCHAR (50) NULL,
+    [PRICE]     INT          NULL,
+    CONSTRAINT [PACK_PK] PRIMARY KEY CLUSTERED ([ID_PACK] ASC)
+);
+

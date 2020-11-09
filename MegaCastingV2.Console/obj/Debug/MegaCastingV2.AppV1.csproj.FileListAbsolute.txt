@@ -1,0 +1,15 @@
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\MegaCastingV2.Console.exe.config
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\MegaCastingV2.Console.exe
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\MegaCastingV2.Console.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\obj\Debug\MegaCastingV2.AppV1.csprojAssemblyReference.cache
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\obj\Debug\MegaCastingV2.AppV1.csproj.CoreCompileInputs.cache
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\obj\Debug\MegaCastingV2.Console.exe
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\obj\Debug\MegaCastingV2.Console.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\EntityFramework.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\MegastingV2.DBlib.dll
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\MegastingV2.DBlib.pdb
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\MegastingV2.DBlib.dll.config
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\EntityFramework.xml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\estephant\source\repos\MegaCastingV2\MegaCastingV2.Console\obj\Debug\MegaCastingV2.AppV1.csproj.CopyComplete

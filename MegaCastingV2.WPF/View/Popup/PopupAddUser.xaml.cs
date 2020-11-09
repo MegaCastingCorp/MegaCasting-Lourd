@@ -29,5 +29,6 @@ namespace MegaCastingV2.WPF.View.Popup
         {
             ((ViewModelUserType)this.DataContext).AddUserType();
         }
+
     }
 }

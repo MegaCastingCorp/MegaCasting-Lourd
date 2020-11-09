@@ -10,6 +10,8 @@ namespace MegaCastingV2.WPF.ViewModel
 {
     public class ViewModelUserType : ViewModelBase 
     {
+        #region Atributes
+
         /// <summary>
         /// Collection de users
         /// </summary>
@@ -20,6 +22,9 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         private USER _SelectedUserType;
 
+        #endregion
+
+        #region Properties
 
         /// <summary>
         /// Obtient ou défini la collection
@@ -38,12 +43,16 @@ namespace MegaCastingV2.WPF.ViewModel
             get { return _SelectedUserType; }
             set { _SelectedUserType = value; }
         }
+        #endregion
 
+        #region Constructors
         public ViewModelUserType(Entities entities) : base(entities)
         {
             this.Entities.USERS.ToList();
             this.UserType = this.Entities.USERS.Local;
         }
+
+        #endregion
 
         #region Methods
 
@@ -67,7 +76,6 @@ namespace MegaCastingV2.WPF.ViewModel
             {
                 USER userType = new USER();
                 userType.USERNAME = "Nouvel utilisateur";
-                userType.USER_PASSWORD = "New password";
                 this.UserType.Add(userType);
                 this.SaveChanges();
                 this.SelectedUserType = userType;

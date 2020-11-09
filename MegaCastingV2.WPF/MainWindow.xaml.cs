@@ -81,6 +81,8 @@ namespace MegaCastingV2.WPF
 
             this.Entities = new Entities();
 
+            this.Entities.USERS.FirstOrDefault();
+
         }
 
         #endregion
@@ -104,6 +106,12 @@ namespace MegaCastingV2.WPF
             
 
         }
+
+        /// <summary>
+        /// Defini le button de login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _ButtonConnect_Click(object sender, RoutedEventArgs e)
         {
             
@@ -141,6 +149,11 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
+        /// <summary>
+        /// Défini le dockPanel comme affichant le type de Categorie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonManageCategory_Click(object sender, RoutedEventArgs e)
         {
             this.DockPanelView.Children.Clear();
@@ -152,6 +165,11 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
+        /// <summary>
+        /// Défini le dockPanel comme affichant le type de Pack
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonManagePack_Click(object sender, RoutedEventArgs e)
         {
             this.DockPanelView.Children.Clear();
@@ -163,6 +181,11 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
+        /// <summary>
+        /// Défini le dockPanel comme affichant le type de organisation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonManageOrganisation_Click(object sender, RoutedEventArgs e)
         {
             this.DockPanelView.Children.Clear();
@@ -173,7 +196,42 @@ namespace MegaCastingV2.WPF
             view.DataContext = viewModel;
 
             this.DockPanelView.Children.Add(view);
-
         }
+
+
+        //#region EventWindows 
+        ///// <summary>
+        ///// Action permettant de reduire la fenètre
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void ButtonMinimanizScrean_Click(object sender, RoutedEventArgs e)
+        //{
+        //    WindowState = WindowState.Minimized;
+        //}
+
+        ///// <summary>
+        ///// Action permettant d'agrandir ou de réduir la fenètre
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void ButtonFullScrean_Click(object sender, RoutedEventArgs e)
+        //{
+        //    WindowState = (WindowState == WindowState.Maximized) ? WindowState.Normal : WindowState.Maximized;
+        //}
+
+        ///// <summary>
+        ///// Action permettant de fermer la fenètre
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Close();
+        //}
+
+
+        //#endregion
+
     }
 }

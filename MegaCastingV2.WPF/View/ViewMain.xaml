@@ -8,18 +8,26 @@
              d:DesignHeight="720" d:DesignWidth="1280">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="42*"/>
-            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="380*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="380*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="380*"/>
+            <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="230*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="330*"/>
+            <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
-        <Image Source="../img/MegaCasting_Logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="278" Margin="102,-76,136,0" Width="434" Grid.Column="1" Grid.RowSpan="2"/>
-        <Label FontFamily="Montserrat" FontSize="20" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bienvenue sur l'applicatif MegaCasting"></Label>
+        <Image Source="../img/MegaCasting_Logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="253" Width="320" Grid.Column="3" Margin="4,0,28.5,0" Grid.RowSpan="2"/>
+        <Label FontFamily="Montserrat" FontSize="20" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bienvenue sur l'applicatif MegaCasting" Height="32" Width="342" Margin="0.5,10,10,44.5"/>
+
+        <Ellipse Grid.Row="2" Margin="4.5,0,0.5,0" Grid.Column="1" StrokeThickness="1" Stroke="Black"/>
+        <Ellipse Grid.Row="2" Grid.Column="5" Margin="4.5,0,0.5,0" StrokeThickness="1" Stroke="Black"/>
+        <Ellipse Grid.Row="2" Margin="4.5,0,0.5,0" Grid.Column="3" StrokeThickness="1" Stroke="Black"/>
 
     </Grid>
 </UserControl>

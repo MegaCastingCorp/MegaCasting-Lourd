@@ -89,6 +89,7 @@
     <Compile Include="PACK.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Partial\USER.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="USER.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>

@@ -130,7 +130,7 @@
 
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nombre de postes :" Grid.Row="3" Grid.Column="1" FontSize="16" Foreground="Black" Margin="10.5,14,-60,14" Width="140"/>
 
-            <TextBox x:Name="_SelectCastingsNbPoste" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Text="{Binding SelectedCastingsType.NB_POSTE}" Margin="37.5,12,-47,8"/>
+            <TextBox x:Name="_SelectCastingsNbPoste" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Text="{Binding SelectedCastingsType.NB_POSTES}" Margin="37.5,12,-47,8"/>
 
             <Button x:Name="_ButtonSaveCastings" Click="_ButtonSaveCastings_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">

@@ -83,6 +83,7 @@
     <Compile Include="ViewModel\ViewModelCastingsType.cs" />
     <Compile Include="ViewModel\ViewModelCategory.cs" />
     <Compile Include="ViewModel\ViewModelLogin.cs" />
+    <Compile Include="ViewModel\ViewModelMain.cs" />
     <Compile Include="ViewModel\ViewModelOrga.cs" />
     <Compile Include="ViewModel\ViewModelPack.cs" />
     <Compile Include="ViewModel\ViewModelUserType.cs" />

@@ -30,5 +30,36 @@ namespace MegaCastingV2.WPF.View.Popup
             ((ViewModelUserType)this.DataContext).AddUserType();
         }
 
+
+        private void RemoveText(object sender, RoutedEventArgs e)
+        {
+            if (PopBoxLastname.Text == "Nom"
+                || PopBoxFirstName.Text == "Prénom" 
+                || PopBoxUsername.Text == "Nom d'utilisateur" 
+                || PopBoxPassword.Text == "Mot de passe" 
+                || PopBoxEmail.Text == "Email")
+            {
+                PopBoxLastname.Text = "";
+                PopBoxFirstName.Text = "";
+                PopBoxUsername.Text = "";
+                PopBoxPassword.Text = "";
+                PopBoxEmail.Text = "";
+            }
+        }
+
+        private void AddText(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PopBoxLastname.Text))
+                PopBoxLastname.Text = "Nom";
+            else if (string.IsNullOrWhiteSpace(PopBoxFirstName.Text))
+                PopBoxFirstName.Text = "Prénom";
+            else if (string.IsNullOrWhiteSpace(PopBoxUsername.Text))
+                PopBoxUsername.Text = "Nom d'utilisateur";
+            else if (string.IsNullOrWhiteSpace(PopBoxPassword.Text))
+                PopBoxPassword.Text = "Mot de passe";
+            else if (string.IsNullOrWhiteSpace(PopBoxEmail.Text))
+                PopBoxEmail.Text = "Email";
+
+        }
     }
 }

@@ -13,21 +13,24 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="30px"/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition Height="75px"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center">Ajouter un utilisateur/client</Label>
-        <ListView Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="330">
-            <TextBox x:Name="_PopBoxLastname" Text="Nom"/>
-            <TextBox x:Name="_PopBoxFirstName" Text="Prénom"/>
-            <TextBox x:Name="_PopBoxUsername" Text="Username"/>
-            <TextBox x:Name="_PopBoxPassword" Text="Password"/>
-            <TextBox x:Name="_PopBoxEmail" Text="Email"/>
-            <Label Content="Civilite :"/>
-            <ComboBox x:Name="_PopComboBox" Width="124" ItemsSource="{Binding UserType}">
-                <ComboBoxItem Tag="Homme" Content="{Binding SelectedUserType.LABEL_CIVILITE}"/>
-            </ComboBox>
-        </ListView>
-        <Button Grid.Row="2" x:Name="_ButtonAddUser"  HorizontalAlignment="Stretch" Click="_ButtonAddUser_Click" Background="#23B5B5" Height="30" Width="100" BorderThickness="0" Content="Ajouter"></Button>
+        <Label Grid.Row="0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center">Ajouter un utilisateur/client</Label>
+        <TextBox Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="PopBoxLastname" Text="Nom"/>
+        <TextBox Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="PopBoxFirstName" Text="Prénom"/>
+        <TextBox Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="PopBoxUsername" Text="Nom d'utilisateur"/>
+        <TextBox Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="PopBoxPassword" Text="Mot de passe"/>
+        <TextBox Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="PopBoxEmail" Text="Email"/>
+        <Label Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Civilite :" Margin="174,27.5,269,9.5" Width="52" RenderTransformOrigin="0.863,0.725"/>
+        <ComboBox Grid.Row="6" x:Name="_PopComboBox" Margin="226,18.5,126,14.5">
+            <ComboBoxItem Tag="Homme" Content="{Binding SelectedUserType.LABEL_CIVILITE}"/>
+        </ComboBox>
+        <Button Grid.Row="9" x:Name="_ButtonAddUser"  HorizontalAlignment="Stretch" Click="_ButtonAddUser_Click" Background="#23B5B5" Height="30" Width="100" BorderThickness="0" Content="Ajouter"></Button>
     </Grid>
 </Window>

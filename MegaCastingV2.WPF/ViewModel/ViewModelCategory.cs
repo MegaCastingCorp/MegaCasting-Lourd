@@ -15,7 +15,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Collection de Category
         /// </summary>
-        private ObservableCollection<CATEGORy> _Categories;
+        private ObservableCollection<CATEGORy> _Category;
 
         /// <summary>
         /// Selectionne une cateogrie
@@ -38,10 +38,10 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou defini la collection de category
         /// </summary>
-        public ObservableCollection<CATEGORy> Categories
+        public ObservableCollection<CATEGORy> Category
         {
-            get { return _Categories; }
-            set { _Categories = value; }
+            get { return _Category; }
+            set { _Category = value; }
         }
 
         #endregion
@@ -52,7 +52,7 @@ namespace MegaCastingV2.WPF.ViewModel
         public ViewModelCategory(Entities entities) : base(entities)
         {
             this.Entities.CATEGORIES.ToList();
-            this.Categories = this.Entities.CATEGORIES.Local;
+            this.Category = this.Entities.CATEGORIES.Local;
         }
 
         #endregion

@@ -24,7 +24,7 @@
         Grid.Column="0"
         Grid.Row="2"
         x:Name="_ListBoxCategory"
-        ItemsSource="{Binding CATEGORies}"
+        ItemsSource="{Binding Categories}"
         SelectedItem="{Binding SelectedCategory}">
             <ListBox.ItemTemplate>
                 <DataTemplate>

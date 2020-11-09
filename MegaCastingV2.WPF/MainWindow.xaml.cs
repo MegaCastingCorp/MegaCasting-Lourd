@@ -131,6 +131,11 @@ namespace MegaCastingV2.WPF
             }
         }
 
+        private void ButtonDisconnect_Click(object sender, RoutedEventArgs e)
+        {
+            _GridAuthentication.Visibility = Visibility.Visible;
+            CurrentEmployee = null;
+        }
 
         /// <summary>
         /// Définie le dockpanel pour afficher les castings
@@ -197,6 +202,8 @@ namespace MegaCastingV2.WPF
 
             this.DockPanelView.Children.Add(view);
         }
+
+
 
 
         //#region EventWindows 

@@ -50,7 +50,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <TextBox x:Name="BoxSearchUser" Text="Rechercher..."  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
+        <TextBox x:Name="BoxSearchUser" Text="Rechercher un utilisateur..." GotFocus="RemoveTextBar" LostFocus="RemoveTextBar" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
         <Button x:Name="_ButtonSearchUser" Click="_ButtonSearchUser_Click" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#23B5B5" Height="26" Width="50" BorderThickness="0" Grid.Column="0" Margin="0,38,15,36" >
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Search"  RenderTransformOrigin="0.938,2.125" Height="20" Width="20"/>
@@ -61,7 +61,7 @@
 
         <Button x:Name="_ButtonAddUserType" Click="_ButtonAddUserType_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#23B5B5" Height="35" Width="170" BorderThickness="0" Margin="220,10,10,62" Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="Add"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
+                <materialDesign:PackIcon Kind="Add" RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                 <Label Foreground="White"
                 Content="Ajouter"
                  />

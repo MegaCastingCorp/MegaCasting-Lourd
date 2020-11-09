@@ -24,9 +24,8 @@
             <TextBox x:Name="_PopBoxPassword" Text="Password"/>
             <TextBox x:Name="_PopBoxEmail" Text="Email"/>
             <Label Content="Civilite :"/>
-            <ComboBox x:Name="_PopComboBox" Width="124">
+            <ComboBox x:Name="_PopComboBox" Width="124" ItemsSource="{Binding UserType}">
                 <ComboBoxItem Tag="Homme" Content="{Binding SelectedUserType.LABEL_CIVILITE}"/>
-                <ComboBoxItem Tag="Femme" Content="{Binding SelectedUserType.LABEL_CIVILITE}"/>
             </ComboBox>
         </ListView>
         <Button Grid.Row="2" x:Name="_ButtonAddUser"  HorizontalAlignment="Stretch" Click="_ButtonAddUser_Click" Background="#23B5B5" Height="30" Width="100" BorderThickness="0" Content="Ajouter"></Button>

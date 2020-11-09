@@ -8,13 +8,13 @@
              d:DesignHeight="720" d:DesignWidth="1280">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="380*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="380*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="380*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="230*"/>
@@ -23,11 +23,54 @@
             <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
         <Image Source="../img/MegaCasting_Logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="253" Width="320" Grid.Column="3" Margin="4,0,28.5,0" Grid.RowSpan="2"/>
-        <Label FontFamily="Montserrat" FontSize="20" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bienvenue sur l'applicatif MegaCasting" Height="32" Width="342" Margin="0.5,10,10,44.5"/>
+        <Label FontFamily="Montserrat" FontSize="20" Grid.Row="1" Grid.Column="3" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bienvenue sur l'applicatif MegaCasting" Height="32" Width="402"/>
 
         <Ellipse Grid.Row="2" Margin="4.5,0,0.5,0" Grid.Column="1" StrokeThickness="1" Stroke="Black"/>
         <Ellipse Grid.Row="2" Grid.Column="5" Margin="4.5,0,0.5,0" StrokeThickness="1" Stroke="Black"/>
         <Ellipse Grid.Row="2" Margin="4.5,0,0.5,0" Grid.Column="3" StrokeThickness="1" Stroke="Black"/>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" FontWeight="Bold" FontSize="22" Content="#Nombre d'uilisateur#" FontFamily="Montserrat" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" FontWeight="Bold" FontSize="22"  Content="#Nombre de Castings#" FontFamily="Montserrat" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" FontWeight="Bold" FontSize="22" Content="#Nombre d'organisation#" FontFamily="Montserrat" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        </Grid>
+        <Label FontSize="18" FontFamily="Montserrat" Content="Nombre d'utilisateur" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <Label FontSize="18" FontFamily="Montserrat" Content="Nombre de castings" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <Label FontSize="18" FontFamily="Montserrat" Content="Nombre d'organisation" Grid.Row="3" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
 
     </Grid>
 </UserControl>

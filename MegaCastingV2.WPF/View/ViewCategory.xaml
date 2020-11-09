@@ -47,7 +47,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <TextBox x:Name="BoxSearchCategory" Text="Rechercher une categorie..."  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
+        <TextBox x:Name="BoxSearchCategory" Text="Rechercher une categorie..." GotFocus="RemoveTextBar" LostFocus="AddTextBar" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
         <Button x:Name="_ButtonSearchCategory" Click="_ButtonSearchCategory_Click" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#23B5B5" Height="26" Width="50" BorderThickness="0" Grid.Column="0" Margin="0,38,15,36" >
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Search"  RenderTransformOrigin="0.938,2.125" Height="20" Width="20"/>

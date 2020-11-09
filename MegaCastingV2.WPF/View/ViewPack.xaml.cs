@@ -44,5 +44,20 @@ namespace MegaCastingV2.WPF.View
         {
 
         }
+
+        private void RemoveTextBar(object sender, RoutedEventArgs e)
+        {
+            if (BoxSearchPack.Text == "Rechercher un pack...")
+            {
+                BoxSearchPack.Text = "";
+            }
+        }
+
+        private void AddTextBar(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(BoxSearchPack.Text))
+                BoxSearchPack.Text = "Recherche un pack...";
+
+        }
     }
 }

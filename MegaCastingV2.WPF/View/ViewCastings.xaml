@@ -49,7 +49,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <TextBox x:Name="BoxSearchCastings" Text="Rechercher un casting..." 
+        <TextBox x:Name="BoxSearchCastings" Text="Rechercher un casting..." GotFocus="RemoveTextBar" LostFocus="AddTextBar"
               HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
         <Button x:Name="_ButtonSearchCastings" Click="_ButtonSearchCastings_Click" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#23B5B5" Height="26" Width="50" BorderThickness="0" Grid.Column="0" Margin="0,38,15,36" >
             <StackPanel Orientation="Horizontal">
@@ -114,23 +114,23 @@
 
             <TextBlock VerticalAlignment="Center" Text="Type De Contrat :" Grid.Row="3" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectCastingsTypeContrat" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="132" Text="{Binding SelectedCastingsType.TYPE_CONTRACT}" Margin="80,14,28.5,11"/>
+            <TextBox x:Name="_SelectCastingsTypeContrat" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="111" Text="{Binding SelectedCastingsType.TYPE_CONTRACT}" Margin="125,14,4.5,11"/>
 
             <TextBlock VerticalAlignment="Top" Text="Localisation :" Grid.Row="5" Grid.Column="1" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectCastingsLocalisation" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedCastingsType.LOCALISATION}" Margin="105,12,28.5,12"/>
+            <TextBox x:Name="_SelectCastingsLocalisation" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedCastingsType.ADRESS_ORG}" Margin="105,12,28.5,12"/>
 
             <TextBlock VerticalAlignment="Center" Text="Durée de diffusion :" Grid.Row="4" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectCastingsDureeDiffu" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedCastingsType.DUREE_DIFFUSION}" Margin="105,12,28.5,12"/>
+            <TextBox x:Name="_SelectCastingsDureeDiffu" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="94" Text="{Binding SelectedCastingsType.DUREE_DIFFUSION}" Margin="142,12,4.5,13"/>
 
             <TextBlock VerticalAlignment="Center" Text="Debut de contrat :" Grid.Row="5" FontSize="16" Foreground="Black"/>
 
-            <DatePicker Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding SelectedCastingsType.DATE_DEB_CONTRACT}" Height="28" Width="110" Margin="24.5,0,-44,0"/>
+            <DatePicker HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding SelectedCastingsType.DATE_DEB_CONTRACT}" Height="28" Width="110" Margin="126,10,4.5,12"/>
 
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nombre de postes :" Grid.Row="3" Grid.Column="1" FontSize="16" Foreground="Black" Margin="10.5,14,-60,14" Width="140"/>
 
-            <TextBox x:Name="_SelectCastingsNbPoste" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedCastingsType.DUREE_DIFFUSION}" Margin="105,12,28.5,12"/>
+            <TextBox x:Name="_SelectCastingsNbPoste" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Text="{Binding SelectedCastingsType.NB_POSTE}" Margin="37.5,12,-47,8"/>
 
             <Button x:Name="_ButtonSaveCastings" Click="_ButtonSaveCastings_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">

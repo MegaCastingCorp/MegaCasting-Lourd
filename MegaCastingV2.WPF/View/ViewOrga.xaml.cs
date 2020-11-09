@@ -25,9 +25,5 @@ namespace MegaCastingV2.WPF.View
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

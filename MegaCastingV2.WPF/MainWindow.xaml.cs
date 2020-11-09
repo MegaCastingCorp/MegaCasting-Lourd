@@ -169,7 +169,7 @@ namespace MegaCastingV2.WPF
 
             ViewModelOrga viewModel = new ViewModelOrga(Entities);
 
-            ViewOrga view = new ViewOrga();
+            ViewOrganisation view = new ViewOrganisation();
             view.DataContext = viewModel;
 
             this.DockPanelView.Children.Add(view);

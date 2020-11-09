@@ -59,5 +59,6 @@ namespace MegaCastingV2.WPF.View
                 BoxSearchCategory.Text = "Recherche une categorie...";
 
         }
+
     }
 }

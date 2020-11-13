@@ -203,6 +203,18 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
+        private void ButtonAccueil_Click(object sender, RoutedEventArgs e)
+        {
+            this.DockPanelView.Children.Clear();
+
+            ViewModelMain viewModel = new ViewModelMain(Entities);
+
+            ViewMain view = new ViewMain();
+            view.DataContext = viewModel;
+
+            this.DockPanelView.Children.Add(view);
+        }
+
 
 
 

@@ -74,11 +74,11 @@ namespace MegaCastingV2.WPF.ViewModel
                 .Any(type => type.USERNAME == "Nouvel utilisateur")
                 )
             {
-                USER userType = new USER();
-                userType.USERNAME = "Nouvel utilisateur";
-                this.UserType.Add(userType);
+                USER user = new USER();
+                user.USERNAME = "Username";
+                this.UserType.Add(user);
                 this.SaveChanges();
-                this.SelectedUserType = userType;
+                this.SelectedUserType = user;
             }
         }
 

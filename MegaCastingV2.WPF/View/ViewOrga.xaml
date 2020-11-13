@@ -113,13 +113,13 @@
 
             <TextBox x:Name="_SelectOrgAddress" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="132" Text="{Binding SelectedOrganisation.ADRESS_ORG}" Margin="80,14,28.5,11"/>
 
-            <TextBlock VerticalAlignment="Center" Text="Email :" Grid.Row="4" FontSize="16" Foreground="Black"/>
+            <TextBlock VerticalAlignment="Center" Text="Email :" Grid.Row="4" FontSize="16" Foreground="Black" Margin="0,14,191.5,14"/>
 
-            <TextBox x:Name="_SelectOrgEmail" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedOrganisation.EMAIL_ORG}" Margin="105,12,28.5,12"/>
+            <TextBox x:Name="_SelectOrgEmail" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="163" Text="{Binding SelectedOrganisation.EMAIL_ORG}" Margin="49,12,28.5,12"/>
 
             <TextBlock VerticalAlignment="Center" Text="Telephone :" Grid.Row="5" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectOrgTel" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="145" Text="{Binding SelectedOrganisation.TEL_ORG}"/>
+            <TextBox x:Name="_SelectOrgTel" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Text="{Binding SelectedOrganisation.TEL_ORG}" Margin="0,12,0.5,12"/>
 
             <Button x:Name="_ButtonSaveOrg" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">

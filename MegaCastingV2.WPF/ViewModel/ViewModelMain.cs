@@ -9,13 +9,26 @@ namespace MegaCastingV2.WPF.ViewModel
 {
     public class ViewModelMain : ViewModelBase
     {
-        public ViewModelMain(Entities entities) : base(entities)
+
+        private int _NbUsers;
+
+        public int NbUsers
         {
+            get { return _NbUsers; }
+            set { _NbUsers = value; }
         }
 
-        private void CountUser()
+
+        private int CountUser()
         {
-            this.Entities.USERS.Count();
+            return this.Entities.USERS.Count();
+
         }
+
+        public ViewModelMain(Entities entities) : base(entities)
+        {
+            this.NbUsers = CountUser();
+        }
+
     }
 }

@@ -50,7 +50,7 @@
         </ListBox>
 
         <TextBox x:Name="BoxSearchOrga" Text="Rechercher une organisation..."  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
-        <Button x:Name="_ButtonSearchOrga" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#23B5B5" Height="26" Width="50" BorderThickness="0" Grid.Column="0" Margin="0,38,15,36" >
+        <Button x:Name="_ButtonSearchOrga" Click="_ButtonSearchOrga_Click" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#23B5B5" Height="26" Width="50" BorderThickness="0" Grid.Column="0" Margin="0,38,15,36" >
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Search"  RenderTransformOrigin="0.938,2.125" Height="20" Width="20"/>
                 <Label Foreground="White"
@@ -58,7 +58,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="_ButtonAddOrga" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#23B5B5" Height="35" Width="170" BorderThickness="0" Margin="220,10,10,62" Grid.Column="1">
+        <Button x:Name="_ButtonAddOrga" Click="_ButtonAddOrga_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#23B5B5" Height="35" Width="170" BorderThickness="0" Margin="220,10,10,62" Grid.Column="1">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Add"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                 <Label Foreground="White"
@@ -67,7 +67,7 @@
             </StackPanel>
         </Button>
         <Button x:Name="_ButtonRemoveOrga" 
-                
+                Click="_ButtonRemoveOrga_Click"
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center" 
                 Background="Red" Margin="220,45,10,27" Height="35"
@@ -121,7 +121,7 @@
 
             <TextBox x:Name="_SelectOrgTel" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Text="{Binding SelectedOrganisation.TEL_ORG}" Margin="0,12,0.5,12"/>
 
-            <Button x:Name="_ButtonSaveOrg" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
+            <Button x:Name="_ButtonSaveOrg" Click="_ButtonSaveOrg_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="ContentSaveEdit"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                     <Label Foreground="White"

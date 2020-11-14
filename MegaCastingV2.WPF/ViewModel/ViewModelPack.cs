@@ -55,5 +55,48 @@ namespace MegaCastingV2.WPF.ViewModel
 
         #endregion
 
+        #region Methods
+
+        /// <summary>
+        /// Sauvegarde les modifications
+        /// </summary>
+        public void SaveChanges()
+        {
+            this.Entities.SaveChanges();
+        }
+
+
+        /// <summary>
+        /// Ajoute un nouveau pack
+        /// </summary>
+        public void AddPack()
+        {
+            if (!this.Entities.PACKs
+                .Any(type => type.NAME_PACK == "Nom du pack")
+                )
+            {
+                PACK pack = new PACK();
+                pack.NAME_PACK = "Pack";
+                this.Pack.Add(pack);
+                this.SaveChanges();
+                this.SelectedPack = pack;
+            }
+        }
+
+        /// <summary>
+        /// Supprime le pack selectionné
+        /// </summary>
+        public void RemovePack()
+        {
+            // Vérification si on a le droit de supprimer
+
+            //Suppression de l'élément
+            this.Pack.Remove(SelectedPack);
+            this.SaveChanges();
+        }
+
+
+        #endregion
+
     }
 }

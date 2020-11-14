@@ -81,13 +81,13 @@
     <Compile Include="Converter\BoolToVisibilityConverter.cs" />
     <Compile Include="Converter\ObjectToVisibilityConverter.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
-    <Compile Include="ViewModel\ViewModelCastingsType.cs" />
+    <Compile Include="ViewModel\ViewModelCastings.cs" />
     <Compile Include="ViewModel\ViewModelCategory.cs" />
     <Compile Include="ViewModel\ViewModelLogin.cs" />
     <Compile Include="ViewModel\ViewModelMain.cs" />
     <Compile Include="ViewModel\ViewModelOrga.cs" />
     <Compile Include="ViewModel\ViewModelPack.cs" />
-    <Compile Include="ViewModel\ViewModelUserType.cs" />
+    <Compile Include="ViewModel\ViewModelUser.cs" />
     <Compile Include="ViewModel\ViewModelMainWindow.cs" />
     <Compile Include="View\Popup\PopupAddUser.xaml.cs">
       <DependentUpon>PopupAddUser.xaml</DependentUpon>

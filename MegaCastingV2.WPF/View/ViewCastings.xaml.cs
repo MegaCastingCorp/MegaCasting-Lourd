@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegaCastingV2.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonSaveCastings_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelCastings)this.DataContext).SaveChanges();
         }
 
         private void _ButtonAddCastings_Click(object sender, RoutedEventArgs e)
@@ -42,7 +43,7 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonRemoveCastings_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelCategory)this.DataContext).RemoveCategory();
         }
 
         private void RemoveTextBar(object sender, RoutedEventArgs e)

@@ -37,12 +37,12 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonRemoveUserType_Click(object sender, RoutedEventArgs e)
         {
-            ((ViewModelUserType)this.DataContext).DeleteUserType();
+            ((ViewModelUser)this.DataContext).DeleteUserType();
         }
 
         private void _ButtonSaveUser_Click(object sender, RoutedEventArgs e)
         {
-            ((ViewModelUserType)this.DataContext).SaveChanges();
+            ((ViewModelUser)this.DataContext).SaveChanges();
         }
 
         private void _ButtonSearchUser_Click(object sender, RoutedEventArgs e)

@@ -54,5 +54,48 @@ namespace MegaCastingV2.WPF.ViewModel
 
         #endregion
 
+        #region Methods
+
+        /// <summary>
+        /// Sauvegarde les modifications
+        /// </summary>
+        public void SaveChanges()
+        {
+            this.Entities.SaveChanges();
+        }
+
+
+        /// <summary>
+        /// Ajoute une nouvelle Organisation
+        /// </summary>
+        public void AddOrganisation()
+        {
+            if (!this.Entities.ORGANISATIONs
+                .Any(type => type.NAME_ORG == "Nom orga")
+                )
+            {
+                ORGANISATION orga = new ORGANISATION();
+                orga.NAME_ORG = "Organisation";
+                this.Organisation.Add(orga);
+                this.SaveChanges();
+                this.SelectedOrganisation = orga;
+            }
+        }
+
+        /// <summary>
+        /// Supprime l'Organisation selectionnée
+        /// </summary>
+        public void RemoveOrga()
+        {
+            // Vérification si on a le droit de supprimer
+
+            //Suppression de l'élément
+            this.Organisation.Remove(SelectedOrganisation);
+            this.SaveChanges();
+        }
+
+
+        #endregion
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegaCastingV2.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,12 +33,12 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonRemovePack_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelPack)this.DataContext).RemovePack();
         }
 
         private void _ButtonSavePack_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelPack)this.DataContext).SaveChanges();
         }
 
         private void _ButtonSearchPack_Click(object sender, RoutedEventArgs e)

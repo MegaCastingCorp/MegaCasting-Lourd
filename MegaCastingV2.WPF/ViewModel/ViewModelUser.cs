@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MegaCastingV2.WPF.ViewModel
 {
-    public class ViewModelUserType : ViewModelBase 
+    public class ViewModelUser : ViewModelBase 
     {
         #region Atributes
 
@@ -46,7 +46,7 @@ namespace MegaCastingV2.WPF.ViewModel
         #endregion
 
         #region Constructors
-        public ViewModelUserType(Entities entities) : base(entities)
+        public ViewModelUser(Entities entities) : base(entities)
         {
             this.Entities.USERS.ToList();
             this.UserType = this.Entities.USERS.Local;

@@ -57,5 +57,47 @@ namespace MegaCastingV2.WPF.ViewModel
 
         #endregion
 
+        #region Methods
+        
+        /// <summary>
+        /// Sauvegarde les modifications
+        /// </summary>
+        public void SaveChanges()
+        {
+            this.Entities.SaveChanges();
+        }
+
+
+        /// <summary>
+        /// Ajoute une nouvelle categorie
+        /// </summary>
+        public void AddCategory()
+        {
+            if (!this.Entities.CATEGORIES
+                .Any(type => type.CAT_LABEL == "Nom de la categorie")
+                )
+            {
+                CATEGORy category = new CATEGORy();
+                category.CAT_LABEL = "categorie";
+                this.Category.Add(category);
+                this.SaveChanges();
+                this.SelectedCategory = category;
+            }
+        }
+
+        /// <summary>
+        /// Supprime la categorie selectionnée
+        /// </summary>
+        public void RemoveCategory()
+        {
+            // Vérification si on a le droit de supprimer
+
+            //Suppression de l'élément
+            this.Category.Remove(SelectedCategory);
+            this.SaveChanges();
+        }
+
+        #endregion
+
     }
 }

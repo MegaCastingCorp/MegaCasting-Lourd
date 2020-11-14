@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MegaCastingV2.WPF.ViewModel
 {
-    public class ViewModelCastingsType : ViewModelBase
+    public class ViewModelCastings : ViewModelBase
     {
         #region Attributes
 
@@ -49,12 +49,53 @@ namespace MegaCastingV2.WPF.ViewModel
 
 
         #region Constructor
-        public ViewModelCastingsType(Entities entities) : base(entities)
+        public ViewModelCastings(Entities entities) : base(entities)
         {
             this.Entities.CASTINGS.ToList();
             this.CastingsType = this.Entities.CASTINGS.Local;
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Sauvegarde les modifications
+        /// </summary>
+        public void SaveChanges()
+        {
+            this.Entities.SaveChanges();
+        }
+
+
+        /// <summary>
+        /// Ajoute un nouveau castings
+        /// </summary>
+        public void AddCastings()
+        {
+            if (!this.Entities.CASTINGS
+                .Any(type => type.LABEL == "Nouveau casting")
+                )
+            {
+                CASTING castings = new CASTING();
+                castings.LABEL = "Casting";
+                this.CastingsType.Add(castings);
+                this.SaveChanges();
+                this.SelectedCastingsType = castings;
+            }
+        }
+
+        /// <summary>
+        /// Supprime le castings sélectionné
+        /// </summary>
+        public void DeleteCastings()
+        {
+            // Vérification si on a le droit de supprimer
+
+            //Suppression de l'élément
+            this.CastingsType.Remove(SelectedCastingsType);
+            this.SaveChanges();
+        }
         #endregion
 
     }

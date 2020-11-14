@@ -97,7 +97,7 @@ namespace MegaCastingV2.WPF
         {
             this.DockPanelView.Children.Clear();
 
-            ViewModelUserType viewModel = new ViewModelUserType(Entities);
+            ViewModelUser viewModel = new ViewModelUser(Entities);
 
             ViewUser view = new ViewUser();
             view.DataContext = viewModel;
@@ -146,7 +146,7 @@ namespace MegaCastingV2.WPF
         {
             this.DockPanelView.Children.Clear();
 
-            ViewModelCastingsType viewModel = new ViewModelCastingsType(Entities);
+            ViewModelCastings viewModel = new ViewModelCastings(Entities);
 
             ViewCastings view = new ViewCastings();
             view.DataContext = viewModel;
@@ -214,7 +214,6 @@ namespace MegaCastingV2.WPF
 
             this.DockPanelView.Children.Add(view);
         }
-
 
 
 

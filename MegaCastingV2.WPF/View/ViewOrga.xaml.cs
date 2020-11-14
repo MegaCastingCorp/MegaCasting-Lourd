@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegaCastingV2.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,5 +26,23 @@ namespace MegaCastingV2.WPF.View
             InitializeComponent();
         }
 
+        private void _ButtonSearchOrga_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _ButtonAddOrga_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void _ButtonRemoveOrga_Click(object sender, RoutedEventArgs e)
+        {
+            ((ViewModelOrga)this.DataContext).RemoveOrga();
+        }
+
+        private void _ButtonSaveOrg_Click(object sender, RoutedEventArgs e)
+        {
+            ((ViewModelOrga)this.DataContext).SaveChanges();
+        }
     }
 }

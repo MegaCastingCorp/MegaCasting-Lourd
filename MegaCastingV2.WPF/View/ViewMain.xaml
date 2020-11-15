@@ -23,7 +23,7 @@
             <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Image Source="../img/MegaCasting_Logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="253" Width="320" Grid.Column="3" Margin="4,0,28.5,0" Grid.RowSpan="2"/>
-        <Label FontFamily="Montserrat" FontSize="17" Grid.Row="1" Grid.Column="3" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bienvenue sur l'applicatif MegaCasting" Height="32" Width="381" Margin="10,27.5,21,28.5"/>
+        <Label FontFamily="Montserrat" FontSize="17" Grid.Row="1" Grid.Column="3" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bienvenue sur l'applicatif MegaCasting" Height="32" Width="344" Margin="34,29,34,27"/>
 
         <Ellipse Grid.Row="2" Margin="4.5,0,0.5,0" Grid.Column="1" StrokeThickness="1" Stroke="Black"/>
         <Ellipse Grid.Row="2" Grid.Column="5" Margin="4.5,0,0.5,0" StrokeThickness="1" Stroke="Black"/>
@@ -39,7 +39,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="1" FontWeight="Bold" FontSize="90" Content="{Binding NbUsers}" FontFamily="Montserrat" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            <Label Grid.Row="1" FontWeight="Bold" FontSize="90" Content="96" FontFamily="Montserrat" VerticalAlignment="Center" HorizontalAlignment="Center" Height="100" Margin="150,1,150,0"></Label>
 
         </Grid>
 

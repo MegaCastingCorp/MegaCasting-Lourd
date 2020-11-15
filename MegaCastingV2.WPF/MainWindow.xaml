@@ -39,10 +39,8 @@
             <Rectangle Fill="White" HorizontalAlignment="Left" Height="99" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="250"/>
             <Image Source="/Img/MegaCasting_Logo.png"/>
 
-            <Button x:Name="ButtonAccueil" Click="ButtonAccueil_Click" Content="Accueil">
-            </Button>
-
-            <Button 
+            
+                <Button 
         Grid.Row="1" 
         Background="#23B5B5"
         VerticalAlignment="Center"

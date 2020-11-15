@@ -9,22 +9,34 @@ namespace MegaCastingV2.WPF.ViewModel
 {
     public class ViewModelMain : ViewModelBase
     {
-
+        /// <summary>
+        /// Nombre d'utilisateur
+        /// </summary>
         private int _NbUsers;
 
+        /// <summary>
+        /// Otient ou défini le nombre d'utilisateur
+        /// </summary>
         public int NbUsers
         {
             get { return _NbUsers; }
             set { _NbUsers = value; }
         }
 
-
+        /// <summary>
+        /// Compte les utilisateurs
+        /// </summary>
+        /// <returns></returns>
         private int CountUser()
         {
             return this.Entities.USERS.Count();
 
         }
 
+        /// <summary>
+        /// Assocation de la variable pour compter à la fonction
+        /// </summary>
+        /// <param name="entities"></param>
         public ViewModelMain(Entities entities) : base(entities)
         {
             this.NbUsers = CountUser();

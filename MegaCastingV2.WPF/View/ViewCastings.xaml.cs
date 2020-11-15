@@ -43,7 +43,7 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonRemoveCastings_Click(object sender, RoutedEventArgs e)
         {
-            ((ViewModelCategory)this.DataContext).RemoveCategory();
+            ((ViewModelCastings)this.DataContext).DeleteCastings();
         }
 
         private void RemoveTextBar(object sender, RoutedEventArgs e)

@@ -34,6 +34,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Rectangle Fill="White" HorizontalAlignment="Left" Height="99" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="250"/>
@@ -132,7 +133,24 @@
             </Button>
 
             <Button 
-        Grid.Row="6"
+        Grid.Row="6" 
+        Background="#23B5B5"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Name="ButtonStats"
+        Click="ButtonStats_Click"
+        Width="230"
+        Height="40"
+                BorderThickness="0">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Graph" Height="28" Width="20"/>
+                    <Label Foreground="White"
+                 Content="Statistiques"></Label>
+                </StackPanel>
+            </Button>
+
+            <Button 
+        Grid.Row="7"
         Grid.Column="2"
         Name="ButtonDisconnect"
         Click="ButtonDisconnect_Click"

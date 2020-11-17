@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\tete-\Desktop\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\
 MegaCastingV2.WPF
 none
 false
 DEBUG;TRACE
-C:\Users\tete-\Desktop\MegaCasting-Lourd\MegaCastingV2.WPF\App.xaml
-91186407531
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\App.xaml
+1054742559
 
-24-1535758323
-21-570060170
-MainWindow.xaml;Style\Style.xaml;View\Popup\PopupAddUser.xaml;View\ViewCastings.xaml;View\ViewCategory.xaml;View\ViewOrga.xaml;View\ViewPack.xaml;View\ViewUser.xaml;View\ViewMain.xaml;
+26-641491229
+211433133690
+MainWindow.xaml;Style\Style.xaml;View\Popup\PopupAddUser.xaml;View\ViewCastings.xaml;View\ViewCategory.xaml;View\ViewOrga.xaml;View\ViewPack.xaml;View\ViewStat.xaml;View\ViewUser.xaml;View\ViewMain.xaml;
 
 False
 

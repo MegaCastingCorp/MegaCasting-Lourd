@@ -215,6 +215,16 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
+        private void ButtonStatistiques_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonStats_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
 
         //#region EventWindows 

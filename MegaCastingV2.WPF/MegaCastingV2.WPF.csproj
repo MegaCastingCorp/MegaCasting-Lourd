@@ -87,6 +87,7 @@
     <Compile Include="ViewModel\ViewModelMain.cs" />
     <Compile Include="ViewModel\ViewModelOrga.cs" />
     <Compile Include="ViewModel\ViewModelPack.cs" />
+    <Compile Include="ViewModel\ViewModelStat.cs" />
     <Compile Include="ViewModel\ViewModelUser.cs" />
     <Compile Include="ViewModel\ViewModelMainWindow.cs" />
     <Compile Include="View\Popup\PopupAddUser.xaml.cs">
@@ -103,6 +104,9 @@
     </Compile>
     <Compile Include="View\ViewPack.xaml.cs">
       <DependentUpon>ViewPack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewStat.xaml.cs">
+      <DependentUpon>ViewStat.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ViewUser.xaml.cs">
       <DependentUpon>ViewUser.xaml</DependentUpon>
@@ -143,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ViewPack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewStat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

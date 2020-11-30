@@ -39,7 +39,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="1" FontWeight="Bold" FontSize="90" Content="96" FontFamily="Montserrat" VerticalAlignment="Center" HorizontalAlignment="Center" Height="100" Margin="150,1,150,0"></Label>
+            <Label Grid.Row="1" FontWeight="Bold" FontSize="90" Content="{Binding NbUsers}" FontFamily="Montserrat" VerticalAlignment="Center" HorizontalAlignment="Center" Height="100" Margin="150,1,150,0"></Label>
 
         </Grid>
 

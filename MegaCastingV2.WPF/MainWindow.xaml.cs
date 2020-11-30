@@ -83,6 +83,10 @@ namespace MegaCastingV2.WPF
 
             this.Entities.USERS.FirstOrDefault();
 
+
+            ViewModelMain viewModel = new ViewModelMain(Entities);
+
+            this.DockPanelView.Children.Add(viewModel);
         }
 
         #endregion

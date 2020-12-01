@@ -84,9 +84,9 @@ namespace MegaCastingV2.WPF
             this.Entities.USERS.FirstOrDefault();
 
 
-            ViewModelMain viewModel = new ViewModelMain(Entities);
+            //ViewModelMain viewModel = new ViewModelMain(Entities);
 
-            this.DockPanelView.Children.Add(viewModel);
+            //this.DockPanelView.Children.Add(viewModel);
         }
 
         #endregion
@@ -219,14 +219,16 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
-        private void ButtonStatistiques_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ButtonStats_Click(object sender, RoutedEventArgs e)
         {
+            this.DockPanelView.Children.Clear();
 
+            ViewModelStat viewModel = new ViewModelStat(Entities);
+
+            ViewStat view = new ViewStat();
+            //view.DataContext = viewModel;
+
+            this.DockPanelView.Children.Add(view);
         }
 
 

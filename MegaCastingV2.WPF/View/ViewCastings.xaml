@@ -116,7 +116,7 @@
 
             <TextBox x:Name="_SelectCastingsTypeContrat" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="111" Text="{Binding SelectedCastingsType.TYPE_CONTRACT}" Margin="125,14,4.5,11"/>
 
-            <TextBlock VerticalAlignment="Top" Text="Localisation :" Grid.Row="5" Grid.Column="1" FontSize="16" Foreground="Black"/>
+            <TextBlock VerticalAlignment="Top" Text="Localisation :" Grid.Row="5" Grid.Column="1" FontSize="16" Foreground="Black" Margin="0.5,16,-1,0"/>
 
             <TextBox x:Name="_SelectCastingsLocalisation" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedCastingsType.ADRESS_ORG}" Margin="105,12,28.5,12"/>
 

@@ -276,3 +276,11 @@ C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\Vie
 C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewOrga.baml
 C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewPack.baml
 C:\Users\Matéo\Documents\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUser.baml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewStat.g.cs
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\LiveCharts.dll
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\LiveCharts.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\LiveCharts.xml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewStat.baml

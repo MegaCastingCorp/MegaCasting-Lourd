@@ -4,16 +4,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MegaCastingV2.WPF.View"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="100px"/>
+            <RowDefinition Height="50px"/>
         </Grid.RowDefinitions>
+        <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Name="Graph">
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Nombre de castings" Labels="{Binding YFormatter}" Foreground="LightBlue" MinValue="0" MaxValue="{Binding MaxYValue}" FontSize="17">
+                    <lvc:Axis.Separator >
+                        <lvc:Separator Step="1"></lvc:Separator>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis Title="Mois" Labels="{Binding Months}" LabelsRotation="25" Foreground="LightBlue" FontSize="17">
+                    <lvc:Axis.Separator >
+                        <lvc:Separator Step="1"></lvc:Separator>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+        </lvc:CartesianChart>
+
     </Grid>
 </UserControl>

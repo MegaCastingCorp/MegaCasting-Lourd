@@ -15,12 +15,12 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Collection de Category
         /// </summary>
-        private ObservableCollection<CATEGORy> _Category;
+        private ObservableCollection<Category> _Category;
 
         /// <summary>
         /// Selectionne une cateogrie
         /// </summary>
-        private CATEGORy _SelectedCategory;
+        private Category _SelectedCategory;
 
         #endregion
 
@@ -29,7 +29,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou defini la category selectionné
         /// </summary>
-        public CATEGORy SelectedCategory
+        public Category SelectedCategory
         {
             get { return _SelectedCategory; }
             set { _SelectedCategory = value; }
@@ -38,7 +38,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou defini la collection de category
         /// </summary>
-        public ObservableCollection<CATEGORy> Category
+        public ObservableCollection<Category> Category
         {
             get { return _Category; }
             set { _Category = value; }
@@ -51,8 +51,8 @@ namespace MegaCastingV2.WPF.ViewModel
 
         public ViewModelCategory(Entities entities) : base(entities)
         {
-            this.Entities.CATEGORIES.ToList();
-            this.Category = this.Entities.CATEGORIES.Local;
+            this.Entities.Categories.ToList();
+            this.Category = this.Entities.Categories.Local;
         }
 
         #endregion
@@ -73,12 +73,12 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void AddCategory()
         {
-            if (!this.Entities.CATEGORIES
-                .Any(type => type.CAT_LABEL == "Nom de la categorie")
+            if (!this.Entities.Categories
+                .Any(type => type.Label == "Nom de la categorie")
                 )
             {
-                CATEGORy category = new CATEGORy();
-                category.CAT_LABEL = "categorie";
+                Category category = new Category();
+                category.Label = "Nom";
                 this.Category.Add(category);
                 this.SaveChanges();
                 this.SelectedCategory = category;

@@ -12,18 +12,21 @@ namespace MegaCastingV2.DBLib
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class Gender
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public Gender()
         {
-            this.Offers = new HashSet<Offer>();
+            this.Employees = new HashSet<Employee>();
+            this.Users = new HashSet<User>();
         }
     
         public long Identifier { get; set; }
         public string Label { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Offer> Offers { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

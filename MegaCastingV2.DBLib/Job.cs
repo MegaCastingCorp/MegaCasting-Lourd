@@ -12,21 +12,20 @@ namespace MegaCastingV2.DBLib
     using System;
     using System.Collections.Generic;
     
-    public partial class CIVILITE
+    public partial class Job
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CIVILITE()
+        public Job()
         {
-            this.EMPLOYEEs = new HashSet<EMPLOYEE>();
-            this.USERS = new HashSet<USER>();
+            this.Offers = new HashSet<Offer>();
         }
     
-        public int ID_CIVILITE { get; set; }
-        public string LABEL_CIVILITE { get; set; }
+        public long Identifier { get; set; }
+        public string Name { get; set; }
+        public long IdentifierJobType { get; set; }
     
+        public virtual JobType JobType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EMPLOYEE> EMPLOYEEs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USER> USERS { get; set; }
+        public virtual ICollection<Offer> Offers { get; set; }
     }
 }

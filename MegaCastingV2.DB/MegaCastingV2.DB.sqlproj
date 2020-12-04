@@ -56,24 +56,22 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Script" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
-    <Folder Include="Script" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\USERS.sql" />
-    <Build Include="dbo\Tables\POSTULER.sql" />
-    <Build Include="dbo\Tables\PACK.sql" />
-    <Build Include="dbo\Tables\ORGANISATION.sql" />
-    <Build Include="dbo\Tables\FILTRES.sql" />
-    <Build Include="dbo\Tables\CIVILITE.sql" />
-    <Build Include="dbo\Tables\CATEGORIES.sql" />
-    <Build Include="dbo\Tables\CASTINGS.sql" />
-    <Build Include="dbo\Tables\APPARTIENT_CASTING.sql" />
-    <Build Include="dbo\Tables\APPARTENIR_FILTRE.sql" />
-    <Build Include="dbo\Tables\EMPLOYEE.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Script\InsertData.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\Producer.sql" />
+    <Build Include="dbo\Tables\Pack.sql" />
+    <Build Include="dbo\Tables\Offer.sql" />
+    <Build Include="dbo\Tables\JobType.sql" />
+    <Build Include="dbo\Tables\Job.sql" />
+    <Build Include="dbo\Tables\Gender.sql" />
+    <Build Include="dbo\Tables\Filtre.sql" />
+    <Build Include="dbo\Tables\Employee.sql" />
+    <Build Include="dbo\Tables\ContractType.sql" />
+    <Build Include="dbo\Tables\Category.sql" />
+    <Build Include="dbo\Tables\Apply.sql" />
   </ItemGroup>
 </Project>

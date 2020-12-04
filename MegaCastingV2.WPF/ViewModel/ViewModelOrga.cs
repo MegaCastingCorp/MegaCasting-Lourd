@@ -14,12 +14,12 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Collection des organisations
         /// </summary>
-        private ObservableCollection<ORGANISATION> _Organisation;
+        private ObservableCollection<Producer> _Producer;
 
         /// <summary>
         /// Selectionne l'organisation
         /// </summary>
-        private ORGANISATION _SelectedOrganisation;
+        private Producer _SelectedProducer;
 
         #endregion
 
@@ -28,19 +28,19 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou defini la collection de l'organisation
         /// </summary>
-        public ObservableCollection<ORGANISATION> Organisation
+        public ObservableCollection<Producer> Producer
         {
-            get { return _Organisation; }
-            set { _Organisation = value; }
+            get { return _Producer; }
+            set { _Producer = value; }
         }
 
         /// <summary>
         /// Obtient ou defini la selection de l'organisation
         /// </summary>
-        public ORGANISATION SelectedOrganisation
+        public Producer SelectedProducer
         {
-            get { return _SelectedOrganisation; }
-            set { _SelectedOrganisation = value; }
+            get { return _SelectedProducer; }
+            set { _SelectedProducer = value; }
         }
 
         #endregion
@@ -48,8 +48,8 @@ namespace MegaCastingV2.WPF.ViewModel
         #region Constructor
         public ViewModelOrga(Entities entities) : base(entities)
         {
-            this.Entities.ORGANISATIONs.ToList();
-            this.Organisation = this.Entities.ORGANISATIONs.Local;
+            this.Entities.Producers.ToList();
+            this.Producer = this.Entities.Producers.Local;
         }
 
         #endregion
@@ -70,15 +70,15 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void AddOrganisation()
         {
-            if (!this.Entities.ORGANISATIONs
-                .Any(type => type.NAME_ORG == "Nom orga")
+            if (!this.Entities.Producers
+                .Any(type => type.Name == "Nom orga")
                 )
             {
-                ORGANISATION orga = new ORGANISATION();
-                orga.NAME_ORG = "Organisation";
-                this.Organisation.Add(orga);
+                Producer orga = new Producer();
+                orga.Name = "Organisation";
+                this.Producer.Add(orga);
                 this.SaveChanges();
-                this.SelectedOrganisation = orga;
+                this.SelectedProducer = orga;
             }
         }
 
@@ -90,7 +90,7 @@ namespace MegaCastingV2.WPF.ViewModel
             // Vérification si on a le droit de supprimer
 
             //Suppression de l'élément
-            this.Organisation.Remove(SelectedOrganisation);
+            this.Producer.Remove(SelectedProducer);
             this.SaveChanges();
         }
 

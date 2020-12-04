@@ -35,6 +35,8 @@ namespace MegaCastingV2.WPF.ViewModel
 
         #endregion
 
+        #region Constructor
+
         /// <summary>
         /// Constructeur du modèle-vue de la fenêtre principale
         /// </summary>
@@ -44,5 +46,6 @@ namespace MegaCastingV2.WPF.ViewModel
             this.Entities = entities;
         }
 
+        #endregion
     }
 }

@@ -12,16 +12,16 @@ namespace MegaCastingV2.DBLib
     using System;
     using System.Collections.Generic;
     
-    public partial class EMPLOYEE
+    public partial class Employee
     {
-        public int ID_EMPLOYEE { get; set; }
-        public string EMPLOYEE_FIRSTNAME { get; set; }
-        public string EMPLOYEE_LASTNAME { get; set; }
-        public string EMPLOYEE_USERNAME { get; set; }
-        public string EMPLOYEE_PASSWORD { get; set; }
-        public bool EST_ADMIN { get; set; }
-        public int ID_CIVILITE { get; set; }
+        public long Identifier { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public bool Admin { get; set; }
+        public long IdentifierGender { get; set; }
     
-        public virtual CIVILITE CIVILITE { get; set; }
+        public virtual Gender Gender { get; set; }
     }
 }

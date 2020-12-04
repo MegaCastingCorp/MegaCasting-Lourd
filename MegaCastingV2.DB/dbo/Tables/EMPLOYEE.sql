@@ -1,12 +1,12 @@
-﻿CREATE TABLE [dbo].[EMPLOYEE] (
-    [ID_EMPLOYEE]        INT           IDENTITY (1, 1) NOT NULL,
-    [EMPLOYEE_FIRSTNAME] VARCHAR (100) NOT NULL,
-    [EMPLOYEE_LASTNAME]  VARCHAR (100) NOT NULL,
-    [EMPLOYEE_USERNAME]  VARCHAR (150) NOT NULL,
-    [EMPLOYEE_PASSWORD]  VARCHAR (175) NOT NULL,
-    [EST_ADMIN]          BIT           NOT NULL,
-    [ID_CIVILITE]        INT           NOT NULL,
-    CONSTRAINT [EMPLOYEE_PK] PRIMARY KEY CLUSTERED ([ID_EMPLOYEE] ASC),
-    CONSTRAINT [EMPLOYEE_CIVILITE_FK] FOREIGN KEY ([ID_CIVILITE]) REFERENCES [dbo].[CIVILITE] ([ID_CIVILITE])
+﻿CREATE TABLE [dbo].[Employee] (
+    [Identifier]       BIGINT         IDENTITY (1, 1) NOT NULL,
+    [Firstname]        NVARCHAR (150) NULL,
+    [Lastname]         NVARCHAR (150) NULL,
+    [Username]         NVARCHAR (150) NOT NULL,
+    [Password]         NVARCHAR (200) NOT NULL,
+    [Admin]            BIT            NOT NULL,
+    [IdentifierGender] BIGINT         NOT NULL,
+    CONSTRAINT [PK_Employee] PRIMARY KEY CLUSTERED ([Identifier] ASC),
+    CONSTRAINT [FK_Employee_Gender] FOREIGN KEY ([IdentifierGender]) REFERENCES [dbo].[Gender] ([Identifier])
 );
 

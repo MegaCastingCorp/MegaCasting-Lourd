@@ -53,19 +53,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CASTING.cs">
+    <Compile Include="Apply.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CATEGORy.cs">
+    <Compile Include="Category.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CIVILITE.cs">
+    <Compile Include="ContractType.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EMPLOYEE.cs">
+    <Compile Include="Employee.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="FILTRE.cs">
+    <Compile Include="Filtre.cs">
+      <DependentUpon>MegaCastingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>MegaCastingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Job.cs">
+      <DependentUpon>MegaCastingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobType.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MegaCastingModel.Context.cs">
@@ -83,15 +92,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MegaCastingModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ORGANISATION.cs">
+    <Compile Include="Offer.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="PACK.cs">
+    <Compile Include="Pack.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Partial\USER.cs" />
+    <Compile Include="Producer.cs">
+      <DependentUpon>MegaCastingModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="USER.cs">
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MegaCastingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
       <DependentUpon>MegaCastingModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>

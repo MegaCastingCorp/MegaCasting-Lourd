@@ -4,22 +4,31 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="76a0c2588fe645cc89af3566e700127c" Name="Diagram1" ZoomLevel="114">
-        <EntityTypeShape EntityType="MegaCastingsModel.CASTING" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaCastingsModel.CATEGORy" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaCastingsModel.CIVILITE" Width="1.5" PointX="3.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaCastingsModel.EMPLOYEE" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaCastingsModel.FILTRE" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaCastingsModel.ORGANISATION" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaCastingsModel.PACK" Width="1.5" PointX="3.75" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MegaCastingsModel.USER" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
-        <AssociationConnector Association="MegaCastingsModel.ORGANISATION_CASTINGS_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaCastingsModel.EMPLOYEE_CIVILITE_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaCastingsModel.USERS_CIVILITE_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaCastingsModel.ORGANISATION_PACK0_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaCastingsModel.APPARTENIR_FILTRE" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaCastingsModel.APPARTIENT_CASTING" ManuallyRouted="false" />
-        <AssociationConnector Association="MegaCastingsModel.POSTULER" ManuallyRouted="false" />
+      <Diagram DiagramId="1109bbb011d5497c9f4762d7f3b2ba6b" Name="Diagram1">
+        <EntityTypeShape EntityType="MegaCastingsModel.Apply" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Category" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.ContractType" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Employee" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Filtre" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Gender" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Job" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.JobType" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Offer" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Pack" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.Producer" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MegaCastingsModel.User" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Apply_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Offer_Apply" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Offer_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Offer_ContractType" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Employee_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Offer_Filtre" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Users_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Job_JobType" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Offer_Job" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Offer_Producer" ManuallyRouted="false" />
+        <AssociationConnector Association="MegaCastingsModel.FK_Producer_Pack" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

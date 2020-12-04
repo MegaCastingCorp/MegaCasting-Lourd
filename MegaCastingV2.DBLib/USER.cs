@@ -12,26 +12,26 @@ namespace MegaCastingV2.DBLib
     using System;
     using System.Collections.Generic;
     
-    public partial class USER
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public USER()
+        public User()
         {
-            this.CASTINGS = new HashSet<CASTING>();
+            this.Applies = new HashSet<Apply>();
         }
     
-        public int ID_USER { get; set; }
-        public string USER_FIRSTNAME { get; set; }
-        public string USER_LASTNAME { get; set; }
-        public string USERNAME { get; set; }
-        public string USER_PASSWORD { get; set; }
-        public string USER_MAIL { get; set; }
-        public System.DateTime USER_NAISSANCE { get; set; }
-        public string IMG_PROFIL { get; set; }
-        public int ID_CIVILITE { get; set; }
+        public long Identifier { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public System.DateTime BirthDate { get; set; }
+        public string Avatar { get; set; }
+        public long IdentifierGender { get; set; }
     
-        public virtual CIVILITE CIVILITE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CASTING> CASTINGS { get; set; }
+        public virtual ICollection<Apply> Applies { get; set; }
+        public virtual Gender Gender { get; set; }
     }
 }

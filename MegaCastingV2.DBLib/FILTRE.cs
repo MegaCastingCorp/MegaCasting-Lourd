@@ -12,19 +12,18 @@ namespace MegaCastingV2.DBLib
     using System;
     using System.Collections.Generic;
     
-    public partial class FILTRE
+    public partial class Filtre
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FILTRE()
+        public Filtre()
         {
-            this.CASTINGS = new HashSet<CASTING>();
+            this.Offers = new HashSet<Offer>();
         }
     
-        public int ID_FILTRE { get; set; }
-        public string CAT_LABEL { get; set; }
-        public string LABEL_FILTRE { get; set; }
+        public long Identifier { get; set; }
+        public string Label { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CASTING> CASTINGS { get; set; }
+        public virtual ICollection<Offer> Offers { get; set; }
     }
 }

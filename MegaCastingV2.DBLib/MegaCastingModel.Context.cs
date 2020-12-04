@@ -25,13 +25,18 @@ namespace MegaCastingV2.DBLib
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CASTING> CASTINGS { get; set; }
-        public virtual DbSet<CATEGORy> CATEGORIES { get; set; }
-        public virtual DbSet<CIVILITE> CIVILITEs { get; set; }
-        public virtual DbSet<EMPLOYEE> EMPLOYEEs { get; set; }
-        public virtual DbSet<FILTRE> FILTRES { get; set; }
-        public virtual DbSet<ORGANISATION> ORGANISATIONs { get; set; }
-        public virtual DbSet<PACK> PACKs { get; set; }
-        public virtual DbSet<USER> USERS { get; set; }
+        public virtual DbSet<Apply> Applies { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<ContractType> ContractTypes { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Filtre> Filtres { get; set; }
+        public virtual DbSet<Gender> Genders { get; set; }
+        public virtual DbSet<Job> Jobs { get; set; }
+        public virtual DbSet<JobType> JobTypes { get; set; }
+        public virtual DbSet<Offer> Offers { get; set; }
+        public virtual DbSet<Pack> Packs { get; set; }
+        public virtual DbSet<Producer> Producers { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

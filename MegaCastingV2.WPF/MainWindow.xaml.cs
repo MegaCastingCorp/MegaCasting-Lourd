@@ -36,7 +36,7 @@ namespace MegaCastingV2.WPF
         /// </summary>
         private ViewModelMainWindow _ViewModel;
 
-        private EMPLOYEE _CurrentEmployee;
+        private Employee _CurrentEmployee;
 
 
         #endregion
@@ -61,7 +61,7 @@ namespace MegaCastingV2.WPF
             set { _ViewModel = value; }
         }
 
-        public EMPLOYEE CurrentEmployee
+        public Employee CurrentEmployee
         {
             get { return _CurrentEmployee; }
             set { _CurrentEmployee = value; }
@@ -81,7 +81,7 @@ namespace MegaCastingV2.WPF
 
             this.Entities = new Entities();
 
-            this.Entities.USERS.FirstOrDefault();
+            this.Entities.Users.FirstOrDefault();
 
 
             //ViewModelMain viewModel = new ViewModelMain(Entities);
@@ -119,8 +119,8 @@ namespace MegaCastingV2.WPF
         private void _ButtonConnect_Click(object sender, RoutedEventArgs e)
         {
             
-            this.CurrentEmployee = this.Entities.EMPLOYEEs
-                .FirstOrDefault(employee => employee.EMPLOYEE_USERNAME == _TextBoxId.Text && employee.EMPLOYEE_PASSWORD == _TextBoxPassWord.Password);
+            this.CurrentEmployee = this.Entities.Employees
+                .FirstOrDefault(employee => employee.Username == _TextBoxId.Text && employee.Password == _TextBoxPassWord.Password);
 
             if (CurrentEmployee == null)
             {

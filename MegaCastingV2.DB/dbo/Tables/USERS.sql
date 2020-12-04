@@ -1,16 +1,15 @@
-﻿CREATE TABLE [dbo].[USERS] (
-    [ID_USER]        INT             NOT NULL,
-    [USER_FIRSTNAME] VARCHAR (100)   NULL,
-    [USER_LASTNAME]  VARCHAR (100)   NOT NULL,
-    [USERNAME]       VARCHAR (50)    NULL,
-    [USER_PASSWORD]  VARCHAR (100)   NULL,
-    [USER_MAIL]      VARCHAR (1000)  NOT NULL,
-    [USER_NAISSANCE] DATE            NOT NULL,
-    [IMG_PROFIL]     NVARCHAR (2000) NULL,
-    [ID_CIVILITE]    INT             NOT NULL,
-    CONSTRAINT [USERS_PK] PRIMARY KEY CLUSTERED ([ID_USER] ASC),
-    CONSTRAINT [USERS_CIVILITE_FK] FOREIGN KEY ([ID_CIVILITE]) REFERENCES [dbo].[CIVILITE] ([ID_CIVILITE])
+﻿CREATE TABLE [dbo].[Users] (
+    [Identifier]       BIGINT          IDENTITY (1, 1) NOT NULL,
+    [Firstname]        NVARCHAR (150)  NULL,
+    [Lastname]         NVARCHAR (150)  NULL,
+    [Username]         NVARCHAR (50)   NOT NULL,
+    [Password]         NVARCHAR (50)   NOT NULL,
+    [Email]            NVARCHAR (200)  NOT NULL,
+    [BirthDate]        DATE            NOT NULL,
+    [Avatar]           NVARCHAR (2000) NULL,
+    [IdentifierGender] BIGINT          NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([Identifier] ASC),
+    CONSTRAINT [FK_Users_Gender] FOREIGN KEY ([IdentifierGender]) REFERENCES [dbo].[Gender] ([Identifier]),
+    CONSTRAINT [FK_Users] UNIQUE NONCLUSTERED ([Identifier] ASC)
 );
-
-
 

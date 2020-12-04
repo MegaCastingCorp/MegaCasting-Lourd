@@ -15,12 +15,12 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Collection des packs
         /// </summary>
-        private ObservableCollection<PACK> _Pack;
+        private ObservableCollection<Pack> _Pack;
 
         /// <summary>
         /// Selectionne un pack
         /// </summary>
-        private PACK _SelectedPack;
+        private Pack _SelectedPack;
 
         #endregion
 
@@ -28,7 +28,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou defini la collection de pack
         /// </summary>
-        public ObservableCollection<PACK> Pack
+        public ObservableCollection<Pack> Pack
         {
             get { return _Pack; }
             set { _Pack = value; }
@@ -37,7 +37,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou defini la selection de pack
         /// </summary>
-        public PACK SelectedPack
+        public Pack SelectedPack
         {
             get { return _SelectedPack; }
             set { _SelectedPack = value; }
@@ -49,8 +49,8 @@ namespace MegaCastingV2.WPF.ViewModel
 
         public ViewModelPack(Entities entities) : base(entities)
         {
-            this.Entities.PACKs.ToList();
-            this.Pack = this.Entities.PACKs.Local;
+            this.Entities.Packs.ToList();
+            this.Pack = this.Entities.Packs.Local;
         }
 
         #endregion
@@ -71,12 +71,12 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void AddPack()
         {
-            if (!this.Entities.PACKs
-                .Any(type => type.NAME_PACK == "Nom du pack")
+            if (!this.Entities.Packs
+                .Any(type => type.Label == "Nom du pack")
                 )
             {
-                PACK pack = new PACK();
-                pack.NAME_PACK = "Pack";
+                Pack pack = new Pack();
+                pack.Label = "Pack";
                 this.Pack.Add(pack);
                 this.SaveChanges();
                 this.SelectedPack = pack;

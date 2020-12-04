@@ -10,20 +10,20 @@ namespace MegaCastingV2.WPF.ViewModel
 {
     public class ViewModelStat : ViewModelBase
     {
-        private ObservableCollection<CASTING> _Castings;
+        private ObservableCollection<Offer> _Offers;
 
-        public ObservableCollection<CASTING> Castings
+        public ObservableCollection<Offer> Offers
         {
-            get { return _Castings; }
-            set { _Castings = value; }
+            get { return _Offers; }
+            set { _Offers = value; }
         }
 
         #region Constructor
         public ViewModelStat(Entities entities)
             : base(entities)
         {
-            this.Entities.CASTINGS.ToList();
-            this.Castings = this.Entities.CASTINGS.Local;
+            this.Entities.Offers.ToList();
+            this.Offers = this.Entities.Offers.Local;
         }
 
         #endregion
@@ -39,9 +39,9 @@ namespace MegaCastingV2.WPF.ViewModel
             int previousYearFromDatetime = today.AddYears(-1).Year;
             for (int i = 1; i <= 12; i++)
             {
-                previousyear.Add((from o in this.Entities.CASTINGS
-                                  where o.DATE_DEB_CONTRACT.Month == i
-                                  select o).Where(o => (o.DATE_DEB_CONTRACT.Year == previousYearFromDatetime)).Count());
+                previousyear.Add((from o in this.Entities.Offers
+                                  where o.PublishDateTime.Month == i
+                                  select o).Where(o => (o.PublishDateTime.Year == previousYearFromDatetime)).Count());
             }
             return previousyear;
         }
@@ -55,9 +55,9 @@ namespace MegaCastingV2.WPF.ViewModel
             List<int> currentyear = new List<int>();
             for (int j = 1; j <= 12; j++)
             {
-                currentyear.Add((from o in this.Entities.CASTINGS
-                                 where o.DATE_DEB_CONTRACT.Month == j
-                                 select o).Where(o => (o.DATE_DEB_CONTRACT.Year == today.Year)).Count());
+                currentyear.Add((from o in this.Entities.Offers
+                                 where o.PublishDateTime.Month == j
+                                 select o).Where(o => (o.PublishDateTime.Year == today.Year)).Count());
             }
             return currentyear;
 

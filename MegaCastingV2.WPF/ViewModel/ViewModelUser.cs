@@ -15,12 +15,12 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Collection de users
         /// </summary>
-        private ObservableCollection<USER> _UserType;
+        private ObservableCollection<User> _User;
 
         /// <summary>
         /// Selectionne le user
         /// </summary>
-        private USER _SelectedUserType;
+        private User _SelectedUser;
 
         #endregion
 
@@ -29,27 +29,27 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou défini la collection
         /// </summary>
-        public ObservableCollection<USER> UserType
+        public ObservableCollection<User> User
         {
-            get { return _UserType; }
-            set { _UserType = value; }
+            get { return _User; }
+            set { _User = value; }
         }
 
         /// <summary>
         /// Obtient ou défini le type de contrat sélectionner
         /// </summary>
-        public USER SelectedUserType
+        public User SelectedUser
         {
-            get { return _SelectedUserType; }
-            set { _SelectedUserType = value; }
+            get { return _SelectedUser; }
+            set { _SelectedUser = value; }
         }
         #endregion
 
         #region Constructors
         public ViewModelUser(Entities entities) : base(entities)
         {
-            this.Entities.USERS.ToList();
-            this.UserType = this.Entities.USERS.Local;
+            this.Entities.Users.ToList();
+            this.User = this.Entities.Users.Local;
         }
 
         #endregion
@@ -70,15 +70,15 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void AddUserType()
         {
-            if (!this.Entities.USERS
-                .Any(type => type.USERNAME == "Nouvel utilisateur")
+            if (!this.Entities.Users
+                .Any(type => type.Username == "Nouvel utilisateur")
                 )
             {
-                USER user = new USER();
-                user.USERNAME = "Username";
-                this.UserType.Add(user);
+                User user = new User();
+                user.Username = "Username";
+                this.User.Add(user);
                 this.SaveChanges();
-                this.SelectedUserType = user;
+                this.SelectedUser = user;
             }
         }
 
@@ -90,7 +90,7 @@ namespace MegaCastingV2.WPF.ViewModel
             // Vérification si on a le droit de supprimer
 
             //Suppression de l'élément
-            this.UserType.Remove(SelectedUserType);
+            this.User.Remove(SelectedUser);
             this.SaveChanges();
         }
         #endregion

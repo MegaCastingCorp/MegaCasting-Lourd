@@ -16,12 +16,12 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Collection de castings
         /// </summary>
-        private ObservableCollection<CASTING> _CastingsType;
+        private ObservableCollection<Offer> _Offers;
 
         /// <summary>
         /// Selectionne un Castings
         /// </summary>
-        private CASTING _SelectedCastingsType;
+        private Offer _SelectedOffers;
 
         #endregion
 
@@ -30,19 +30,19 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou défini la collection de castings
         /// </summary>
-        public ObservableCollection<CASTING> CastingsType
+        public ObservableCollection<Offer> Offer
         {
-            get { return _CastingsType; }
-            set { _CastingsType = value; }
+            get { return _Offers; }
+            set { _Offers = value; }
         }
 
         /// <summary>
         /// Ontient ou defeni le type de castings selectionne
         /// </summary>
-        public CASTING SelectedCastingsType
+        public Offer SelectedOffers
         {
-            get { return _SelectedCastingsType; }
-            set { _SelectedCastingsType = value; }
+            get { return _SelectedOffers; }
+            set { _SelectedOffers = value; }
         }
 
         #endregion
@@ -51,8 +51,8 @@ namespace MegaCastingV2.WPF.ViewModel
         #region Constructor
         public ViewModelCastings(Entities entities) : base(entities)
         {
-            this.Entities.CASTINGS.ToList();
-            this.CastingsType = this.Entities.CASTINGS.Local;
+            this.Entities.Offers.ToList();
+            this.Offer = this.Entities.Offers.Local;
         }
 
         #endregion
@@ -73,15 +73,15 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void AddCastings()
         {
-            if (!this.Entities.CASTINGS
-                .Any(type => type.LABEL == "Nouveau casting")
+            if (!this.Entities.Offers
+                .Any(type => type.Name == "Nouveau casting")
                 )
             {
-                CASTING castings = new CASTING();
-                castings.LABEL = "Casting";
-                this.CastingsType.Add(castings);
+                Offer castings = new Offer();
+                castings.Name = "Casting";
+                this.Offer.Add(castings);
                 this.SaveChanges();
-                this.SelectedCastingsType = castings;
+                this.SelectedOffers = castings;
             }
         }
 
@@ -93,7 +93,7 @@ namespace MegaCastingV2.WPF.ViewModel
             // Vérification si on a le droit de supprimer
 
             //Suppression de l'élément
-            this.CastingsType.Remove(SelectedCastingsType);
+            this.Offer.Remove(SelectedOffers);
             this.SaveChanges();
         }
         #endregion

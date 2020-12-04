@@ -12,18 +12,12 @@ namespace MegaCastingV2.DBLib
     using System;
     using System.Collections.Generic;
     
-    public partial class ORGANISATION
+    public partial class Apply
     {
-        public int ID_ORG { get; set; }
-        public string NAME_ORG { get; set; }
-        public string URL_ORG { get; set; }
-        public string EMAIL_ORG { get; set; }
-        public string TEL_ORG { get; set; }
-        public string ADRESS_ORG { get; set; }
-        public int ID_CASTING { get; set; }
-        public int ID_PACK { get; set; }
+        public long IdentifierOffer { get; set; }
+        public long IdentifierUsers { get; set; }
     
-        public virtual CASTING CASTING { get; set; }
-        public virtual PACK PACK { get; set; }
+        public virtual User User { get; set; }
+        public virtual Offer Offer { get; set; }
     }
 }

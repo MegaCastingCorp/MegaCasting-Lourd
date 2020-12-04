@@ -12,19 +12,19 @@ namespace MegaCastingV2.DBLib
     using System;
     using System.Collections.Generic;
     
-    public partial class PACK
+    public partial class Pack
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PACK()
+        public Pack()
         {
-            this.ORGANISATIONs = new HashSet<ORGANISATION>();
+            this.Producers = new HashSet<Producer>();
         }
     
-        public int ID_PACK { get; set; }
-        public string NAME_PACK { get; set; }
-        public Nullable<int> PRICE { get; set; }
+        public long Identifier { get; set; }
+        public string Label { get; set; }
+        public Nullable<long> Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ORGANISATION> ORGANISATIONs { get; set; }
+        public virtual ICollection<Producer> Producers { get; set; }
     }
 }

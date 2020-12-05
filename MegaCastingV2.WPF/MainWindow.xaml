@@ -40,8 +40,8 @@
             <Rectangle Fill="White" HorizontalAlignment="Left" Height="99" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="250"/>
             <Image Source="/Img/MegaCasting_Logo.png"/>
 
-            
-                <Button 
+
+            <Button 
         Grid.Row="1" 
         Background="#23B5B5"
         VerticalAlignment="Center"
@@ -54,7 +54,7 @@
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="User" Height="28" Width="23"/>
                     <Label Foreground="White"
-                    Content="Gestions des Utilisateurs"/>
+                    Content="Gestion des Utilisateurs"/>
 
                 </StackPanel>
             </Button>
@@ -73,7 +73,7 @@
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Cinema"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                     <Label Foreground="White"
-                 Content="Gestions des Castings"/>
+                 Content="Gestion des Castings"/>
 
                 </StackPanel>
             </Button>
@@ -91,7 +91,7 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="ViewStream" Height="27" Width="22"/>
                     <Label Foreground="White"
-                 Content="Gestions des Categories"/>
+                 Content="Gestion des Catégories"/>
 
                 </StackPanel>
             </Button>
@@ -109,7 +109,7 @@
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Package" Height="28" Width="20"/>
                     <Label Foreground="White"
-                 Content="Gestions des Packs"></Label>
+                 Content="Gestion des Packs"></Label>
 
                 </StackPanel>
             </Button>
@@ -127,7 +127,7 @@
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="AccountSupervisor" Height="28" Width="20"/>
                     <Label Foreground="White"
-                 Content="Gestions des Organisations"></Label>
+                 Content="Producteurs"></Label>
 
                 </StackPanel>
             </Button>
@@ -173,7 +173,7 @@
             <view:ViewMain ></view:ViewMain>
         </DockPanel>
 
-        <Grid x:Name="_GridAuthentication" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="0.95" Background="#656565" Visibility="Collapsed" >
+        <Grid x:Name="_GridAuthentication" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="1" Background="White" Visibility="Visible" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="auto"/>
@@ -188,19 +188,21 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label  Grid.Row="1" Grid.Column="1" Foreground="White">Identifiant :</Label>
-            <Label  Grid.Row="2" Grid.Column="1" Foreground="White">Mot de passe :</Label>
-            <TextBox x:Name="_TextBoxId" Grid.Row="1" Grid.Column="2" Width="200" Background="#CBCBCB" Margin="3.8,3.8,38.2,1.6" />
-            <PasswordBox x:Name="_TextBoxPassWord" Grid.Row="2" Grid.Column="2" Background="#CBCBCB" Width="200" Margin="3.4,3.4,39,2.8" />
-            <Button Background="#23B5B5" BorderBrush="#23B5B5" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" x:Name="_ButtonConnect" Click="_ButtonConnect_Click" >
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Source="Img\1.jpg" Opacity="0.30" Margin="-116,0,-93,-48.5" Grid.RowSpan="6"></Image>
+            <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Source="Img\MegaCasting_Logo.png" Margin="50,0,41.5,0.5"></Image>
+            <Label  Grid.Row="1" Grid.Column="1" Foreground="Black">Identifiant :</Label>
+            <Label  Grid.Row="2" Grid.Column="1" Foreground="Black">Mot de passe :</Label>
+            <TextBox x:Name="_TextBoxId" Grid.Row="1" Grid.Column="2" Width="200" Background="White" TextChanged="_TextBoxId_TextChanged" />
+            <PasswordBox x:Name="_TextBoxPassWord" Grid.Row="2" Grid.Column="2" Background="White" Width="200"/>
+            <Button Background="#23B5B5" BorderBrush="#23B5B5" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" x:Name="_ButtonConnect" Click="_ButtonConnect_Click" Grid.RowSpan="2" Height="40px" Margin="0.5,10,0,271.75" >
                 <StackPanel Orientation="Horizontal">
-                    <Label Foreground="#CBCBCB"
+                    <Label Foreground="White"
                  Content="  Se Connecter   "></Label>
-                    <materialDesign:PackIcon Kind="LoginVariant" Width="25" Height="25" Foreground="#CBCBCB" />
+                    <materialDesign:PackIcon Kind="LoginVariant" Width="25" Height="25" Foreground="White" />
 
                 </StackPanel>
             </Button>
-            <Label Name="_LabelErrorMessage" Visibility="Hidden" Background="Red" Opacity="0.5" Foreground="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">Le mot de passe ou l'identifiant n'est pas correct</Label>
+            <Label Name="_LabelErrorMessage" Visibility="Hidden" Background="Red" Opacity="0.5" Foreground="White" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="0.5,55.5,0,236.5">Le mot de passe ou l'identifiant n'est pas correct.</Label>
 
         </Grid>
     </Grid>

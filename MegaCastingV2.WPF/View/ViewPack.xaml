@@ -42,8 +42,8 @@
                             <RowDefinition Height="5"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding NAME_PACK}"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding PRICE}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Label}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Price}"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -103,11 +103,11 @@
 
             <TextBlock VerticalAlignment="Center" Text="Nom :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserLastname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedPack.NAME_PACK}"/>
+            <TextBox x:Name="_SelectUserLastname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedPack.Label}"/>
 
             <TextBlock VerticalAlignment="Center" Text="Prix :" Grid.Row="2" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserFirstname" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedPack.PRICE}" Margin="35,14,74.5,11"/>
+            <TextBox x:Name="_SelectUserFirstname" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedPack.Price}" Margin="35,14,74.5,11"/>
 
             <Button x:Name="_ButtonSavePack" Click="_ButtonSavePack_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">

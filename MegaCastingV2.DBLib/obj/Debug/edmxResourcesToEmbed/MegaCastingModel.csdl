@@ -1,202 +1,344 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MegaCastingsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="CASTING">
+  <EntityType Name="Apply">
     <Key>
-      <PropertyRef Name="ID_CASTING" />
+      <PropertyRef Name="IdentifierOffer" />
     </Key>
-    <Property Name="ID_CASTING" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="LABEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="DOM_METIERS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="METIERS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="TYPE_CONTRACT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="DUREE_DIFFUSION" Type="Int32" />
-    <Property Name="DATE_DEB_CONTRACT" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="NB_POSTES" Type="Int32" Nullable="false" />
-    <Property Name="LOCALISATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="DESC_POSTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="DESC_PROFIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="COORDONNEES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="ORGANISATIONs" Relationship="Self.ORGANISATION_CASTINGS_FK" FromRole="CASTINGS" ToRole="ORGANISATION" />
-    <NavigationProperty Name="FILTRES" Relationship="Self.APPARTENIR_FILTRE" FromRole="CASTINGS" ToRole="FILTRES" />
-    <NavigationProperty Name="CATEGORIES" Relationship="Self.APPARTIENT_CASTING" FromRole="CASTINGS" ToRole="CATEGORIES" />
-    <NavigationProperty Name="USERS" Relationship="Self.POSTULER" FromRole="CASTINGS" ToRole="USERS" />
+    <Property Name="IdentifierOffer" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdentifierUsers" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Apply_Users" FromRole="Apply" ToRole="Users" />
+    <NavigationProperty Name="Offer" Relationship="Self.FK_Offer_Apply" FromRole="Apply" ToRole="Offer" />
   </EntityType>
-  <EntityType Name="CATEGORy">
+  <EntityType Name="Category">
     <Key>
-      <PropertyRef Name="ID_CAT" />
+      <PropertyRef Name="Identifier" />
     </Key>
-    <Property Name="ID_CAT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CAT_LABEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IMG_CAST" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CASTINGS" Relationship="Self.APPARTIENT_CASTING" FromRole="CATEGORIES" ToRole="CASTINGS" />
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Label" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offer_Category" FromRole="Category" ToRole="Offer" />
   </EntityType>
-  <EntityType Name="CIVILITE">
+  <EntityType Name="ContractType">
     <Key>
-      <PropertyRef Name="ID_CIVILITE" />
+      <PropertyRef Name="Identifier" />
     </Key>
-    <Property Name="ID_CIVILITE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="LABEL_CIVILITE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="EMPLOYEEs" Relationship="Self.EMPLOYEE_CIVILITE_FK" FromRole="CIVILITE" ToRole="EMPLOYEE" />
-    <NavigationProperty Name="USERS" Relationship="Self.USERS_CIVILITE_FK" FromRole="CIVILITE" ToRole="USERS" />
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offer_ContractType" FromRole="ContractType" ToRole="Offer" />
   </EntityType>
-  <EntityType Name="EMPLOYEE">
+  <EntityType Name="Employee">
     <Key>
-      <PropertyRef Name="ID_EMPLOYEE" />
+      <PropertyRef Name="Identifier" />
     </Key>
-    <Property Name="ID_EMPLOYEE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="EMPLOYEE_FIRSTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EMPLOYEE_LASTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EMPLOYEE_USERNAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EMPLOYEE_PASSWORD" Type="String" MaxLength="175" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EST_ADMIN" Type="Boolean" Nullable="false" />
-    <Property Name="ID_CIVILITE" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CIVILITE" Relationship="Self.EMPLOYEE_CIVILITE_FK" FromRole="EMPLOYEE" ToRole="CIVILITE" />
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firstname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Lastname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Admin" Type="Boolean" Nullable="false" />
+    <Property Name="IdentifierGender" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Employee_Gender" FromRole="Employee" ToRole="Gender" />
   </EntityType>
-  <EntityType Name="FILTRE">
+  <EntityType Name="Filtre">
     <Key>
-      <PropertyRef Name="ID_FILTRE" />
+      <PropertyRef Name="Identifier" />
     </Key>
-    <Property Name="ID_FILTRE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CAT_LABEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="LABEL_FILTRE" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="CASTINGS" Relationship="Self.APPARTENIR_FILTRE" FromRole="FILTRES" ToRole="CASTINGS" />
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Label" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offer_Filtre" FromRole="Filtre" ToRole="Offer" />
   </EntityType>
-  <EntityType Name="ORGANISATION">
+  <EntityType Name="Gender">
     <Key>
-      <PropertyRef Name="ID_ORG" />
+      <PropertyRef Name="Identifier" />
     </Key>
-    <Property Name="ID_ORG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NAME_ORG" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="URL_ORG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EMAIL_ORG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="TEL_ORG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ADRESS_ORG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ID_CASTING" Type="Int32" Nullable="false" />
-    <Property Name="ID_PACK" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CASTING" Relationship="Self.ORGANISATION_CASTINGS_FK" FromRole="ORGANISATION" ToRole="CASTINGS" />
-    <NavigationProperty Name="PACK" Relationship="Self.ORGANISATION_PACK0_FK" FromRole="ORGANISATION" ToRole="PACK" />
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Label" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Gender" FromRole="Gender" ToRole="Employee" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Gender" FromRole="Gender" ToRole="Users" />
   </EntityType>
-  <EntityType Name="PACK">
+  <EntityType Name="Job">
     <Key>
-      <PropertyRef Name="ID_PACK" />
+      <PropertyRef Name="Identifier" />
     </Key>
-    <Property Name="ID_PACK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NAME_PACK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="PRICE" Type="Int32" />
-    <NavigationProperty Name="ORGANISATIONs" Relationship="Self.ORGANISATION_PACK0_FK" FromRole="PACK" ToRole="ORGANISATION" />
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdentifierJobType" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="JobType" Relationship="Self.FK_Job_JobType" FromRole="Job" ToRole="JobType" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offer_Job" FromRole="Job" ToRole="Offer" />
   </EntityType>
-  <EntityType Name="USER">
+  <EntityType Name="JobType">
     <Key>
-      <PropertyRef Name="ID_USER" />
+      <PropertyRef Name="Identifier" />
     </Key>
-    <Property Name="ID_USER" Type="Int32" Nullable="false" />
-    <Property Name="USER_FIRSTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="USER_LASTNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="USER_PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="USER_MAIL" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="USER_NAISSANCE" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="IMG_PROFIL" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-    <Property Name="ID_CIVILITE" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CIVILITE" Relationship="Self.USERS_CIVILITE_FK" FromRole="USERS" ToRole="CIVILITE" />
-    <NavigationProperty Name="CASTINGS" Relationship="Self.POSTULER" FromRole="USERS" ToRole="CASTINGS" />
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Jobs" Relationship="Self.FK_Job_JobType" FromRole="JobType" ToRole="Job" />
   </EntityType>
-  <Association Name="ORGANISATION_CASTINGS_FK">
-    <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="1" />
-    <End Role="ORGANISATION" Type="Self.ORGANISATION" Multiplicity="*" />
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="Identifier" />
+    </Key>
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdentifierJob" Type="Int64" Nullable="false" />
+    <Property Name="IdentifierContractType" Type="Int64" Nullable="false" />
+    <Property Name="PublishDateTime" Type="DateTime" Precision="7" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="StartContractDate" Type="DateTime" Precision="0" />
+    <Property Name="PostCount" Type="Int32" />
+    <Property Name="JobDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ProfilDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IdentifierProducer" Type="Int64" Nullable="false" />
+    <Property Name="IdentifierCategory" Type="Int64" Nullable="false" />
+    <Property Name="IdentifierFilters" Type="Int64" Nullable="false" />
+    <Property Name="IdentifierApply" Type="Int64" />
+    <NavigationProperty Name="Apply" Relationship="Self.FK_Offer_Apply" FromRole="Offer" ToRole="Apply" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Offer_Category" FromRole="Offer" ToRole="Category" />
+    <NavigationProperty Name="ContractType" Relationship="Self.FK_Offer_ContractType" FromRole="Offer" ToRole="ContractType" />
+    <NavigationProperty Name="Filtre" Relationship="Self.FK_Offer_Filtre" FromRole="Offer" ToRole="Filtre" />
+    <NavigationProperty Name="Job" Relationship="Self.FK_Offer_Job" FromRole="Offer" ToRole="Job" />
+    <NavigationProperty Name="Producer" Relationship="Self.FK_Offer_Producer" FromRole="Offer" ToRole="Producer" />
+  </EntityType>
+  <EntityType Name="Pack">
+    <Key>
+      <PropertyRef Name="Identifier" />
+    </Key>
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Label" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int64" />
+    <NavigationProperty Name="Producers" Relationship="Self.FK_Producer_Pack" FromRole="Pack" ToRole="Producer" />
+  </EntityType>
+  <EntityType Name="Producer">
+    <Key>
+      <PropertyRef Name="Identifier" />
+    </Key>
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IdentifierPack" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Offers" Relationship="Self.FK_Offer_Producer" FromRole="Producer" ToRole="Offer" />
+    <NavigationProperty Name="Pack" Relationship="Self.FK_Producer_Pack" FromRole="Producer" ToRole="Pack" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Identifier" />
+    </Key>
+    <Property Name="Identifier" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firstname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Lastname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Avatar" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="IdentifierGender" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Applies" Relationship="Self.FK_Apply_Users" FromRole="Users" ToRole="Apply" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Users_Gender" FromRole="Users" ToRole="Gender" />
+  </EntityType>
+  <Association Name="FK_Apply_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Apply" Type="Self.Apply" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="CASTINGS">
-        <PropertyRef Name="ID_CASTING" />
+      <Principal Role="Users">
+        <PropertyRef Name="Identifier" />
       </Principal>
-      <Dependent Role="ORGANISATION">
-        <PropertyRef Name="ID_CASTING" />
+      <Dependent Role="Apply">
+        <PropertyRef Name="IdentifierUsers" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="EMPLOYEE_CIVILITE_FK">
-    <End Role="CIVILITE" Type="Self.CIVILITE" Multiplicity="1" />
-    <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="*" />
+  <Association Name="FK_Offer_Apply">
+    <End Role="Apply" Type="Self.Apply" Multiplicity="1" />
+    <End Role="Offer" Type="Self.Offer" Multiplicity="0..1" />
     <ReferentialConstraint>
-      <Principal Role="CIVILITE">
-        <PropertyRef Name="ID_CIVILITE" />
+      <Principal Role="Apply">
+        <PropertyRef Name="IdentifierOffer" />
       </Principal>
-      <Dependent Role="EMPLOYEE">
-        <PropertyRef Name="ID_CIVILITE" />
+      <Dependent Role="Offer">
+        <PropertyRef Name="Identifier" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="USERS_CIVILITE_FK">
-    <End Role="CIVILITE" Type="Self.CIVILITE" Multiplicity="1" />
-    <End Role="USERS" Type="Self.USER" Multiplicity="*" />
+  <Association Name="FK_Offer_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Offer" Type="Self.Offer" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="CIVILITE">
-        <PropertyRef Name="ID_CIVILITE" />
+      <Principal Role="Category">
+        <PropertyRef Name="Identifier" />
       </Principal>
-      <Dependent Role="USERS">
-        <PropertyRef Name="ID_CIVILITE" />
+      <Dependent Role="Offer">
+        <PropertyRef Name="IdentifierCategory" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ORGANISATION_PACK0_FK">
-    <End Role="PACK" Type="Self.PACK" Multiplicity="1" />
-    <End Role="ORGANISATION" Type="Self.ORGANISATION" Multiplicity="*" />
+  <Association Name="FK_Offer_ContractType">
+    <End Role="ContractType" Type="Self.ContractType" Multiplicity="1" />
+    <End Role="Offer" Type="Self.Offer" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="PACK">
-        <PropertyRef Name="ID_PACK" />
+      <Principal Role="ContractType">
+        <PropertyRef Name="Identifier" />
       </Principal>
-      <Dependent Role="ORGANISATION">
-        <PropertyRef Name="ID_PACK" />
+      <Dependent Role="Offer">
+        <PropertyRef Name="IdentifierContractType" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="APPARTENIR_FILTRE">
-    <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="*" />
-    <End Role="FILTRES" Type="Self.FILTRE" Multiplicity="*" />
+  <Association Name="FK_Employee_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="Identifier" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="IdentifierGender" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
-  <Association Name="APPARTIENT_CASTING">
-    <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="*" />
-    <End Role="CATEGORIES" Type="Self.CATEGORy" Multiplicity="*" />
+  <Association Name="FK_Offer_Filtre">
+    <End Role="Filtre" Type="Self.Filtre" Multiplicity="1" />
+    <End Role="Offer" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filtre">
+        <PropertyRef Name="Identifier" />
+      </Principal>
+      <Dependent Role="Offer">
+        <PropertyRef Name="IdentifierFilters" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
-  <Association Name="POSTULER">
-    <End Role="CASTINGS" Type="Self.CASTING" Multiplicity="*" />
-    <End Role="USERS" Type="Self.USER" Multiplicity="*" />
+  <Association Name="FK_Users_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="Identifier" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="IdentifierGender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Job_JobType">
+    <End Role="JobType" Type="Self.JobType" Multiplicity="1" />
+    <End Role="Job" Type="Self.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobType">
+        <PropertyRef Name="Identifier" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="IdentifierJobType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offer_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1" />
+    <End Role="Offer" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="Identifier" />
+      </Principal>
+      <Dependent Role="Offer">
+        <PropertyRef Name="IdentifierJob" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Offer_Producer">
+    <End Role="Producer" Type="Self.Producer" Multiplicity="1" />
+    <End Role="Offer" Type="Self.Offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producer">
+        <PropertyRef Name="Identifier" />
+      </Principal>
+      <Dependent Role="Offer">
+        <PropertyRef Name="IdentifierProducer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producer_Pack">
+    <End Role="Pack" Type="Self.Pack" Multiplicity="1" />
+    <End Role="Producer" Type="Self.Producer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pack">
+        <PropertyRef Name="Identifier" />
+      </Principal>
+      <Dependent Role="Producer">
+        <PropertyRef Name="IdentifierPack" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="CASTINGS" EntityType="Self.CASTING" />
-    <EntitySet Name="CATEGORIES" EntityType="Self.CATEGORy" />
-    <EntitySet Name="CIVILITEs" EntityType="Self.CIVILITE" />
-    <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
-    <EntitySet Name="FILTRES" EntityType="Self.FILTRE" />
-    <EntitySet Name="ORGANISATIONs" EntityType="Self.ORGANISATION" />
-    <EntitySet Name="PACKs" EntityType="Self.PACK" />
-    <EntitySet Name="USERS" EntityType="Self.USER" />
-    <AssociationSet Name="ORGANISATION_CASTINGS_FK" Association="Self.ORGANISATION_CASTINGS_FK">
-      <End Role="CASTINGS" EntitySet="CASTINGS" />
-      <End Role="ORGANISATION" EntitySet="ORGANISATIONs" />
+    <EntitySet Name="Applies" EntityType="Self.Apply" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="ContractTypes" EntityType="Self.ContractType" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Filtres" EntityType="Self.Filtre" />
+    <EntitySet Name="Genders" EntityType="Self.Gender" />
+    <EntitySet Name="Jobs" EntityType="Self.Job" />
+    <EntitySet Name="JobTypes" EntityType="Self.JobType" />
+    <EntitySet Name="Offers" EntityType="Self.Offer" />
+    <EntitySet Name="Packs" EntityType="Self.Pack" />
+    <EntitySet Name="Producers" EntityType="Self.Producer" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Apply_Users" Association="Self.FK_Apply_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Apply" EntitySet="Applies" />
     </AssociationSet>
-    <AssociationSet Name="EMPLOYEE_CIVILITE_FK" Association="Self.EMPLOYEE_CIVILITE_FK">
-      <End Role="CIVILITE" EntitySet="CIVILITEs" />
-      <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+    <AssociationSet Name="FK_Offer_Apply" Association="Self.FK_Offer_Apply">
+      <End Role="Apply" EntitySet="Applies" />
+      <End Role="Offer" EntitySet="Offers" />
     </AssociationSet>
-    <AssociationSet Name="USERS_CIVILITE_FK" Association="Self.USERS_CIVILITE_FK">
-      <End Role="CIVILITE" EntitySet="CIVILITEs" />
-      <End Role="USERS" EntitySet="USERS" />
+    <AssociationSet Name="FK_Offer_Category" Association="Self.FK_Offer_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Offer" EntitySet="Offers" />
     </AssociationSet>
-    <AssociationSet Name="ORGANISATION_PACK0_FK" Association="Self.ORGANISATION_PACK0_FK">
-      <End Role="PACK" EntitySet="PACKs" />
-      <End Role="ORGANISATION" EntitySet="ORGANISATIONs" />
+    <AssociationSet Name="FK_Offer_ContractType" Association="Self.FK_Offer_ContractType">
+      <End Role="ContractType" EntitySet="ContractTypes" />
+      <End Role="Offer" EntitySet="Offers" />
     </AssociationSet>
-    <AssociationSet Name="APPARTENIR_FILTRE" Association="Self.APPARTENIR_FILTRE">
-      <End Role="CASTINGS" EntitySet="CASTINGS" />
-      <End Role="FILTRES" EntitySet="FILTRES" />
+    <AssociationSet Name="FK_Employee_Gender" Association="Self.FK_Employee_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Employee" EntitySet="Employees" />
     </AssociationSet>
-    <AssociationSet Name="APPARTIENT_CASTING" Association="Self.APPARTIENT_CASTING">
-      <End Role="CASTINGS" EntitySet="CASTINGS" />
-      <End Role="CATEGORIES" EntitySet="CATEGORIES" />
+    <AssociationSet Name="FK_Offer_Filtre" Association="Self.FK_Offer_Filtre">
+      <End Role="Filtre" EntitySet="Filtres" />
+      <End Role="Offer" EntitySet="Offers" />
     </AssociationSet>
-    <AssociationSet Name="POSTULER" Association="Self.POSTULER">
-      <End Role="CASTINGS" EntitySet="CASTINGS" />
-      <End Role="USERS" EntitySet="USERS" />
+    <AssociationSet Name="FK_Users_Gender" Association="Self.FK_Users_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Job_JobType" Association="Self.FK_Job_JobType">
+      <End Role="JobType" EntitySet="JobTypes" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offer_Job" Association="Self.FK_Offer_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="Offer" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Offer_Producer" Association="Self.FK_Offer_Producer">
+      <End Role="Producer" EntitySet="Producers" />
+      <End Role="Offer" EntitySet="Offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producer_Pack" Association="Self.FK_Producer_Pack">
+      <End Role="Pack" EntitySet="Packs" />
+      <End Role="Producer" EntitySet="Producers" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -68,7 +68,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Ajoute un nouveau utilisateur
         /// </summary>
-        public void AddUserType()
+        public void AddUser()
         {
             if (!this.Entities.Users
                 .Any(type => type.Username == "Nouvel utilisateur")
@@ -85,7 +85,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Supprime le contrat sélectionné
         /// </summary>
-        public void DeleteUserType()
+        public void DeleteUser()
         {
             // Vérification si on a le droit de supprimer
 

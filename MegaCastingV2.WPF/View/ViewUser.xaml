@@ -26,8 +26,8 @@
         Grid.Column="0"
         Grid.Row="2"
         x:Name="_ListBoxUserType"
-        ItemsSource="{Binding UserType}"
-        SelectedItem="{Binding SelectedUserType}">
+        ItemsSource="{Binding User}"
+        SelectedItem="{Binding SelectedUser}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -43,8 +43,8 @@
                             <RowDefinition Height="5"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding USER_FIRSTNAME}"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding USER_LASTNAME}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Firstname}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Lastname}"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -100,35 +100,48 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
+            
             <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Height="40" Width="219">Information de l'utilisateur</Label>
 
+            <!--#region Lastname -->
             <TextBlock VerticalAlignment="Center" Text="Nom :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserLastname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedUserType.USER_LASTNAME}"/>
+            <TextBox x:Name="_SelectUserLastname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedUser.Lastname}"/>
 
+            <!--#endregion-->
+            
+            <!--#region Firstname -->
             <TextBlock VerticalAlignment="Center" Text="Prenom :" Grid.Row="2" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserFirstname" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedUserType.USER_FIRSTNAME}" Margin="64,12,45.5,12"/>
+            <TextBox x:Name="_SelectUserFirstname" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedUser.Firstname}" Margin="64,12,45.5,12"/>
 
-            <Ellipse HorizontalAlignment="Left" Stroke="Black" Width="110" Grid.Row="1" Grid.RowSpan="2" Height="100px" Grid.Column="1"/>
+            <!--#endregion-->
 
+            <!--#region Username -->
             <TextBlock VerticalAlignment="Center" Text="Username :" Grid.Row="3" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserUsername" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="132" Text="{Binding SelectedUserType.USERNAME}" Margin="80,14,28.5,11"/>
+            <TextBox x:Name="_SelectUserUsername" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="132" Text="{Binding SelectedUser.Username}" Margin="80,14,28.5,11"/>
+            <!--#endregion-->
 
+            <!--#region Password -->
             <TextBlock VerticalAlignment="Center" Text="Mot de passe :" Grid.Row="4" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserPassword" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedUserType.USER_PASSWORD}" Margin="105,12,28.5,12"/>
+            <TextBox x:Name="_SelectUserPassword" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedUser.Password}" Margin="105,12,28.5,12"/>
+            <!--#endregion-->
 
+            <!--#region Email -->
             <TextBlock VerticalAlignment="Center" Text="Email :" Grid.Row="5" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserEmail" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="145" Text="{Binding SelectedUserType.USER_MAIL}"/>
+            <TextBox x:Name="_SelectUserEmail" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="145" Text="{Binding SelectedUser.Email}"/>
+            <!--#endregion-->
 
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Date de naissance :" Grid.Row="3" Grid.Column="1" FontSize="16" Foreground="Black" Margin="10.5,14,-60,14" Width="140"/>
+            <!--#region Birthdate -->
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Date de naissance :" Grid.Row="1" Grid.Column="1" FontSize="16" Foreground="Black" Margin="10.5,14,-60,14" Width="140"/>
 
-            <DatePicker Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="4" Text="{Binding SelectedUserType.USER_NAISSANCE}" Height="28" Width="110" Margin="24.5,0,-44,0"/>
+            <DatePicker Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="2" Text="{Binding SelectedUser.BirthDate}" Height="28" Width="110" Margin="24.5,0,-44,0"/>
+            <!--#endregion-->
 
-            <Button x:Name="_ButtonSaveUser" Click="_ButtonSaveUser_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
+            <Button x:Name="_ButtonSaveUser" Click="_ButtonSaveUser_Click" Grid.Column="0" Grid.Row="6" Background="Green" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="ContentSaveEdit"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                     <Label Foreground="White"

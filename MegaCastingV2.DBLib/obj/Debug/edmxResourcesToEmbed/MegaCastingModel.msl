@@ -1,124 +1,146 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="MegaCastingsModelStoreContainer" CdmEntityContainer="Entities">
-    <EntitySetMapping Name="CASTINGS">
-      <EntityTypeMapping TypeName="MegaCastingsModel.CASTING">
-        <MappingFragment StoreEntitySet="CASTINGS">
-          <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
-          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
-          <ScalarProperty Name="DOM_METIERS" ColumnName="DOM_METIERS" />
-          <ScalarProperty Name="METIERS" ColumnName="METIERS" />
-          <ScalarProperty Name="TYPE_CONTRACT" ColumnName="TYPE_CONTRACT" />
-          <ScalarProperty Name="DUREE_DIFFUSION" ColumnName="DUREE_DIFFUSION" />
-          <ScalarProperty Name="DATE_DEB_CONTRACT" ColumnName="DATE_DEB_CONTRACT" />
-          <ScalarProperty Name="NB_POSTES" ColumnName="NB_POSTES" />
-          <ScalarProperty Name="LOCALISATION" ColumnName="LOCALISATION" />
-          <ScalarProperty Name="DESC_POSTE" ColumnName="DESC_POSTE" />
-          <ScalarProperty Name="DESC_PROFIL" ColumnName="DESC_PROFIL" />
-          <ScalarProperty Name="COORDONNEES" ColumnName="COORDONNEES" />
+    <EntitySetMapping Name="Applies">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Apply">
+        <MappingFragment StoreEntitySet="Apply">
+          <ScalarProperty Name="IdentifierOffer" ColumnName="IdentifierOffer" />
+          <ScalarProperty Name="IdentifierUsers" ColumnName="IdentifierUsers" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CATEGORIES">
-      <EntityTypeMapping TypeName="MegaCastingsModel.CATEGORy">
-        <MappingFragment StoreEntitySet="CATEGORIES">
-          <ScalarProperty Name="ID_CAT" ColumnName="ID_CAT" />
-          <ScalarProperty Name="CAT_LABEL" ColumnName="CAT_LABEL" />
-          <ScalarProperty Name="IMG_CAST" ColumnName="IMG_CAST" />
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CIVILITEs">
-      <EntityTypeMapping TypeName="MegaCastingsModel.CIVILITE">
-        <MappingFragment StoreEntitySet="CIVILITE">
-          <ScalarProperty Name="ID_CIVILITE" ColumnName="ID_CIVILITE" />
-          <ScalarProperty Name="LABEL_CIVILITE" ColumnName="LABEL_CIVILITE" />
+    <EntitySetMapping Name="ContractTypes">
+      <EntityTypeMapping TypeName="MegaCastingsModel.ContractType">
+        <MappingFragment StoreEntitySet="ContractType">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EMPLOYEEs">
-      <EntityTypeMapping TypeName="MegaCastingsModel.EMPLOYEE">
-        <MappingFragment StoreEntitySet="EMPLOYEE">
-          <ScalarProperty Name="ID_EMPLOYEE" ColumnName="ID_EMPLOYEE" />
-          <ScalarProperty Name="EMPLOYEE_FIRSTNAME" ColumnName="EMPLOYEE_FIRSTNAME" />
-          <ScalarProperty Name="EMPLOYEE_LASTNAME" ColumnName="EMPLOYEE_LASTNAME" />
-          <ScalarProperty Name="EMPLOYEE_USERNAME" ColumnName="EMPLOYEE_USERNAME" />
-          <ScalarProperty Name="EMPLOYEE_PASSWORD" ColumnName="EMPLOYEE_PASSWORD" />
-          <ScalarProperty Name="EST_ADMIN" ColumnName="EST_ADMIN" />
-          <ScalarProperty Name="ID_CIVILITE" ColumnName="ID_CIVILITE" />
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="IdentifierGender" ColumnName="IdentifierGender" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="FILTRES">
-      <EntityTypeMapping TypeName="MegaCastingsModel.FILTRE">
-        <MappingFragment StoreEntitySet="FILTRES">
-          <ScalarProperty Name="ID_FILTRE" ColumnName="ID_FILTRE" />
-          <ScalarProperty Name="CAT_LABEL" ColumnName="CAT_LABEL" />
-          <ScalarProperty Name="LABEL_FILTRE" ColumnName="LABEL_FILTRE" />
+    <EntitySetMapping Name="Filtres">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Filtre">
+        <MappingFragment StoreEntitySet="Filtre">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ORGANISATIONs">
-      <EntityTypeMapping TypeName="MegaCastingsModel.ORGANISATION">
-        <MappingFragment StoreEntitySet="ORGANISATION">
-          <ScalarProperty Name="ID_ORG" ColumnName="ID_ORG" />
-          <ScalarProperty Name="NAME_ORG" ColumnName="NAME_ORG" />
-          <ScalarProperty Name="URL_ORG" ColumnName="URL_ORG" />
-          <ScalarProperty Name="EMAIL_ORG" ColumnName="EMAIL_ORG" />
-          <ScalarProperty Name="TEL_ORG" ColumnName="TEL_ORG" />
-          <ScalarProperty Name="ADRESS_ORG" ColumnName="ADRESS_ORG" />
-          <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
-          <ScalarProperty Name="ID_PACK" ColumnName="ID_PACK" />
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PACKs">
-      <EntityTypeMapping TypeName="MegaCastingsModel.PACK">
-        <MappingFragment StoreEntitySet="PACK">
-          <ScalarProperty Name="ID_PACK" ColumnName="ID_PACK" />
-          <ScalarProperty Name="NAME_PACK" ColumnName="NAME_PACK" />
-          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdentifierJobType" ColumnName="IdentifierJobType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="USERS">
-      <EntityTypeMapping TypeName="MegaCastingsModel.USER">
-        <MappingFragment StoreEntitySet="USERS">
-          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
-          <ScalarProperty Name="USER_FIRSTNAME" ColumnName="USER_FIRSTNAME" />
-          <ScalarProperty Name="USER_LASTNAME" ColumnName="USER_LASTNAME" />
-          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
-          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
-          <ScalarProperty Name="USER_MAIL" ColumnName="USER_MAIL" />
-          <ScalarProperty Name="USER_NAISSANCE" ColumnName="USER_NAISSANCE" />
-          <ScalarProperty Name="IMG_PROFIL" ColumnName="IMG_PROFIL" />
-          <ScalarProperty Name="ID_CIVILITE" ColumnName="ID_CIVILITE" />
+    <EntitySetMapping Name="JobTypes">
+      <EntityTypeMapping TypeName="MegaCastingsModel.JobType">
+        <MappingFragment StoreEntitySet="JobType">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="APPARTENIR_FILTRE" TypeName="MegaCastingsModel.APPARTENIR_FILTRE" StoreEntitySet="APPARTENIR_FILTRE">
-      <EndProperty Name="CASTINGS">
-        <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
-      </EndProperty>
-      <EndProperty Name="FILTRES">
-        <ScalarProperty Name="ID_FILTRE" ColumnName="ID_FILTRE" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="APPARTIENT_CASTING" TypeName="MegaCastingsModel.APPARTIENT_CASTING" StoreEntitySet="APPARTIENT_CASTING">
-      <EndProperty Name="CASTINGS">
-        <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
-      </EndProperty>
-      <EndProperty Name="CATEGORIES">
-        <ScalarProperty Name="ID_CAT" ColumnName="ID_CAT" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="POSTULER" TypeName="MegaCastingsModel.POSTULER" StoreEntitySet="POSTULER">
-      <EndProperty Name="CASTINGS">
-        <ScalarProperty Name="ID_CASTING" ColumnName="ID_CASTING" />
-      </EndProperty>
-      <EndProperty Name="USERS">
-        <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="Offers">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Offer">
+        <MappingFragment StoreEntitySet="Offer">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="IdentifierJob" ColumnName="IdentifierJob" />
+          <ScalarProperty Name="IdentifierContractType" ColumnName="IdentifierContractType" />
+          <ScalarProperty Name="PublishDateTime" ColumnName="PublishDateTime" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="StartContractDate" ColumnName="StartContractDate" />
+          <ScalarProperty Name="PostCount" ColumnName="PostCount" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="ProfilDescription" ColumnName="ProfilDescription" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="IdentifierProducer" ColumnName="IdentifierProducer" />
+          <ScalarProperty Name="IdentifierCategory" ColumnName="IdentifierCategory" />
+          <ScalarProperty Name="IdentifierFilters" ColumnName="IdentifierFilters" />
+          <ScalarProperty Name="IdentifierApply" ColumnName="IdentifierApply" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Packs">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Pack">
+        <MappingFragment StoreEntitySet="Pack">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producers">
+      <EntityTypeMapping TypeName="MegaCastingsModel.Producer">
+        <MappingFragment StoreEntitySet="Producer">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IdentifierPack" ColumnName="IdentifierPack" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MegaCastingsModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MegaCastingsModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="IdentifierGender" ColumnName="IdentifierGender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

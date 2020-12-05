@@ -17,7 +17,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0" FontFamily="Impact" FontSize="25" Foreground="#23B5B5">ORGANISATIONS</Label>
+        <Label Grid.Column="0" Grid.Row="0" FontFamily="Impact" FontSize="25" Foreground="#23B5B5">PRODUCTEURS</Label>
 
         <Rectangle x:Name="_RectangleListBoxOrga" Grid.Column="0" Grid.Row="2" Stroke="Gray"></Rectangle>
 
@@ -25,8 +25,8 @@
         Grid.Column="0"
         Grid.Row="2"
         x:Name="_ListBoxUserType"
-        ItemsSource="{Binding Organisation}"
-        SelectedItem="{Binding SelectedOrganisation}">
+        ItemsSource="{Binding Producer}"
+        SelectedItem="{Binding SelectedProducer}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -42,14 +42,14 @@
                             <RowDefinition Height="5"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding NAME_ORG}"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding ADRESS_ORG}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Url}"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <TextBox x:Name="BoxSearchOrga" Text="Rechercher une organisation..."  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
+        <TextBox x:Name="BoxSearchOrga" Text="Rechercher un producteur..."  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Width="330"/>
         <Button x:Name="_ButtonSearchOrga" Click="_ButtonSearchOrga_Click" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#23B5B5" Height="26" Width="50" BorderThickness="0" Grid.Column="0" Margin="0,38,15,36" >
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Search"  RenderTransformOrigin="0.938,2.125" Height="20" Width="20"/>
@@ -99,29 +99,34 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Height="40" Width="240" Margin="0,5,0.5,5">Information de l'organisation</Label>
+            <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Height="40" Width="240" Margin="0,5,0.5,5">Information du producteur</Label>
 
+            <!--#region Name -->
             <TextBlock VerticalAlignment="Center" Text="Nom :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectOrgName" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedOrganisation.NAME_ORG}"/>
+            <TextBox x:Name="_SelectOrgName" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedProducer.Name}"/>
+            <!--#endregion-->
 
+            <!--#region Username -->
+            <TextBlock VerticalAlignment="Center" Text="Username :" Grid.Row="3" Grid.Column="0" FontSize="16" Foreground="Black"/>
+
+            <TextBox x:Name="_SelectOrgUsername" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="150px" Text="{Binding SelectedProducer.UserName}"/>
+            <!--#endregion-->
+
+
+            <!--#region Site -->
             <TextBlock VerticalAlignment="Center" Text="Site :" Grid.Row="2" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectOrgSite" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedOrganisation.URL_ORG}" Margin="64,12,45.5,12"/>
+            <TextBox x:Name="_SelectOrgSite" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedProducer.Url}"/>
+            <!--#endregion-->
 
-            <TextBlock VerticalAlignment="Center" Text="Adresse :" Grid.Row="3" Grid.Column="0" FontSize="16" Foreground="Black"/>
+            <!--#region Password -->
+            <TextBlock VerticalAlignment="Center" Text="Mot de passe :" Grid.Row="4" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectOrgAddress" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="132" Text="{Binding SelectedOrganisation.ADRESS_ORG}" Margin="80,14,28.5,11"/>
+            <TextBox x:Name="_SelectOrgEmail" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="125" Text="{Binding SelectedProducer.Password}" Margin="105,14,10.5,11"/>
+            <!--#endregion-->
 
-            <TextBlock VerticalAlignment="Center" Text="Email :" Grid.Row="4" FontSize="16" Foreground="Black" Margin="0,14,191.5,14"/>
-
-            <TextBox x:Name="_SelectOrgEmail" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="163" Text="{Binding SelectedOrganisation.EMAIL_ORG}" Margin="49,12,28.5,12"/>
-
-            <TextBlock VerticalAlignment="Center" Text="Telephone :" Grid.Row="5" FontSize="16" Foreground="Black"/>
-
-            <TextBox x:Name="_SelectOrgTel" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Width="160" Text="{Binding SelectedOrganisation.TEL_ORG}" Margin="0,12,0.5,12"/>
-
-            <Button x:Name="_ButtonSaveOrg" Click="_ButtonSaveOrg_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
+            <Button x:Name="_ButtonSaveOrg" Click="_ButtonSaveOrg_Click" Grid.Column="0" Grid.Row="6" Background="Green" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="ContentSaveEdit"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                     <Label Foreground="White"

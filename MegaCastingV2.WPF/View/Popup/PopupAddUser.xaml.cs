@@ -27,7 +27,7 @@ namespace MegaCastingV2.WPF.View.Popup
 
         private void _ButtonAddUser_Click(object sender, RoutedEventArgs e)
         {
-            ((ViewModelUser)this.DataContext).AddUserType();
+            ((ViewModelUser)this.DataContext).AddUser();
         }
 
 

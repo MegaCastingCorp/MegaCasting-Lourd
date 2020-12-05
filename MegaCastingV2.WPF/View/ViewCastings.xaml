@@ -1,10 +1,9 @@
 ﻿<UserControl x:Class="MegaCastingV2.WPF.View.ViewCastings"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MegaCastingV2.WPF.View" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -25,8 +24,8 @@
         Grid.Column="0"
         Grid.Row="2"
         x:Name="_ListBoxUserType"
-        ItemsSource="{Binding CastingsType}"
-        SelectedItem="{Binding SelectedCastingsType}">
+        ItemsSource="{Binding Offers}"
+        SelectedItem="{Binding SelectedOffers}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -42,8 +41,8 @@
                             <RowDefinition Height="5"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding LABEL}"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding NB_POSTES}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}"></TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Duration}"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -102,37 +101,62 @@
 
             <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Height="40" Width="225" Margin="11,5,4.5,5">Information sur le castings</Label>
 
-            <TextBlock VerticalAlignment="Center" Text="Label :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
+            <!--#region Name -->
+            <TextBlock VerticalAlignment="Center" Text="Nom :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectCastignsLabel" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedCastingsType.LABEL}"/>
+            <TextBox x:Name="_SelectCastignsLabel" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedOffers.Name}"/>
+            <!--#endregion-->
 
-            <TextBlock VerticalAlignment="Center" Text="Domaine du metiers :" Grid.Row="2" Grid.Column="0" FontSize="16" Foreground="Black"/>
+            <!--#region Reference -->
+            <TextBlock VerticalAlignment="Center" Text="Reference :" Grid.Row="2" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectCastingsDom" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="83" Text="{Binding SelectedCastingsType.DOM_METIERS}" Margin="153,12,4.5,12"/>
+            <TextBox x:Name="_SelectCastingsDom" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="156" Text="{Binding SelectedOffers.Reference}" Margin="80,12,4.5,12"/>
+            <!--#endregion-->
 
-            <Ellipse HorizontalAlignment="Left" Stroke="Black" Width="110" Grid.Row="1" Grid.RowSpan="2" Height="100px" Grid.Column="1"/>
-
+            <!--#region ContractType -->
             <TextBlock VerticalAlignment="Center" Text="Type De Contrat :" Grid.Row="3" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectCastingsTypeContrat" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="111" Text="{Binding SelectedCastingsType.TYPE_CONTRACT}" Margin="125,14,4.5,11"/>
+            <TextBox x:Name="_SelectCastingsTypeContrat" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="111" Text="{Binding SelectedOffers.IdentifierContractType}" Margin="125,14,4.5,11"/>
+            <!--#endregion-->
 
-            <TextBlock VerticalAlignment="Top" Text="Localisation :" Grid.Row="5" Grid.Column="1" FontSize="16" Foreground="Black" Margin="0.5,16,-1,0"/>
+            <!--#region City -->
+            <TextBlock VerticalAlignment="Top" Text="Ville :" Grid.Row="3" Grid.Column="1" FontSize="16" Foreground="Black" Margin="0.5,16,-1,0"/>
 
-            <TextBox x:Name="_SelectCastingsLocalisation" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedCastingsType.ADRESS_ORG}" Margin="105,12,28.5,12"/>
+            <TextBox x:Name="_SelectCastingsCity" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="111" Text="{Binding SelectedOffers.City}" Margin="38.5,13,-59,12"/>
+            <!--#endregion-->
 
+            <!--#region Duration -->
             <TextBlock VerticalAlignment="Center" Text="Durée de diffusion :" Grid.Row="4" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectCastingsDureeDiffu" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="94" Text="{Binding SelectedCastingsType.DUREE_DIFFUSION}" Margin="142,12,4.5,13"/>
+            <TextBox x:Name="_SelectCastingsDureeDiffu" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="94" Text="{Binding SelectedOffers.Duration}" Margin="142,12,4.5,13"/>
+            <!--#endregion-->
 
+            <!--#region StartContractDate -->
             <TextBlock VerticalAlignment="Center" Text="Debut de contrat :" Grid.Row="5" FontSize="16" Foreground="Black"/>
 
-            <DatePicker HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding SelectedCastingsType.DATE_DEB_CONTRACT}" Height="28" Width="110" Margin="126,10,4.5,12"/>
+            <DatePicker HorizontalAlignment="Center"  Grid.Row="5" Text="{Binding SelectedCastingsType.StartContractDate}" Height="28" Width="110" Margin="126,10,4.5,12"/>
+            <!--#endregion-->
 
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nombre de postes :" Grid.Row="3" Grid.Column="1" FontSize="16" Foreground="Black" Margin="10.5,14,-60,14" Width="140"/>
+            <!--#region PostCount -->
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Nombre de postes :" Grid.Row="1" Grid.Column="1" FontSize="16" Foreground="Black" Margin="0.5,16,-49,12" Width="139"/>
 
-            <TextBox x:Name="_SelectCastingsNbPoste" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Text="{Binding SelectedCastingsType.NB_POSTES}" Margin="37.5,12,-47,8"/>
+            <TextBox x:Name="_SelectCastingsNbPoste" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="18" Height="30" Text="{Binding SelectedOffers.PostCount}" Margin="139.5,12,-67,8"/>
+            <!--#endregion-->
 
-            <Button x:Name="_ButtonSaveCastings" Click="_ButtonSaveCastings_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
+            <!--#region Street -->
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Street :" Grid.Row="2" Grid.Column="1" FontSize="16" Foreground="Black" Margin="0.5,16,-49,12" Width="139"/>
+
+            <TextBox x:Name="_SelectCastingsAddress" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Width="96" Height="30" Text="{Binding SelectedOffers.Street}" Margin="0,8,-59,12"/>
+            <!--#endregion-->
+
+
+            <!--#region ZipCode -->
+            <TextBlock VerticalAlignment="Top" Text="Code Postal :" Grid.Row="4" Grid.Column="1" FontSize="16" Foreground="Black" Margin="0.5,16,-1,0"/>
+
+            <TextBox x:Name="_SelectCastingsZipCode" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="66" Text="{Binding SelectedOffers.ZipCode}" Margin="91.5,13,-67,12"/>
+            <!--#endregion-->
+
+            <Button x:Name="_ButtonSaveCastings" Click="_ButtonSaveCastings_Click" Grid.Column="0" Grid.Row="6" Background="Green" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="ContentSaveEdit"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                     <Label Foreground="White"

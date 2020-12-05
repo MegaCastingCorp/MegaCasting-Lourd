@@ -231,6 +231,11 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
+        private void _TextBoxId_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
 
 
         //#region EventWindows 

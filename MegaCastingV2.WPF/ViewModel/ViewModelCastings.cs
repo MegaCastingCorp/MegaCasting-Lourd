@@ -30,7 +30,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Obtient ou défini la collection de castings
         /// </summary>
-        public ObservableCollection<Offer> Offer
+        public ObservableCollection<Offer> Offers
         {
             get { return _Offers; }
             set { _Offers = value; }
@@ -52,7 +52,7 @@ namespace MegaCastingV2.WPF.ViewModel
         public ViewModelCastings(Entities entities) : base(entities)
         {
             this.Entities.Offers.ToList();
-            this.Offer = this.Entities.Offers.Local;
+            this.Offers = this.Entities.Offers.Local;
         }
 
         #endregion
@@ -79,7 +79,7 @@ namespace MegaCastingV2.WPF.ViewModel
             {
                 Offer castings = new Offer();
                 castings.Name = "Casting";
-                this.Offer.Add(castings);
+                this.Offers.Add(castings);
                 this.SaveChanges();
                 this.SelectedOffers = castings;
             }
@@ -93,7 +93,7 @@ namespace MegaCastingV2.WPF.ViewModel
             // Vérification si on a le droit de supprimer
 
             //Suppression de l'élément
-            this.Offer.Remove(SelectedOffers);
+            this.Offers.Remove(SelectedOffers);
             this.SaveChanges();
         }
         #endregion

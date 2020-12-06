@@ -32,7 +32,7 @@ namespace MegaCastingV2.WPF.ViewModel
         /// Gets all offers from the previous year and count how much there are for each month
         /// </summary>
         /// <returns> List of this count for all month y-1</returns>
-        //public List<int> PreviousYear()
+       // public List<int> PreviousYear()
        // {
        //     List<int> previousyear = new List<int>();
        //     DateTime today = DateTime.Now;
@@ -41,10 +41,10 @@ namespace MegaCastingV2.WPF.ViewModel
        //     {
        //         previousyear.Add((from o in this.Entities.Offers
        //                           where o.PublishDateTime.Month == i
-       //                           select o).Where(o => (o.PublishDateTime.Year == previousYearFromDatetime)).Count());
+       //                        select o).Where(o => (o.PublishDateTime.Year == previousYearFromDatetime)).Count());
        //     }
        //     return previousyear;
-       // }
+       //}
         /// <summary>
         /// Gets all offers from the current year and count how much there are for each month
         /// </summary>
@@ -57,7 +57,7 @@ namespace MegaCastingV2.WPF.ViewModel
         //    {
         //currentyear.Add((from o in this.Entities.Offers
         //where o.PublishDateTime.Month == j
-        //select o).Where(o => (o.PublishDateTime.Year == today.Year)).Count());
+        //select o).Where(o => o.PublishDateTime.Year == today.Year).Count());
         //}
         //        return currentyear;
 

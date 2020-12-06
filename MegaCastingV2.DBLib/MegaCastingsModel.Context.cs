@@ -36,7 +36,6 @@ namespace MegaCastingV2.DBLib
         public virtual DbSet<Offer> Offers { get; set; }
         public virtual DbSet<Pack> Packs { get; set; }
         public virtual DbSet<Producer> Producers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

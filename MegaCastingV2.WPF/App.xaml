@@ -15,7 +15,7 @@
                 <!--#endregion-->
             </ResourceDictionary.MergedDictionaries>
             <!--#region Converters-->
-            <converter:ObjectToVisibilityConverter x:Key="_SharedObjectToVisiblityConverter"/>
+            
 
 
             <!--#endregion-->

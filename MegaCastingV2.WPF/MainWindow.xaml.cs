@@ -272,5 +272,8 @@ namespace MegaCastingV2.WPF
 
         //#endregion
 
+        private void ButtonManageContractType_OnClick(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

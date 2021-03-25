@@ -16,36 +16,31 @@ using System.Windows.Shapes;
 namespace MegaCastingV2.WPF.View
 {
     /// <summary>
-    /// Logique d'interaction pour ViewUser.xaml
+    /// Logique d'interaction pour ViewContractType.xaml
     /// </summary>
-    public partial class ViewUser : UserControl
+    public partial class ViewContractType : UserControl
     {
-        public ViewUser()
+        public ViewContractType()
         {
             InitializeComponent();
         }
 
-        private void _ButtonAddUser_Click(object sender, RoutedEventArgs e)
+        private void _ButtonSearchContractType_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void _ButtonRemoveUser_Click(object sender, RoutedEventArgs e)
+        private void _ButtonAddContractType_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void _ButtonSearchUsers_Click(object sender, RoutedEventArgs e)
+        private void _ButtonRemoveContractType_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void _ListBoxUserTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void _ButtonSaveUser_Click(object sender, RoutedEventArgs e)
+        private void _ButtonSaveContractType_Click(object sender, RoutedEventArgs e)
         {
 
         }

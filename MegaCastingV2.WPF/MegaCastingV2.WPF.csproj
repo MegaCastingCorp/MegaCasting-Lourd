@@ -89,6 +89,7 @@
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="ViewModel\ViewModelCastings.cs" />
     <Compile Include="ViewModel\ViewModelCategory.cs" />
+    <Compile Include="ViewModel\ViewModelContractType.cs" />
     <Compile Include="ViewModel\ViewModelLogin.cs" />
     <Compile Include="ViewModel\ViewModelMain.cs" />
     <Compile Include="ViewModel\ViewModelOrga.cs" />
@@ -105,6 +106,9 @@
     <Compile Include="View\ViewCategory.xaml.cs">
       <DependentUpon>ViewCategory.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewContractType.xaml.cs">
+      <DependentUpon>ViewContractType.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ViewOrga.xaml.cs">
       <DependentUpon>ViewOrga.xaml</DependentUpon>
     </Compile>
@@ -114,11 +118,11 @@
     <Compile Include="View\ViewStat.xaml.cs">
       <DependentUpon>ViewStat.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewUser.xaml.cs">
-      <DependentUpon>ViewUser.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\ViewMain.xaml.cs">
       <DependentUpon>ViewMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewUser.xaml.cs">
+      <DependentUpon>ViewUser.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -148,6 +152,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ViewContractType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ViewOrga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,11 +168,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ViewUser.xaml">
+    <Page Include="View\ViewMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ViewMain.xaml">
+    <Page Include="View\ViewUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

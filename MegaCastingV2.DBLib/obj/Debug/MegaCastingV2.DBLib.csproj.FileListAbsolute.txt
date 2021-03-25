@@ -28,8 +28,8 @@ C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Deb
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\EntityFramework.xml
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.csprojAssemblyReference.cache
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.csproj.CoreCompileInputs.cache
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.csproj.CopyComplete
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.dll
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.pdb
-C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.csprojAssemblyReference.cache

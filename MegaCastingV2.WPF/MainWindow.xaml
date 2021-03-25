@@ -35,6 +35,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Rectangle Fill="White" HorizontalAlignment="Left" Height="99" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="250"/>
@@ -54,7 +55,7 @@
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="User" Height="28" Width="23"/>
                     <Label Foreground="White"
-                    Content="Gestion des Utilisateurs"/>
+                    Content="Utilisateurs"/>
 
                 </StackPanel>
             </Button>
@@ -73,7 +74,7 @@
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Cinema"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                     <Label Foreground="White"
-                 Content="Gestion des Castings"/>
+                 Content="Castings"/>
 
                 </StackPanel>
             </Button>
@@ -91,13 +92,13 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <materialDesign:PackIcon Kind="ViewStream" Height="27" Width="22"/>
                     <Label Foreground="White"
-                 Content="Gestion des Catégories"/>
+                 Content="Catégories"/>
 
                 </StackPanel>
             </Button>
 
             <Button 
-        Grid.Row="4" 
+        Grid.Row="7" 
         Background="#23B5B5"
         VerticalAlignment="Center"
         HorizontalAlignment="Center"
@@ -109,7 +110,7 @@
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Package" Height="28" Width="20"/>
                     <Label Foreground="White"
-                 Content="Gestion des Packs"></Label>
+                 Content="Packs de castings"></Label>
 
                 </StackPanel>
             </Button>
@@ -148,9 +149,26 @@
                  Content="Statistiques"></Label>
                 </StackPanel>
             </Button>
+            <Button 
+                Grid.Row="4" 
+                Background="#23B5B5"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Width="230"
+                Height="40"
+                Name="ButtonManageContractType"
+                Click="ButtonManageContractType_OnClick"
+                BorderThickness="0" Margin="10,10.5,10,104" Grid.RowSpan="2">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="folder" Height="28" Width="23"/>
+                    <Label Foreground="White"
+                           Content="Types de contrat"/>
+
+                </StackPanel>
+            </Button>
 
             <Button 
-        Grid.Row="7"
+        Grid.Row="8"
         Grid.Column="2"
         Name="ButtonDisconnect"
         Click="ButtonDisconnect_Click"
@@ -170,10 +188,10 @@
         </Grid>
 
         <DockPanel x:Name="DockPanelView" Grid.Column="2" Grid.RowSpan="2">
-            <view:ViewMain ></view:ViewMain>
+            <view:ViewMain Loaded="ViewMain_Loaded" ></view:ViewMain>
         </DockPanel>
 
-        <Grid x:Name="_GridAuthentication" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="1" Background="White" Visibility="Visible" >
+        <Grid x:Name="_GridAuthentication" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="1" Background="White" Visibility="Hidden" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="auto"/>
@@ -202,7 +220,7 @@
 
                 </StackPanel>
             </Button>
-            <Label Name="_LabelErrorMessage" Visibility="Hidden" Background="Red" Opacity="0.5" Foreground="White" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="0.5,55.5,0,236.5">Le mot de passe ou l'identifiant n'est pas correct.</Label>
+            <Label Name="_LabelErrorMessage" Visibility="Hidden" Background="Red" Opacity="0.5" Foreground="White" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="0.5,55.5,0,236.5">L'identifiant ou le mot de passe n'est pas correct.</Label>
 
         </Grid>
     </Grid>

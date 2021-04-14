@@ -188,7 +188,7 @@
         </Grid>
 
         <DockPanel x:Name="DockPanelView" Grid.Column="2" Grid.RowSpan="2">
-            <view:ViewMain Loaded="ViewMain_Loaded" ></view:ViewMain>
+            <view:ViewMain></view:ViewMain>
         </DockPanel>
 
         <Grid x:Name="_GridAuthentication" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="1" Background="White" Visibility="Hidden" >

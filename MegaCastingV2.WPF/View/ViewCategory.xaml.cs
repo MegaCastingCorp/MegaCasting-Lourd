@@ -38,7 +38,7 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonAddCategorie_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelCategory)this.DataContext).AddCategory(this._SelectCategorieLabel.Text);
         }
 
         private void _ButtonRemoveCategorie_Click(object sender, RoutedEventArgs e)

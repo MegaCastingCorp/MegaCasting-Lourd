@@ -28,7 +28,7 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonAddPack_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelPack)this.DataContext).AddPack(this._SelectPackName.Text);
         }
 
         private void _ButtonRemovePack_Click(object sender, RoutedEventArgs e)

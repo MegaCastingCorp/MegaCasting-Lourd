@@ -274,6 +274,14 @@ namespace MegaCastingV2.WPF
 
         private void ButtonManageContractType_OnClick(object sender, RoutedEventArgs e)
         {
+            this.DockPanelView.Children.Clear();
+
+            ViewModelContractType viewModel = new ViewModelContractType(Entities);
+
+            ViewContractType view = new ViewContractType();
+            //view.DataContext = viewModel;
+
+            this.DockPanelView.Children.Add(view);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace MegaCastingV2.DBLib
         public string Name { get; set; }
         public string Reference { get; set; }
         public long IdentifierJob { get; set; }
-        public long IdentifierContractType { get; set; }
+        public Nullable<long> IdentifierContractType { get; set; }
         public Nullable<System.DateTime> PublishDateTime { get; set; }
         public int Duration { get; set; }
         public Nullable<System.DateTime> StartContractDate { get; set; }

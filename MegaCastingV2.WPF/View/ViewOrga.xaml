@@ -24,7 +24,7 @@
         <ListBox
         Grid.Column="0"
         Grid.Row="2"
-        x:Name="_ListBoxUserType"
+        x:Name="_ListBoxOrga"
         ItemsSource="{Binding Producer}"
         SelectedItem="{Binding SelectedProducer}">
             <ListBox.ItemTemplate>
@@ -63,6 +63,14 @@
                 <materialDesign:PackIcon Kind="Add"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
                 <Label Foreground="White"
                 Content="Ajouter"
+                 />
+            </StackPanel>
+        </Button>
+        <Button x:Name="_ButtonResetOrga" Click="_ButtonResetOrga_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#9EDE1C " Height="35" Width="170" BorderThickness="0" Margin="45,6,185,59" Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Add"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
+                <Label Foreground="White"
+                Content="Rénitialiser"
                  />
             </StackPanel>
         </Button>
@@ -120,12 +128,7 @@
             <TextBox x:Name="_SelectOrgSite" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedProducer.Url}"/>
             <!--#endregion-->
 
-            <!--#region Password -->
-            <TextBlock VerticalAlignment="Center" Text="Mot de passe :" Grid.Row="4" FontSize="16" Foreground="Black"/>
-
-            <TextBox x:Name="_SelectOrgEmail" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="125" Text="{Binding SelectedProducer.Password}" Margin="105,14,10.5,11"/>
-            <!--#endregion-->
-
+  
             <Button x:Name="_ButtonSaveOrg" Click="_ButtonSaveOrg_Click" Grid.Column="0" Grid.Row="6" Background="Green" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="ContentSaveEdit"  RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>

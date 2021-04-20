@@ -4,8 +4,10 @@
     [UserName]       NVARCHAR (50)  NULL,
     [Password]       NVARCHAR (50)  NULL,
     [Url]            NVARCHAR (200) NULL,
-    [IdentifierPack] BIGINT         NOT NULL,
+    [IdentifierPack] BIGINT         NULL,
     CONSTRAINT [PK_Producer] PRIMARY KEY CLUSTERED ([Identifier] ASC),
     CONSTRAINT [FK_Producer_Pack] FOREIGN KEY ([IdentifierPack]) REFERENCES [dbo].[Pack] ([Identifier])
 );
+
+
 

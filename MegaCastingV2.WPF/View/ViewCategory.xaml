@@ -102,7 +102,7 @@
             <!--#region Label -->
             <TextBlock VerticalAlignment="Center" Text="Nom de la categorie :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserLastname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="88" Text="{Binding SelectedCategory.Label}" Margin="152,14,0.5,11"/>
+            <TextBox x:Name="_SelectCategorieLabel" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="88" Text="{Binding SelectedCategory.Label}" Margin="152,14,0.5,11"/>
             <!--#endregion-->
 
             <Button x:Name="_ButtonSaveCategory" Click="_ButtonSaveCategory_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">

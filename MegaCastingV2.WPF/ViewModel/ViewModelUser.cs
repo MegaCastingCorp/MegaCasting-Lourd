@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MegaCastingV2.WPF.ViewModel
 {
@@ -66,32 +67,32 @@ namespace MegaCastingV2.WPF.ViewModel
 
 
         /// <summary>
-        /// Ajoute un nouveau utilisateur
-        /// </summary>
-        public void AddUser()
-        {
-            if (!this.Entities.Users
-                .Any(type => type.Username == "Nouvel utilisateur")
-                )
-            {
-                User user = new User();
-                user.Username = "Username";
-                this.User.Add(user);
-                this.SaveChanges();
-                this.SelectedUser = user;
-            }
-        }
-
-        /// <summary>
         /// Supprime le contrat sélectionné
         /// </summary>
         public void DeleteUser()
         {
-            // Vérification si on a le droit de supprimer
+            //Vérification si on a le droit de supprimer
 
-            //Suppression de l'élément
-            this.User.Remove(SelectedUser);
-            this.SaveChanges();
+            if (SelectedUser == null)
+            {
+                MessageBox.Show("Vous devez selectionner un utilisateur pour le supprimer");
+            }
+            else if (!SelectedUser.Username.Any())
+            {
+                MessageBoxResult result = MessageBox.Show("Souhaitez-vous confimer la suppression", "Suppresion d'un Type de Contrat", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+
+                    // Suppression de l'élément
+                    this.Entities.Users.Remove(SelectedUser);
+                    this.Entities.SaveChanges();
+                    this.User.Remove(SelectedUser);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins une offre lié a l'utilisateur");
+            }
         }
         #endregion
     }

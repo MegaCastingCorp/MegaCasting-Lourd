@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MegaCastingV2.WPF.ViewModel
 {
@@ -69,17 +70,31 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Ajoute un nouveau pack
         /// </summary>
-        public void AddPack()
+        public void AddPack(string text)
         {
-            if (!this.Entities.Packs
-                .Any(type => type.Label == "Nom du pack")
-                )
+            if (text.Any())
             {
-                Pack pack = new Pack();
-                pack.Label = "Pack";
-                this.Pack.Add(pack);
-                this.SaveChanges();
-                this.SelectedPack = pack;
+                if (!this.Entities.Producers.Any(type => type.Name == text))
+                {
+                    MessageBoxResult result = MessageBox.Show("Souhaitez-vous confirmer l'ajout ?", "Ajout d'un pack", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Pack pack = new Pack();
+                        pack.Label = text;
+                        this.Pack.Add(pack);
+
+                        this.Entities.SaveChanges();
+                        this.SelectedPack = pack;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Le pack existe déjà");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez saisir un nom");
             }
         }
 
@@ -88,11 +103,28 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void RemovePack()
         {
-            // Vérification si on a le droit de supprimer
+            //Vérification si on a le droit de supprimer
 
-            //Suppression de l'élément
-            this.Pack.Remove(SelectedPack);
-            this.SaveChanges();
+            if (SelectedPack == null)
+            {
+                MessageBox.Show("Vous devez selectionner un pack pour le supprimer");
+            }
+            else if (!SelectedPack.Producers.Any())
+            {
+                MessageBoxResult result = MessageBox.Show("Souhaitez-vous confimer la suppression", "Suppresion d'un pack", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+
+                    // Suppression de l'élément
+                    this.Entities.Packs.Remove(SelectedPack);
+                    this.Entities.SaveChanges();
+                    this.Pack.Remove(SelectedPack);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins un producteur lié à un pack.");
+            }
         }
 
 

@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MegaCastingV2.WPF.ViewModel
 {
@@ -64,34 +65,66 @@ namespace MegaCastingV2.WPF.ViewModel
             this.Entities.SaveChanges();
         }
 
-
-        /// <summary>
-        /// Ajoute une nouvelle Organisation
+        ///<summary>
+        /// Ajout de producteur
         /// </summary>
-        public void AddOrganisation()
+        public void AddOrga(string text)
         {
-            if (!this.Entities.Producers
-                .Any(type => type.Name == "Nom orga")
-                )
+            if (text.Any())
             {
-                Producer orga = new Producer();
-                orga.Name = "Organisation";
-                this.Producer.Add(orga);
-                this.SaveChanges();
-                this.SelectedProducer = orga;
+                if (!this.Entities.Producers.Any(type => type.Name == text))
+                {
+                    MessageBoxResult result = MessageBox.Show("Souhaitez-vous confirmer l'ajout ?", "Ajout d'un producteur", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Producer producer = new Producer();
+                        producer.Name = text;
+                        this.Producer.Add(producer);
+
+                        this.Entities.SaveChanges();
+                        this.SelectedProducer = producer;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Le producteur existe déjà");
+                }
             }
+            else
+            {
+                MessageBox.Show("Veuillez saisir un nom");
+            }
+
         }
+
 
         /// <summary>
         /// Supprime l'Organisation selectionnée
         /// </summary>
         public void RemoveOrga()
         {
-            // Vérification si on a le droit de supprimer
+          //Vérification si on a le droit de supprimer
 
-            //Suppression de l'élément
-            this.Producer.Remove(SelectedProducer);
-            this.SaveChanges();
+            if (SelectedProducer == null)
+            {
+                MessageBox.Show("Vous devez selectionner un Type de Contrat pour le supprimer");
+            }
+            else if (!SelectedProducer.Offers.Any())
+            {
+                MessageBoxResult result = MessageBox.Show("Souhaitez-vous confimer la suppression", "Suppresion d'un Type de Contrat", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+
+                    // Suppression de l'élément
+                    this.Entities.Producers.Remove(SelectedProducer);
+                    this.Entities.SaveChanges();
+                    this.Producer.Remove(SelectedProducer);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins une offre lié à un type de contrat");
+            }
         }
 
 

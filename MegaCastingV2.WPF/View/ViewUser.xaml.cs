@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegaCastingV2.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,11 +28,11 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonAddUser_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void _ButtonRemoveUser_Click(object sender, RoutedEventArgs e)
         {
+            ((ViewModelUser)this.DataContext).DeleteUser();
 
         }
 
@@ -47,7 +48,8 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonSaveUser_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelUser)this.DataContext).SaveChanges();
         }
+
     }
 }

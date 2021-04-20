@@ -81,7 +81,7 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="IdentifierJob" Type="Int64" Nullable="false" />
-    <Property Name="IdentifierContractType" Type="Int64" Nullable="false" />
+    <Property Name="IdentifierContractType" Type="Int64" />
     <Property Name="PublishDateTime" Type="DateTime" Precision="7" />
     <Property Name="Duration" Type="Int32" Nullable="false" />
     <Property Name="StartContractDate" Type="DateTime" Precision="0" />
@@ -120,7 +120,7 @@
     <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="IdentifierPack" Type="Int64" Nullable="false" />
+    <Property Name="IdentifierPack" Type="Int64" />
     <NavigationProperty Name="Offers" Relationship="Self.FK_Offer_Producer" FromRole="Producer" ToRole="Offer" />
     <NavigationProperty Name="Pack" Relationship="Self.FK_Producer_Pack" FromRole="Producer" ToRole="Pack" />
   </EntityType>
@@ -187,7 +187,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Offer_ContractType">
-    <End Role="ContractType" Type="Self.ContractType" Multiplicity="1" />
+    <End Role="ContractType" Type="Self.ContractType" Multiplicity="0..1" />
     <End Role="Offer" Type="Self.Offer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ContractType">
@@ -271,7 +271,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Producer_Pack">
-    <End Role="Pack" Type="Self.Pack" Multiplicity="1" />
+    <End Role="Pack" Type="Self.Pack" Multiplicity="0..1" />
     <End Role="Producer" Type="Self.Producer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Pack">

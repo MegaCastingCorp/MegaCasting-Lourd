@@ -33,6 +33,7 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonAddOrga_Click(object sender, RoutedEventArgs e)
         {
+            ((ViewModelOrga)this.DataContext).AddOrga(this._SelectOrgName.Text);
         }
 
         private void _ButtonRemoveOrga_Click(object sender, RoutedEventArgs e)
@@ -43,6 +44,19 @@ namespace MegaCastingV2.WPF.View
         private void _ButtonSaveOrg_Click(object sender, RoutedEventArgs e)
         {
             ((ViewModelOrga)this.DataContext).SaveChanges();
+        }
+
+        private void _ButtonResetOrga_Click(object sender, RoutedEventArgs e)
+        {
+            if (_ListBoxOrga.SelectedItem != null)
+            {
+                _ListBoxOrga.UnselectAll();
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionner un utilisateur à renitialiser.");
+            }
+
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows;
 
 namespace MegaCastingV2.WPF.ViewModel
 {
@@ -71,17 +71,31 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Ajoute un nouveau castings
         /// </summary>
-        public void AddCastings()
+        public void AddCastings(string text)
         {
-            if (!this.Entities.Offers
-                .Any(type => type.Name == "Nouveau casting")
-                )
+            if (text.Any())
             {
-                Offer castings = new Offer();
-                castings.Name = "Casting";
-                this.Offers.Add(castings);
-                this.SaveChanges();
-                this.SelectedOffers = castings;
+                if (!this.Entities.Offers.Any(type => type.Name == text))
+                {
+                    MessageBoxResult result = MessageBox.Show("Souhaitez-vous confirmer l'ajout", "Ajout d'un type de job", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Offer offer = new Offer();
+                        offer.Name = text;
+                        this.Offers.Add(offer);
+
+                        this.Entities.SaveChanges();
+                        this.SelectedOffers = offer;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Le contrat existe déjà");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez saisir un Nom");
             }
         }
 
@@ -90,11 +104,28 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void DeleteCastings()
         {
-            // Vérification si on a le droit de supprimer
+            //Vérification si on a le droit de supprimer
 
-            //Suppression de l'élément
-            this.Offers.Remove(SelectedOffers);
-            this.SaveChanges();
+            if (SelectedOffers == null)
+            {
+                MessageBox.Show("Vous devez selectionner un Type de Contrat pour le supprimer");
+            }
+            else if (!SelectedOffers.Producer.Offers.Any())
+            {
+                MessageBoxResult result = MessageBox.Show("Souhaitez-vous confimer la suppression", "Suppresion d'un Type de Contrat", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+
+                    // Suppression de l'élément
+                    this.Entities.Offers.Remove(SelectedOffers);
+                    this.Entities.SaveChanges();
+                    this.Offers.Remove(SelectedOffers);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins une offre lier à un type de contrat");
+            }
         }
         #endregion
 

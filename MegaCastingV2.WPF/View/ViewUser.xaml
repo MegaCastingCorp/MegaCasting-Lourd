@@ -59,14 +59,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="_ButtonAddUser" Click="_ButtonAddUser_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#23B5B5" Height="35" Width="170" BorderThickness="0" Margin="220,10,10,62" Grid.Column="1">
-            <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="Add" RenderTransformOrigin="0.938,2.125" Height="27" Width="22"/>
-                <Label Foreground="White"
-                Content="Ajouter"
-                 />
-            </StackPanel>
-        </Button>
+
         <Button x:Name="_ButtonRemoveUser" 
                 Click="_ButtonRemoveUser_Click" 
                 VerticalAlignment="Center" 
@@ -121,12 +114,6 @@
             <TextBlock VerticalAlignment="Center" Text="Username :" Grid.Row="3" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
             <TextBox x:Name="_SelectUserUsername" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="132" Text="{Binding SelectedUser.Username}" Margin="80,14,28.5,11"/>
-            <!--#endregion-->
-
-            <!--#region Password -->
-            <TextBlock VerticalAlignment="Center" Text="Mot de passe :" Grid.Row="4" FontSize="16" Foreground="Black"/>
-
-            <TextBox x:Name="_SelectUserPassword" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="107" Text="{Binding SelectedUser.Password}" Margin="105,12,28.5,12"/>
             <!--#endregion-->
 
             <!--#region Email -->

@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MegaCastingV2.WPF.ViewModel
 {
@@ -71,18 +72,33 @@ namespace MegaCastingV2.WPF.ViewModel
         /// <summary>
         /// Ajoute une nouvelle categorie
         /// </summary>
-        public void AddCategory()
+        public void AddCategory(string text)
         {
-            if (!this.Entities.Categories
-                .Any(type => type.Label == "Nom de la categorie")
-                )
+            if (text.Any())
             {
-                Category category = new Category();
-                category.Label = "Nom";
-                this.Category.Add(category);
-                this.SaveChanges();
-                this.SelectedCategory = category;
+                if (!this.Entities.Categories.Any(type => type.Label == text))
+                {
+                    MessageBoxResult result = MessageBox.Show("Souhaitez-vous confirmer l'ajout", "Ajout d'une categorie", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Category category = new Category();
+                        category.Label = text;
+                        this.Category.Add(category);
+
+                        this.Entities.SaveChanges();
+                        this.SelectedCategory = category;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La categorie existe déjà");
+                }
             }
+            else
+            {
+                MessageBox.Show("Veuillez saisir un nom");
+            }
+
         }
 
         /// <summary>
@@ -90,11 +106,28 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         public void RemoveCategory()
         {
-            // Vérification si on a le droit de supprimer
+            //Vérification si on a le droit de supprimer
 
-            //Suppression de l'élément
-            this.Category.Remove(SelectedCategory);
-            this.SaveChanges();
+            if (SelectedCategory == null)
+            {
+                MessageBox.Show("Vous devez selectionner une categorie pour la supprimer");
+            }
+            else if (!SelectedCategory.Offers.Any())
+            {
+                MessageBoxResult result = MessageBox.Show("Souhaitez-vous confimer la suppression", "Suppresion d'une categorie", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+
+                    // Suppression de l'élément
+                    this.Entities.Categories.Remove(SelectedCategory);
+                    this.Entities.SaveChanges();
+                    this.Category.Remove(SelectedCategory);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins une offre lié a une categorie");
+            }
         }
 
         #endregion

@@ -33,7 +33,7 @@ namespace MegaCastingV2.WPF.View
 
         private void _ButtonAddCastings_Click(object sender, RoutedEventArgs e)
         {
-
+            ((ViewModelCastings)this.DataContext).AddCastings(this._SelectCastignsLabel.Text);
         }
 
         private void _ButtonSearchCastings_Click(object sender, RoutedEventArgs e)

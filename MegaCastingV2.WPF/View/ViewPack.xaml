@@ -103,11 +103,11 @@
 
             <TextBlock VerticalAlignment="Center" Text="Nom :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserLastname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedPack.Label}"/>
+            <TextBox x:Name="_SelectPackName" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedPack.Label}"/>
 
             <TextBlock VerticalAlignment="Center" Text="Prix :" Grid.Row="2" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
-            <TextBox x:Name="_SelectUserFirstname" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedPack.Price}" Margin="35,14,74.5,11"/>
+            <TextBox x:Name="_SelectPackPrix" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="131" Text="{Binding SelectedPack.Price}" Margin="35,14,74.5,11"/>
 
             <Button x:Name="_ButtonSavePack" Click="_ButtonSavePack_Click" Grid.Column="0" Grid.Row="6" Background="#23B5B5" Height="35" Width="170" BorderThickness="0">
                 <StackPanel Orientation="Horizontal">

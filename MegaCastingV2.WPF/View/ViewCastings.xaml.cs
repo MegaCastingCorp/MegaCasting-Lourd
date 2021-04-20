@@ -46,18 +46,16 @@ namespace MegaCastingV2.WPF.View
             ((ViewModelCastings)this.DataContext).DeleteCastings();
         }
 
-        private void RemoveTextBar(object sender, RoutedEventArgs e)
+        private void _ButtonResetCastings_Click(object sender, RoutedEventArgs e)
         {
-            if (BoxSearchCastings.Text == "Rechercher un casting...")
+            if (_ListBoxCastings.SelectedItem != null)
             {
-                BoxSearchCastings.Text = "";
+                _ListBoxCastings.UnselectAll();
             }
-        }
-
-        private void AddTextBar(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(BoxSearchCastings.Text))
-                BoxSearchCastings.Text = "Recherche un casting...";
+            else
+            {
+                MessageBox.Show("Veuillez selectionner un utilisateur à renitialiser.");
+            }
 
         }
     }

@@ -41,23 +41,16 @@ namespace MegaCastingV2.WPF.View
             ((ViewModelPack)this.DataContext).SaveChanges();
         }
 
-        private void _ButtonSearchPack_Click(object sender, RoutedEventArgs e)
+        private void _ButtonResetPack_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void RemoveTextBar(object sender, RoutedEventArgs e)
-        {
-            if (BoxSearchPack.Text == "Rechercher un pack...")
+            if (_ListBoxPack.SelectedItem != null)
             {
-                BoxSearchPack.Text = "";
+                _ListBoxPack.UnselectAll();
             }
-        }
-
-        private void AddTextBar(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(BoxSearchPack.Text))
-                BoxSearchPack.Text = "Recherche un pack...";
+            else
+            {
+                MessageBox.Show("Veuillez selectionner un pack pour rénitialiser.");
+            }
 
         }
     }

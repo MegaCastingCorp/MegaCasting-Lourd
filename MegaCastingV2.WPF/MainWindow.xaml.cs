@@ -283,5 +283,14 @@ namespace MegaCastingV2.WPF
 
             this.DockPanelView.Children.Add(view);
         }
+
+        private void ButtonHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.DockPanelView.Children.Clear();
+
+            ViewMain view = new ViewMain();
+
+            this.DockPanelView.Children.Add(view);
+        }
     }
 }

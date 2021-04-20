@@ -41,6 +41,21 @@
             <Rectangle Fill="White" HorizontalAlignment="Left" Height="99" Stroke="Gray" StrokeThickness="1" VerticalAlignment="Top" Width="250"/>
             <Image Source="/Img/MegaCasting_Logo.png"/>
 
+            <Button 
+        Grid.Row="0" 
+        Background="#23B5B5"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Width="70"
+        Height="40"
+        Name="ButtonHome"
+        Click="ButtonHome_Click"
+        BorderThickness="0" Margin="10,8,170,29">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Home" Height="28" Width="23"/>
+                </StackPanel>
+            </Button>
+
 
             <Button 
         Grid.Row="1" 

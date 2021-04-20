@@ -26,11 +26,6 @@ namespace MegaCastingV2.WPF.View
             InitializeComponent();
         }
 
-        private void _ButtonSearchCategory_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void _ButtonSaveCategory_Click(object sender, RoutedEventArgs e)
         {
             ((ViewModelCategory)this.DataContext).SaveChanges();
@@ -46,20 +41,16 @@ namespace MegaCastingV2.WPF.View
             ((ViewModelCategory)this.DataContext).RemoveCategory();
         }
 
-        private void RemoveTextBar(object sender, RoutedEventArgs e)
+        private void _ButtonResetCategorie_Click(object sender, RoutedEventArgs e)
         {
-            if (BoxSearchCategory.Text == "Rechercher une categorie...")
+            if (_ListBoxCategory.SelectedItem != null)
             {
-                BoxSearchCategory.Text = "";
+                _ListBoxCategory.UnselectAll();
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionner un utilisateur à renitialiser.");
             }
         }
-
-        private void AddTextBar(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(BoxSearchCategory.Text))
-                BoxSearchCategory.Text = "Recherche une categorie...";
-
-        }
-
     }
 }

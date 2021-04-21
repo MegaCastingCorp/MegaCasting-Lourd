@@ -75,9 +75,9 @@ namespace MegaCastingV2.WPF.ViewModel
         {
             if (text.Any())
             {
-                if (!this.Entities.Offers.Any(type => type.Name == text))
+                if (!this.Entities.Offers.Any(type => !(type.Name != text )))
                 {
-                    MessageBoxResult result = MessageBox.Show("Souhaitez-vous confirmer l'ajout", "Ajout d'un type de job", MessageBoxButton.YesNo);
+                    MessageBoxResult result = MessageBox.Show("Souhaitez-vous confirmer l'ajout", "Ajout d'un casting", MessageBoxButton.YesNo);
                     if (result == MessageBoxResult.Yes)
                     {
                         Offer offer = new Offer();
@@ -90,12 +90,12 @@ namespace MegaCastingV2.WPF.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Le contrat existe déjà");
+                    MessageBox.Show("Le casting existe déjà");
                 }
             }
             else
             {
-                MessageBox.Show("Veuillez saisir un Nom");
+                MessageBox.Show("Veuillez saisir un nom et une durée");
             }
         }
 
@@ -108,7 +108,7 @@ namespace MegaCastingV2.WPF.ViewModel
 
             if (SelectedOffers == null)
             {
-                MessageBox.Show("Vous devez selectionner un Type de Contrat pour le supprimer");
+                MessageBox.Show("Vous devez selectionner un casting pour le supprimer");
             }
             else if (!SelectedOffers.Producer.Offers.Any())
             {
@@ -124,7 +124,7 @@ namespace MegaCastingV2.WPF.ViewModel
             }
             else
             {
-                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins une offre lier à un type de contrat");
+                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins une offre lier à un producteur");
             }
         }
         #endregion

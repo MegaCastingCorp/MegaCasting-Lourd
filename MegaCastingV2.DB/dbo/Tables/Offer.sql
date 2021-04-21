@@ -4,8 +4,8 @@
     [Reference]              NVARCHAR (50)   NULL,
     [IdentifierJob]          BIGINT          NOT NULL,
     [IdentifierContractType] BIGINT          NULL,
-    [PublishDateTime]        DATETIME2 (7)   NULL,
-    [Duration]               INT             NOT NULL,
+    [PublishDateTime]        DATE            NULL,
+    [Duration]               INT             NULL,
     [StartContractDate]      DATE            NULL,
     [PostCount]              INT             NULL,
     [JobDescription]         NVARCHAR (2000) NULL,
@@ -25,6 +25,10 @@
     CONSTRAINT [FK_Offer_Job] FOREIGN KEY ([IdentifierJob]) REFERENCES [dbo].[Job] ([Identifier]),
     CONSTRAINT [FK_Offer_Producer] FOREIGN KEY ([IdentifierProducer]) REFERENCES [dbo].[Producer] ([Identifier])
 );
+
+
+
+
 
 
 

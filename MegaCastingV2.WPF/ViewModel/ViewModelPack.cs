@@ -123,6 +123,7 @@ namespace MegaCastingV2.WPF.ViewModel
             }
             else
             {
+
                 MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins un producteur lié à un pack.");
             }
         }

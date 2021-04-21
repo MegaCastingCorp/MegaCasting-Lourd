@@ -77,7 +77,7 @@ namespace MegaCastingV2.WPF.ViewModel
             {
                 MessageBox.Show("Vous devez selectionner un utilisateur pour le supprimer");
             }
-            else if (!SelectedUser.Username.Any())
+            else if (!SelectedUser.Applies.Any())
             {
                 MessageBoxResult result = MessageBox.Show("Souhaitez-vous confimer la suppression", "Suppresion d'un Type de Contrat", MessageBoxButton.YesNo);
                 if (result == MessageBoxResult.Yes)
@@ -91,7 +91,7 @@ namespace MegaCastingV2.WPF.ViewModel
             }
             else
             {
-                MessageBox.Show("Vous ne pouvez pas supprimer car il existe encore au moins une offre lié a l'utilisateur");
+                MessageBox.Show("Vous ne pouvez pas supprimer car l'utilisateur à postuler à une offre");
             }
         }
         #endregion

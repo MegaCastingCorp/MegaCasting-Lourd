@@ -120,18 +120,18 @@ namespace MegaCastingV2.WPF
         {
             
             this.CurrentEmployee = this.Entities.Employees
-                .FirstOrDefault(employee => employee.Username == _TextBoxId.Text && employee.Password == _TextBoxPassWord.Password);
+                .FirstOrDefault(employee => employee.Username == _TextBoxUsername.Text && employee.Password == _TextBoxPassWord.Password);
 
             if (CurrentEmployee == null)
             {
-                _TextBoxId.Text = "";
+                _TextBoxUsername.Text = "";
                 _TextBoxPassWord.Password = "";
                 _LabelErrorMessage.Visibility = Visibility.Visible;
 
             }
             else
             {
-                _GridAuthentication.Visibility = Visibility.Collapsed;
+                _GridAuthentication.Visibility = Visibility.Hidden;
             }
         }
 
@@ -219,18 +219,6 @@ namespace MegaCastingV2.WPF
             this.DockPanelView.Children.Add(view);
         }
 
-        private void ButtonStats_Click(object sender, RoutedEventArgs e)
-        {
-            this.DockPanelView.Children.Clear();
-
-            ViewModelStat viewModel = new ViewModelStat(Entities);
-
-            ViewStat view = new ViewStat();
-            //view.DataContext = viewModel;
-
-            this.DockPanelView.Children.Add(view);
-        }
-
         private void _TextBoxId_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -291,6 +279,11 @@ namespace MegaCastingV2.WPF
             ViewMain view = new ViewMain();
 
             this.DockPanelView.Children.Add(view);
+        }
+
+        private void ViewMain_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

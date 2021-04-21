@@ -260,7 +260,6 @@ C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewContractType.g.cs
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewOrga.g.cs
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewPack.g.cs
-C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewStat.g.cs
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.g.cs
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUser.g.cs
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\App.g.cs
@@ -274,7 +273,6 @@ C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewContractType.baml
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewOrga.baml
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewPack.baml
-C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewStat.baml
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewMain.baml
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\View\ViewUser.baml
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.g.resources
@@ -284,3 +282,7 @@ C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.csproj.CopyComplete
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.exe
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.pdb
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.exe.manifest
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\bin\Debug\MegaCastingV2.WPF.application
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.exe.manifest
+C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.WPF\obj\Debug\MegaCastingV2.WPF.application

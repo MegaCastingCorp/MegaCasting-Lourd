@@ -30,7 +30,6 @@ namespace MegaCastingV2.WPF.ViewModel
         private int CountUser()
         {
             return this.Entities.Users.Count();
-
         }
 
         /// <summary>

@@ -36,11 +36,6 @@ namespace MegaCastingV2.WPF.View
             ((ViewModelCastings)this.DataContext).AddCastings(this._SelectCastignsLabel.Text);
         }
 
-        private void _ButtonSearchCastings_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void _ButtonRemoveCastings_Click(object sender, RoutedEventArgs e)
         {
             ((ViewModelCastings)this.DataContext).DeleteCastings();
@@ -56,7 +51,11 @@ namespace MegaCastingV2.WPF.View
             {
                 MessageBox.Show("Veuillez selectionner un utilisateur à renitialiser.");
             }
+        }
 
+        private void _ListBoxCastings_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            ((ViewModelCastings)this.DataContext).SetNameProducer();
         }
     }
 }

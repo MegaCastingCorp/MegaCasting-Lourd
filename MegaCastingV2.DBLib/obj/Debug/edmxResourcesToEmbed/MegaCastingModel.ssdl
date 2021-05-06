@@ -71,8 +71,8 @@
     <Property Name="Reference" Type="nvarchar" MaxLength="50" />
     <Property Name="IdentifierJob" Type="bigint" Nullable="false" />
     <Property Name="IdentifierContractType" Type="bigint" />
-    <Property Name="PublishDateTime" Type="datetime2" Precision="7" />
-    <Property Name="Duration" Type="int" Nullable="false" />
+    <Property Name="PublishDateTime" Type="date" />
+    <Property Name="Duration" Type="int" />
     <Property Name="StartContractDate" Type="date" />
     <Property Name="PostCount" Type="int" />
     <Property Name="JobDescription" Type="nvarchar" MaxLength="2000" />

@@ -26,11 +26,6 @@ namespace MegaCastingV2.WPF.View
             InitializeComponent();
         }
 
-        private void _ButtonSearchContractType_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void _ButtonAddContractType_Click(object sender, RoutedEventArgs e)
         {
             ((ViewModelContractType)this.DataContext).AddContractType(this._SelectNameContractType.Text);

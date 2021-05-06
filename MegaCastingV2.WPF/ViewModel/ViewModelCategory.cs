@@ -14,7 +14,7 @@ namespace MegaCastingV2.WPF.ViewModel
         #region Atributes
 
         /// <summary>
-        /// Collection de Category
+        /// Collection de cateogrie
         /// </summary>
         private ObservableCollection<Category> _Category;
 
@@ -28,7 +28,7 @@ namespace MegaCastingV2.WPF.ViewModel
         #region Properties
 
         /// <summary>
-        /// Obtient ou defini la category selectionné
+        /// Obtient ou defini la cateogrie selectionné
         /// </summary>
         public Category SelectedCategory
         {
@@ -37,7 +37,7 @@ namespace MegaCastingV2.WPF.ViewModel
         }
 
         /// <summary>
-        /// Obtient ou defini la collection de category
+        /// Obtient ou defini la collection de cateogrie
         /// </summary>
         public ObservableCollection<Category> Category
         {

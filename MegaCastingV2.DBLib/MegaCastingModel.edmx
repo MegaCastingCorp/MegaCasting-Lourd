@@ -77,7 +77,7 @@
           <Property Name="IdentifierJob" Type="bigint" Nullable="false" />
           <Property Name="IdentifierContractType" Type="bigint" />
           <Property Name="PublishDateTime" Type="date" />
-          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="Duration" Type="int" />
           <Property Name="StartContractDate" Type="date" />
           <Property Name="PostCount" Type="int" />
           <Property Name="JobDescription" Type="nvarchar" MaxLength="2000" />
@@ -412,7 +412,7 @@
           <Property Name="IdentifierJob" Type="Int64" Nullable="false" />
           <Property Name="IdentifierContractType" Type="Int64" />
           <Property Name="PublishDateTime" Type="DateTime" Precision="0" />
-          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <Property Name="Duration" Type="Int32" />
           <Property Name="StartContractDate" Type="DateTime" Precision="0" />
           <Property Name="PostCount" Type="Int32" />
           <Property Name="JobDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />

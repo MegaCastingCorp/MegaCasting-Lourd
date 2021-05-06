@@ -15,21 +15,36 @@ namespace MegaCastingV2.WPF.ViewModel
         #region Atributes
 
         /// <summary>
-        /// Collection de Category
+        /// Collection de contrat
         /// </summary>
         private ObservableCollection<ContractType> _ContractType;
 
         /// <summary>
-        /// Selectionne une cateogrie
+        /// Selectionne une contrat
         /// </summary>
         private ContractType _SelectedContractType;
+
+
+        /// <summary>
+        /// Nom du producteur associé à l'offre
+        /// </summary>
+        private Producer _nameProducer;
 
         #endregion
 
         #region Properties
 
         /// <summary>
-        /// Obtient ou defini la category selectionné
+        /// Obtient ou défini le nom du producteur associé à l'offre
+        /// </summary>
+        public Producer nameProducer
+        {
+            get { return _nameProducer; }
+            set { _nameProducer = value; }
+        }
+
+        /// <summary>
+        /// Obtient ou defini la contrat selectionné
         /// </summary>
         public ContractType SelectedContractType
         {
@@ -38,7 +53,7 @@ namespace MegaCastingV2.WPF.ViewModel
         }
 
         /// <summary>
-        /// Obtient ou defini la collection de category
+        /// Obtient ou defini la collection de contrat
         /// </summary>
         public ObservableCollection<ContractType> ContractType
         {
@@ -48,18 +63,30 @@ namespace MegaCastingV2.WPF.ViewModel
 
         #endregion
 
-
         #region Constructor
 
         public ViewModelContractType(Entities entities) : base(entities)
         {
             this.Entities.ContractTypes.ToList();
             this.ContractType = this.Entities.ContractTypes.Local;
+
+            this.Entities.Producers.ToList();
         }
 
         #endregion
 
         #region Methods
+
+        //public void setNameProducer()
+        //{
+        //    foreach (Producer producer in nameProducer)
+        //    {
+        //        if (producer.Identifier == ContractType.)
+        //        {
+        //            this.nameProducer = SelectedContractType.
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// Sauvegarde les modifications
@@ -110,11 +137,11 @@ namespace MegaCastingV2.WPF.ViewModel
 
             if (SelectedContractType == null)
             {
-                MessageBox.Show("Vous devez selectionner un Type de Contrat pour le supprimer");
+                MessageBox.Show("Vous devez selectionner un type de Contrat pour le supprimer");
             }
             else if (!SelectedContractType.Offers.Any())
             {
-                MessageBoxResult result = MessageBox.Show("Souhaitez-vous confimer la suppression", "Suppresion d'un Type de Contrat", MessageBoxButton.YesNo);
+                MessageBoxResult result = MessageBox.Show("Souhaitez-vous confirmer la suppression", "Suppresion d'un Type de Contrat", MessageBoxButton.YesNo);
                 if (result == MessageBoxResult.Yes)
                 {
 

@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:MegaCastingV2.WPF.View"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             
+             xmlns:viewModel="clr-namespace:MegaCastingV2.WPF.ViewModel"
+             d:DataContext="{d:DesignInstance viewModel:ViewModelContractType}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -24,13 +27,14 @@
 
         <ListBox
         Grid.Column="0"
-        Grid.Row="2"
+        Grid.Row="1"
         x:Name="_ListBoxContractType"
         ItemsSource="{Binding ContractType}"
         SelectedItem="{Binding SelectedContractType}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <!--
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="10"/>
                             <ColumnDefinition Width="*"/>
@@ -42,8 +46,22 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="5"/>
                         </Grid.RowDefinitions>
-
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}"></TextBlock>
+-->
+                        <!--
+                        <TextBlock Margin="10,0,10,0" Text="{Binding Name}"></TextBlock>
+                        -->
+                        <Label>
+                            <Label.Content>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} - {1}">
+                                            <Binding Path="Identifier" />
+                                            <Binding Path="Name" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </Label.Content>
+                        </Label>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -93,7 +111,7 @@
 
             <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Height="40" Width="219">Information du contrat</Label>
 
-            <!--#region Lastname -->
+            <!--#region Name -->
             <TextBlock VerticalAlignment="Center" Text="Nom :" Grid.Row="1" Grid.Column="0" FontSize="16" Foreground="Black"/>
 
             <TextBox x:Name="_SelectNameContractType" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150px" Text="{Binding SelectedContractType.Name}"/>

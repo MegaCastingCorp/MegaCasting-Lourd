@@ -2,16 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+
 
 namespace MegaCastingV2.WPF.ViewModel
 {
     public class ViewModelCastings : ViewModelBase
     {
         #region Attributes
+
+        /// <summary>
+        /// Collection de castings
+        /// </summary>
+        private ObservableCollection<Producer> _Producer;
 
         /// <summary>
         /// Collection de castings
@@ -23,9 +30,28 @@ namespace MegaCastingV2.WPF.ViewModel
         /// </summary>
         private Offer _SelectedOffers;
 
+        private string _nameProducer;
+
+
+
         #endregion
 
         #region Properties
+
+        public string nameProducer
+        {
+            get { return _nameProducer; }
+            set { _nameProducer = value; }
+        }
+
+        /// <summary>
+        /// Obtient ou défini la collection de castings
+        /// </summary>
+        public ObservableCollection<Producer> Producer
+        {
+            get { return _Producer; }
+            set { _Producer = value; }
+        }
 
         /// <summary>
         /// Obtient ou défini la collection de castings
@@ -53,11 +79,25 @@ namespace MegaCastingV2.WPF.ViewModel
         {
             this.Entities.Offers.ToList();
             this.Offers = this.Entities.Offers.Local;
+
+            this.Entities.Producers.ToList();
+            this.Producer = this.Entities.Producers.Local;
+
         }
 
         #endregion
 
         #region Methods
+        public void SetNameProducer()
+        {
+            foreach (Producer producers in Producer)
+            {
+                if (producers.Identifier == SelectedOffers.Producer.Identifier) 
+                {
+                    this.nameProducer = producers.Name; 
+                }
+            }
+        }
 
         /// <summary>
         /// Sauvegarde les modifications

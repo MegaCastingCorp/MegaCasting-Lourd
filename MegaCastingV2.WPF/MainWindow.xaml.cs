@@ -267,7 +267,7 @@ namespace MegaCastingV2.WPF
             ViewModelContractType viewModel = new ViewModelContractType(Entities);
 
             ViewContractType view = new ViewContractType();
-            //view.DataContext = viewModel;
+            view.DataContext = viewModel;
 
             this.DockPanelView.Children.Add(view);
         }

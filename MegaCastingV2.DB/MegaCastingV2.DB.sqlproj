@@ -70,8 +70,8 @@
     <Build Include="dbo\Tables\Gender.sql" />
     <Build Include="dbo\Tables\Filtre.sql" />
     <Build Include="dbo\Tables\Employee.sql" />
-    <Build Include="dbo\Tables\ContractType.sql" />
     <Build Include="dbo\Tables\Category.sql" />
     <Build Include="dbo\Tables\Apply.sql" />
+    <Build Include="dbo\Tables\ContractType.sql" />
   </ItemGroup>
 </Project>

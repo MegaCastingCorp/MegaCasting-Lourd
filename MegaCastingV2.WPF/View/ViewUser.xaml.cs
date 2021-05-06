@@ -36,11 +36,6 @@ namespace MegaCastingV2.WPF.View
 
         }
 
-        private void _ButtonSearchUsers_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void _ListBoxUserTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

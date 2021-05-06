@@ -25,10 +25,12 @@
         Grid.Row="2"
         x:Name="_ListBoxCastings"
         ItemsSource="{Binding Offers}"
-        SelectedItem="{Binding SelectedOffers}">
+        SelectedItem="{Binding SelectedOffers}"
+            FocusableChanged="_ListBoxCastings_FocusableChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <!--
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="10"/>
                             <ColumnDefinition Width="*"/>
@@ -40,9 +42,20 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="5"/>
                         </Grid.RowDefinitions>
+                        -->
 
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Name}"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding Duration}"></TextBlock>
+                        <Label>
+                            <Label.Content>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} - {1}">
+                                            <Binding Path="Identifier" />
+                                            <Binding Path="Name" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </Label.Content>
+                        </Label>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -152,6 +165,13 @@
             <TextBlock VerticalAlignment="Top" Text="Code Postal :" Grid.Row="4" Grid.Column="1" FontSize="16" Foreground="Black" Margin="0.5,16,-1,0"/>
 
             <TextBox x:Name="_SelectCastingsZipCode" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="66" Text="{Binding SelectedOffers.ZipCode}" Margin="91.5,13,-67,12"/>
+            <!--#endregion-->
+
+
+            <!--#region Producer -->
+            <TextBlock VerticalAlignment="Center" Text="Producteur :" Grid.Row="5" Grid.Column="1" FontSize="16" Foreground="Black"/>
+
+            <TextBox x:Name="_SelectCastingsProducer" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="66" Text="{Binding nameProducer}" Margin="90.5,10,-66,15" />
             <!--#endregion-->
 
             <Button x:Name="_ButtonSaveCastings" Click="_ButtonSaveCastings_Click" Grid.Column="0" Grid.Row="6" Background="Green" Height="35" Width="170" BorderThickness="0">

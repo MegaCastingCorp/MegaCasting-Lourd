@@ -33,3 +33,14 @@ C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Deb
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.csproj.CopyComplete
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.dll
 C:\Users\tete-\Desktop\MegaCasting\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.pdb
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\MegaCastingV2.DBLib.dll.config
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\MegaCastingV2.DBLib.dll
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\MegaCastingV2.DBLib.pdb
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\EntityFramework.dll
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\EntityFramework.xml
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.csproj.CoreCompileInputs.cache
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.csproj.CopyComplete
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.dll
+E:\GitHub\MegaCasting-Lourd\MegaCastingV2.DBLib\obj\Debug\MegaCastingV2.DBLib.pdb
